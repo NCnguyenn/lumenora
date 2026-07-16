@@ -1,0 +1,170 @@
+{
+  "navigation": {
+    "dcl": 515,
+    "load": 630,
+    "ttfb": 333,
+    "transferSize": 988982
+  },
+  "paints": [
+    {
+      "name": "first-paint",
+      "t": 520
+    },
+    {
+      "name": "first-contentful-paint",
+      "t": 520
+    }
+  ],
+  "slowest": [
+    {
+      "name": "esop-us-Library/default/dwfe0a1c36/Aesop_NGL_Library_Thumbnail_Design_Approach_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 2632,
+      "size": 131577
+    },
+    {
+      "name": "images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Harvest_Festival_2022_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 2264,
+      "size": 120827
+    },
+    {
+      "name": "pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_A_Guide_to_Summer_Skin_Care_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1609,
+      "size": 88803
+    },
+    {
+      "name": "/events",
+      "type": "beacon",
+      "duration": 1505,
+      "size": 300
+    },
+    {
+      "name": "ibrary/default/dw19aef3c9/images/pages/the-athenaeum/Aesop_Queer_Cities_Guide_Web_Primary_Mobile.jpg",
+      "type": "img",
+      "duration": 1398,
+      "size": 112147
+    },
+    {
+      "name": "p-us-Library/default/dw2062758d/Aesop_NGL_Library_Thumbnail_Product_Philosophy_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 1391,
+      "size": 147163
+    },
+    {
+      "name": "ites-aesop-us-Library/default/dw2633aa79/Aesop_NGL_Library_Thumbnail_Our_Story_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 1351,
+      "size": 82430
+    },
+    {
+      "name": "lt/dw8547e0f8/images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Ouranon_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 1317,
+      "size": 109149
+    },
+    {
+      "name": "/images/pages/the-athenaeum/Aesop_View_From_Above_Web_Primary_A_Full_Width_Video_Fallback_Mobile.jpg",
+      "type": "img",
+      "duration": 1313,
+      "size": 63574
+    },
+    {
+      "name": "mages/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Objects_of_Inspiration_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 1239,
+      "size": 94182
+    },
+    {
+      "name": "-us-Library/default/dw3a3a25af/Aesop_NGL_Library_Thumbnail_Product_Philosophy_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1230,
+      "size": 145923
+    },
+    {
+      "name": "sop-us-Library/default/dw07a347ab/Aesop_NGL_Library_Thumbnail_Design_Approach_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1219,
+      "size": 117961
+    },
+    {
+      "name": "tes-aesop-us-Library/default/dw6c1686a7/Aesop_NGL_Library_Thumbnail_Our_Story_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1201,
+      "size": 78055
+    },
+    {
+      "name": "images/pages/the-athenaeum/Aesop_View_From_Above_Web_Primary_A_Full_Width_Video_Fallback_Desktop.jpg",
+      "type": "img",
+      "duration": 1196,
+      "size": 57613
+    },
+    {
+      "name": "ages/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Objects_of_Inspiration_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1196,
+      "size": 78887
+    },
+    {
+      "name": "mages/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Harvest_Festival_2022_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1188,
+      "size": 113183
+    },
+    {
+      "name": "t/dw54b4b99c/images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Ouranon_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1174,
+      "size": 100509
+    },
+    {
+      "name": "images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_An_Aesop_Filmography_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1138,
+      "size": 54679
+    },
+    {
+      "name": "images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Echoes_of_You_Eidesis_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 1132,
+      "size": 61600
+    },
+    {
+      "name": "b/images/pages/the-athenaeum/Aesop_Gift_Kits_2024-25_Web_Athenaeum_The_Soap_Service_Film-Desktop.jpg",
+      "type": "img",
+      "duration": 1130,
+      "size": 30174
+    },
+    {
+      "name": "he-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_A_Guide_to_Nurturing_Sensitive_Skin_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 1127,
+      "size": 73635
+    },
+    {
+      "name": "w07f69455/images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_On_Blending_Mobile_1080x800px.jpg",
+      "type": "img",
+      "duration": 1126,
+      "size": 75587
+    },
+    {
+      "name": "/dwfcff9782/images/pages/the-athenaeum/Aesop_International_Womens_Day_2022_Web_Athenaeum_Primary.jpg",
+      "type": "img",
+      "duration": 1084,
+      "size": 72320
+    },
+    {
+      "name": "s/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_A_Guide_to_Caring_for_Oily_Skin_Desktop_1080x720px.jpg",
+      "type": "img",
+      "duration": 1074,
+      "size": 74163
+    },
+    {
+      "name": "/Sites-aesop-us-Library/default/dw75342f44/images/pages/the-athenaeum/The-sound-of-Aesop-desktop.jpg",
+      "type": "img",
+      "duration": 1068,
+      "size": 66695
+    }
+  ]
+}

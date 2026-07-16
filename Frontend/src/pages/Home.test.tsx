@@ -82,6 +82,30 @@ describe('Home editorial experience', () => {
     ).toBeInTheDocument()
   })
 
+  it('uses structured grids for categories and product compositions', () => {
+    const { container } = renderHome()
+
+    const categories = container.querySelector(
+      '[data-layout="home-categories"]',
+    )
+    const compositions = container.querySelector(
+      '[data-layout="home-compositions"]',
+    )
+
+    expect(categories).toHaveClass('lg:grid-cols-12')
+    expect(compositions).toHaveClass('md:grid-cols-12')
+    expect(screen.getByText('Nourish, renew and restore.')).toBeInTheDocument()
+    expect(screen.getByText('Hydrate, soften and replenish.')).toBeInTheDocument()
+    expect(screen.getByText('Shield skin with daily protection.')).toBeInTheDocument()
+  })
+
+  it('marks editorial passages for progressive motion', () => {
+    const { container } = renderHome()
+
+    expect(container.querySelectorAll('.editorial-reveal').length).toBeGreaterThan(3)
+    expect(container.querySelectorAll('.editorial-image').length).toBeGreaterThan(6)
+  })
+
   it('ships every editorial image used by Home', () => {
     editorialAssets.forEach((filename) => {
       const path = resolve(

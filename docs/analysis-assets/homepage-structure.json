@@ -1,0 +1,28 @@
+{
+  "title": "Formulations for Skin, Hair & Body Care of the Finest Quality - Aesop",
+  "header": {
+    "h": 0,
+    "bg": "rgba(0, 0, 0, 0)",
+    "color": "rgb(51, 51, 51)",
+    "position": "relative",
+    "borderBottom": "0px none rgb(51, 51, 51)"
+  },
+  "topSections": [
+    {
+      "tag": "div",
+      "cls": "experience-region experience-main",
+      "h": 9873,
+      "w": 485,
+      "text": "Plant-based and laboratory-made ingredients A sensory juxtaposition Cool Coriander Seed. Warm Black Pepper. Composed of ",
+      "bg": "rgba(0, 0, 0, 0)",
+      "display": "block",
+      "padding": "0px"
+    }
+  ],
+  "footer": {
+    "h": 1473,
+    "bg": "rgb(37, 37, 37)",
+    "color": "rgb(51, 51, 51)",
+    "cols": "block"
+  }
+}

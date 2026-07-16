@@ -1,0 +1,16 @@
+## Console messages
+Showing 1-14 of 14 (Page 1 of 1).
+msgid=1 [issue] Deprecated feature used (count: 1)
+msgid=2 [issue] Deprecated feature used (count: 1)
+msgid=3 [issue] Deprecated feature used (count: 1)
+msgid=4 [log] Ver: 3 (1 args)
+msgid=5 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=6 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=7 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=8 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=10 [issue] No label associated with a form field (count: 1)
+msgid=11 [debug] Error (1 args)
+msgid=12 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=13 [log] skipping embed on:  [node HTMLHeadElement] (2 args)
+msgid=14 [issue] Response was blocked by CORB (Cross-Origin Read Blocking) (count: 1)
+msgid=15 [error] Uncaught TypeError: window.sprChat is not a function (0 args)

@@ -1,0 +1,170 @@
+{
+  "navigation": {
+    "dcl": 821,
+    "load": 2665,
+    "ttfb": 645,
+    "transferSize": 898533
+  },
+  "paints": [
+    {
+      "name": "first-paint",
+      "t": 804
+    },
+    {
+      "name": "first-contentful-paint",
+      "t": 804
+    }
+  ],
+  "slowest": [
+    {
+      "name": "/deployments/aesop-us/main_site/production/en_US/swat_reviews-config.js",
+      "type": "script",
+      "duration": 992,
+      "size": 0
+    },
+    {
+      "name": "/deployments/aesop-us/main_site/production/en_US/rating_summary-config.js",
+      "type": "script",
+      "duration": 986,
+      "size": 0
+    },
+    {
+      "name": "/cast/sdk/libs/sender/1.0/cast_framework.js",
+      "type": "script",
+      "duration": 912,
+      "size": 0
+    },
+    {
+      "name": "/web/public/native/config/media/7f3a3570-b133-4bc6-b9a7-6d1f636ab090",
+      "type": "fetch",
+      "duration": 904,
+      "size": 0
+    },
+    {
+      "name": "/web/public/native/config/media/234a5a3e-796b-4f93-8406-013b0ecf925e",
+      "type": "fetch",
+      "duration": 892,
+      "size": 0
+    },
+    {
+      "name": "/web/public/native/config/media/35a170cd-6c46-49d1-949c-46a73b85eea0",
+      "type": "fetch",
+      "duration": 889,
+      "size": 0
+    },
+    {
+      "name": "/web/public/native/config/media/8496ff63-e978-46e2-9593-af630daa7803",
+      "type": "fetch",
+      "duration": 886,
+      "size": 0
+    },
+    {
+      "name": "/eureka/clank/150/cast_sender.js",
+      "type": "script",
+      "duration": 872,
+      "size": 0
+    },
+    {
+      "name": "1211/images/products/BT26/Antithesis_2026_PDP_Secondary_Image_1_50-50_Desktop_Mobile_2000x2084px.jpg",
+      "type": "img",
+      "duration": 870,
+      "size": 5434
+    },
+    {
+      "name": "wd38893ec/images/products/BT26/Aesop_Body_Antithesis_Intense_Body_Cleanser_500mL_NGL_2000x2000px.jpg",
+      "type": "img",
+      "duration": 869,
+      "size": 11556
+    },
+    {
+      "name": "/default/dw2d43a759/images/products/BS14/New/Aesop_Top_20_2025_PDP_Texture_Deodorant_2000x2000px.jpg",
+      "type": "img",
+      "duration": 852,
+      "size": 0
+    },
+    {
+      "name": "ult/dwed7d6e47/images/products/BS14/New/Aesop_Personal_Care_Deodorant_50mL_Web_Front_2000x2000px.jpg",
+      "type": "img",
+      "duration": 851,
+      "size": 0
+    },
+    {
+      "name": "catalog/default/dweee82e92/images/products/BT26/Antithesis_2026_PDP_Carousel_Image_1_2000x2000px.jpg",
+      "type": "img",
+      "duration": 850,
+      "size": 8219
+    },
+    {
+      "name": "efault/dwf23087a3/images/products/HR32/New/Aesop_Top_20_2025_PDP_Texture_Conditioner_2000x2000px.jpg",
+      "type": "img",
+      "duration": 827,
+      "size": 0
+    },
+    {
+      "name": "/hls/7f3a3570-b133-4bc6-b9a7-6d1f636ab090/playlist_1080_0_3_3.m3u8",
+      "type": "xmlhttprequest",
+      "duration": 810,
+      "size": 0
+    },
+    {
+      "name": "/d4u0s5pjfxq",
+      "type": "fetch",
+      "duration": 800,
+      "size": 0
+    },
+    {
+      "name": "/msreceiver",
+      "type": "beacon",
+      "duration": 762,
+      "size": 300
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_availability",
+      "type": "fetch",
+      "duration": 602,
+      "size": 542
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_onetrustconsentgpc",
+      "type": "fetch",
+      "duration": 602,
+      "size": 301
+    },
+    {
+      "name": "g/default/dw49f804ab/images/products/HR32/New/Aesop_Hair_Conditioner_100mL_Web_Front_2000x2000px.jpg",
+      "type": "img",
+      "duration": 586,
+      "size": 15801
+    },
+    {
+      "name": "/edd8a9329ddd/d35c47fb739d46bb89ff41ba22601a04/wpt.json",
+      "type": "xmlhttprequest",
+      "duration": 575,
+      "size": 320
+    },
+    {
+      "name": "M06/ContentEnhancement/Aesop_Hand_Resurrection_Aromatique_Hand_Balm_75mL_Web_Front_A_2000x2000px.jpg",
+      "type": "img",
+      "duration": 520,
+      "size": 0
+    },
+    {
+      "name": "roducts/BM06/ContentEnhancement/Aesop_Top_20_2025_PDP_Texture_Resurrection_Hand_Balm_2000x2000px.jpg",
+      "type": "img",
+      "duration": 520,
+      "size": 0
+    },
+    {
+      "name": "ducts/BD11/Aesop_Geranium_Leaf_Hydrating_Body_Treatment_100mL-NGL_In-Situ_01_Product_2000x2000px.jpg",
+      "type": "img",
+      "duration": 519,
+      "size": 0
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 518,
+      "size": 0
+    }
+  ]
+}

@@ -251,30 +251,41 @@ export function Home() {
       </section>
 
       {/* ── Contents — Skin, Body, Sun ── */}
-      <section className="bg-ivory border-b border-charcoal/10">
+      <section id="home-categories" className="bg-ivory border-b border-charcoal/10">
         <div className="mx-auto max-w-editorial px-6 md:px-10 lg:px-14 py-20 md:py-28">
-          <p className="max-w-md text-sm font-serif italic text-charcoal/70 leading-relaxed mb-14 md:mb-20">
+          <p className="editorial-reveal max-w-xl text-base font-serif italic text-charcoal/75 leading-relaxed mb-14 md:mb-20">
             Three fields of practice — skin, body, and sun — assembled as a considered
             daily edit rather than a catalogue of categories.
           </p>
 
-          <div className="relative grid grid-cols-12 gap-x-4 gap-y-10 md:gap-y-0 min-h-[520px] md:min-h-[640px]">
+          <div
+            data-layout="home-categories"
+            className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-12 lg:gap-7 xl:gap-10 items-start"
+          >
             {/* Large vertical skin */}
             <Link
               to="/shop"
-              className="col-span-12 md:col-span-5 md:row-start-1 group"
+              className="editorial-reveal group md:col-span-1 lg:col-span-5"
             >
               <figure>
-                <div className="aspect-[3/4] overflow-hidden bg-parchment">
+                <div className="aspect-[4/5] overflow-hidden bg-parchment">
                   <EditorialImg
                     src="/assets/generated/home-contents-skin.jpg"
                     fallback="/assets/generated/product-serum.png"
                     alt="Skin ritual still-life"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="editorial-image w-full h-full object-cover"
                   />
                 </div>
-                <figcaption className="mt-3 text-[11px] uppercase tracking-folio text-charcoal/80">
-                  Skin
+                <figcaption className="mt-5 border-t border-charcoal/20 pt-4">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h2 className="font-serif text-2xl text-charcoal">Skin</h2>
+                    <span className="editorial-link text-[11px] uppercase tracking-folio text-charcoal/75">
+                      Explore
+                    </span>
+                  </div>
+                  <p className="mt-2 text-[15px] font-serif text-charcoal/75">
+                    Nourish, renew and restore.
+                  </p>
                 </figcaption>
               </figure>
             </Link>
@@ -282,19 +293,27 @@ export function Home() {
             {/* Low horizontal body — offset */}
             <Link
               to="/shop"
-              className="col-span-12 md:col-span-6 md:col-start-6 md:row-start-1 md:mt-24 lg:mt-32 group"
+              className="editorial-reveal group md:col-span-1 md:mt-10 lg:col-span-4 lg:mt-16"
             >
               <figure>
-                <div className="aspect-[16/9] overflow-hidden bg-parchment">
+                <div className="aspect-[4/3] overflow-hidden bg-parchment">
                   <EditorialImg
                     src="/assets/generated/home-contents-body.jpg"
                     fallback="/assets/generated/home-feature-lotion.png"
                     alt="Body cream texture"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="editorial-image w-full h-full object-cover"
                   />
                 </div>
-                <figcaption className="mt-3 text-[11px] uppercase tracking-folio text-charcoal/80">
-                  Body
+                <figcaption className="mt-5 border-t border-charcoal/20 pt-4">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h2 className="font-serif text-2xl text-charcoal">Body</h2>
+                    <span className="editorial-link text-[11px] uppercase tracking-folio text-charcoal/75">
+                      Explore
+                    </span>
+                  </div>
+                  <p className="mt-2 text-[15px] font-serif text-charcoal/75">
+                    Hydrate, soften and replenish.
+                  </p>
                 </figcaption>
               </figure>
             </Link>
@@ -302,19 +321,27 @@ export function Home() {
             {/* Smaller sun with open paper */}
             <Link
               to="/shop"
-              className="col-span-8 md:col-span-4 md:col-start-8 md:row-start-1 md:self-end md:mb-4 group"
+              className="editorial-reveal group md:col-span-1 md:col-start-2 lg:col-span-3 lg:col-start-auto lg:mt-28"
             >
-              <figure className="md:pl-6">
-                <div className="aspect-square overflow-hidden bg-parchment max-w-[280px] md:max-w-none">
+              <figure>
+                <div className="aspect-[3/4] overflow-hidden bg-parchment">
                   <EditorialImg
                     src="/assets/generated/home-contents-sun.jpg"
                     fallback="/assets/generated/product-sunscreen.png"
                     alt="Sun care with foliage"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="editorial-image w-full h-full object-cover"
                   />
                 </div>
-                <figcaption className="mt-3 text-[11px] uppercase tracking-folio text-charcoal/80">
-                  Sun
+                <figcaption className="mt-5 border-t border-charcoal/20 pt-4">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h2 className="font-serif text-2xl text-charcoal">Sun</h2>
+                    <span className="editorial-link text-[11px] uppercase tracking-folio text-charcoal/75">
+                      Explore
+                    </span>
+                  </div>
+                  <p className="mt-2 text-[15px] font-serif text-charcoal/75">
+                    Shield skin with daily protection.
+                  </p>
                 </figcaption>
               </figure>
             </Link>
@@ -325,14 +352,14 @@ export function Home() {
       {/* ── The Daily Edit ── */}
       <section className="bg-parchment border-b border-charcoal/10">
         <div className="mx-auto max-w-editorial px-6 md:px-10 lg:px-14 py-20 md:py-28">
-          <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="editorial-reveal grid grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="col-span-12 lg:col-span-8">
               <div className="aspect-[4/3] overflow-hidden bg-ivory">
                 <EditorialImg
                   src="/assets/generated/home-daily-edit.jpg"
                   fallback="/assets/generated/home-hero.png"
                   alt="Daily edit still-life on wet limestone"
-                  className="w-full h-full object-cover"
+                  className="editorial-image w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -341,7 +368,7 @@ export function Home() {
               <p className="text-[11px] uppercase tracking-folio text-brass mb-4">
                 The Daily Edit
               </p>
-              <p className="font-serif text-base leading-relaxed text-charcoal/80 mb-10 max-w-sm">
+              <p className="font-serif text-base leading-relaxed text-charcoal/80 mb-10 max-w-md">
                 Three formulas for the morning sequence — toner, gel, cream — chosen for
                 quiet hydration rather than spectacle.
               </p>
@@ -359,7 +386,7 @@ export function Home() {
                         <span className="font-serif text-[15px] leading-snug text-charcoal group-hover:text-oxblood transition-colors">
                           {product.name}
                         </span>
-                        <span className="text-[11px] tracking-wide text-charcoal/55">
+                        <span className="text-[12px] tracking-wide text-charcoal/70">
                           {formatPrice(product.price)}
                         </span>
                       </Link>
@@ -373,13 +400,13 @@ export function Home() {
       </section>
 
       {/* ── Compositions for the Skin ── */}
-      <section className="bg-ivory border-b border-charcoal/10">
-        <div className="mx-auto max-w-editorial px-6 md:px-10 lg:px-14 py-20 md:py-28 space-y-20 md:space-y-28">
-          <div className="max-w-lg">
+      <section id="home-compositions" className="bg-ivory border-b border-charcoal/10">
+        <div className="mx-auto max-w-editorial px-6 md:px-10 lg:px-14 py-20 md:py-28 space-y-16 md:space-y-20">
+          <div className="editorial-reveal max-w-xl">
             <h2 className="font-serif text-3xl md:text-4xl leading-tight text-charcoal">
               Compositions for the Skin
             </h2>
-            <p className="mt-4 text-sm font-serif italic text-charcoal/65 leading-relaxed">
+            <p className="mt-4 text-base font-serif italic text-charcoal/75 leading-relaxed">
               Curated still-lifes, not a shelf of equals — each formula given its own frame.
             </p>
           </div>
@@ -389,13 +416,13 @@ export function Home() {
             const item = compositions[0];
             const product = findProduct(item.name);
             return (
-              <figure className="w-full">
+              <figure className="editorial-reveal group w-full">
                 <div className="aspect-[16/7] md:aspect-[21/8] overflow-hidden bg-parchment">
                   <EditorialImg
                     src={item.image}
                     fallback={item.fallback}
                     alt={item.name}
-                    className="w-full h-full object-cover"
+                    className="editorial-image w-full h-full object-cover"
                   />
                 </div>
                 <figcaption className="mt-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 max-w-3xl">
@@ -406,12 +433,12 @@ export function Home() {
                     >
                       {item.name}
                     </Link>
-                    <p className="mt-1 text-sm text-charcoal/60 font-serif italic">
+                    <p className="mt-1 text-sm text-charcoal/75 font-serif italic">
                       {item.descriptor}
                     </p>
                   </div>
                   {product && (
-                    <span className="text-[12px] tracking-wide text-charcoal/70 shrink-0">
+                    <span className="text-[13px] tracking-wide text-charcoal/80 shrink-0">
                       {formatPrice(product.price)}
                     </span>
                   )}
@@ -420,32 +447,36 @@ export function Home() {
             );
           })()}
 
+          <div
+            data-layout="home-compositions"
+            className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-8 lg:gap-12 items-start"
+          >
           {/* Square held to one side */}
           {(() => {
             const item = compositions[1];
             const product = findProduct(item.name);
             return (
-              <figure className="w-full md:w-5/12 md:max-w-md md:ml-[8%]">
+              <figure className="editorial-reveal group md:col-span-5">
                 <div className="aspect-square overflow-hidden bg-parchment">
                   <EditorialImg
                     src={item.image}
                     fallback={item.fallback}
                     alt={item.name}
-                    className="w-full h-full object-cover"
+                    className="editorial-image w-full h-full object-cover"
                   />
                 </div>
-                <figcaption className="mt-5 space-y-1">
+                <figcaption className="mt-5 border-t border-charcoal/20 pt-4 space-y-1">
                   <Link
                     to="/shop"
                     className="font-serif text-lg text-charcoal hover:text-oxblood transition-colors block"
                   >
                     {item.name}
                   </Link>
-                  <p className="text-sm text-charcoal/60 font-serif italic">
+                  <p className="text-sm text-charcoal/75 font-serif italic">
                     {item.descriptor}
                   </p>
                   {product && (
-                    <p className="text-[12px] tracking-wide text-charcoal/70 pt-1">
+                    <p className="text-[13px] tracking-wide text-charcoal/80 pt-1">
                       {formatPrice(product.price)}
                     </p>
                   )}
@@ -459,43 +490,44 @@ export function Home() {
             const item = compositions[2];
             const product = findProduct(item.name);
             return (
-              <div className="grid grid-cols-12 gap-8 lg:gap-14 items-end">
-                <figure className="col-span-12 md:col-span-5 md:col-start-2">
-                  <div className="aspect-[3/4] overflow-hidden bg-parchment">
+              <figure className="editorial-reveal group md:col-span-6 md:col-start-7 md:mt-12">
+                <div>
+                  <div className="aspect-square overflow-hidden bg-parchment">
                     <EditorialImg
                       src={item.image}
                       fallback={item.fallback}
                       alt={item.name}
-                      className="w-full h-full object-cover"
+                      className="editorial-image w-full h-full object-cover"
                     />
                   </div>
-                </figure>
-                <div className="col-span-12 md:col-span-4 md:col-start-8 pb-2">
+                </div>
+                <figcaption className="mt-5 border-t border-charcoal/20 pt-4">
                   <Link
                     to="/shop"
                     className="font-serif text-xl md:text-2xl leading-snug text-charcoal hover:text-oxblood transition-colors"
                   >
                     {item.name}
                   </Link>
-                  <p className="mt-4 text-sm font-serif italic text-charcoal/65 leading-relaxed">
+                  <p className="mt-3 text-sm font-serif italic text-charcoal/75 leading-relaxed">
                     {item.descriptor}
                   </p>
                   {product && (
-                    <p className="mt-6 text-[12px] tracking-wide text-charcoal/70">
+                    <p className="mt-3 text-[13px] tracking-wide text-charcoal/80">
                       {formatPrice(product.price)}
                     </p>
                   )}
-                </div>
-              </div>
+                </figcaption>
+              </figure>
             );
           })()}
+          </div>
         </div>
       </section>
 
       {/* ── Brand Interlude ── */}
       <section className="bg-oxblood text-ivory">
         <div className="mx-auto max-w-editorial px-6 md:px-10 lg:px-14 py-20 md:py-28">
-          <div className="grid grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div className="editorial-reveal grid grid-cols-12 gap-10 lg:gap-16 items-center">
             <div className="col-span-12 md:col-span-6 lg:col-span-5">
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-[1.15] text-ivory">
                 Many formulas.
@@ -509,12 +541,12 @@ export function Home() {
               </p>
             </div>
             <div className="col-span-10 col-start-3 md:col-span-5 md:col-start-8 lg:col-start-8">
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="group aspect-[4/3] overflow-hidden">
                 <EditorialImg
                   src="/assets/generated/home-brand-interlude.jpg"
                   fallback="/assets/generated/blog-editorial-5.png"
                   alt="Botanical mineral texture"
-                  className="w-full h-full object-cover opacity-90"
+                  className="editorial-image w-full h-full object-cover opacity-90"
                 />
               </div>
             </div>
@@ -546,7 +578,7 @@ export function Home() {
             {ritualScenes.map((scene) => (
               <div
                 key={scene.label}
-                className="grid grid-cols-12 gap-8 lg:gap-12 items-center"
+                className="editorial-reveal group grid grid-cols-12 gap-8 lg:gap-12 items-center"
               >
                 <div
                   className={`col-span-12 md:col-span-7 ${
@@ -558,7 +590,7 @@ export function Home() {
                       src={scene.image}
                       fallback={scene.fallback}
                       alt={`${scene.label} ritual`}
-                      className="w-full h-full object-cover"
+                      className="editorial-image w-full h-full object-cover"
                     />
                   </div>
                 </div>
@@ -586,7 +618,7 @@ export function Home() {
                             <span className="font-serif text-sm leading-snug text-charcoal group-hover:text-oxblood transition-colors">
                               {product.name}
                             </span>
-                            <span className="text-[11px] tracking-wide text-charcoal/55 shrink-0 pt-0.5">
+                            <span className="text-[12px] tracking-wide text-charcoal/75 shrink-0 pt-0.5">
                               {formatPrice(product.price)}
                             </span>
                           </Link>
@@ -616,7 +648,7 @@ export function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-12 gap-10 lg:gap-14">
+          <div className="editorial-reveal grid grid-cols-12 gap-10 lg:gap-14">
             {/* Primary cover story */}
             <article className="col-span-12 lg:col-span-7">
               <Link to="/blog" className="group block">
@@ -625,7 +657,7 @@ export function Home() {
                     src="/assets/generated/home-journal-primary.jpg"
                     fallback={primaryArticle.image}
                     alt={primaryArticle.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="editorial-image w-full h-full object-cover"
                   />
                 </div>
                 <p className="text-[10px] uppercase tracking-folio text-brass mb-3">
@@ -653,13 +685,13 @@ export function Home() {
                       />
                     </div>
                     <div className="col-span-8">
-                      <p className="text-[10px] uppercase tracking-folio text-charcoal/50 mb-2">
+                      <p className="text-[11px] uppercase tracking-folio text-charcoal/70 mb-2">
                         {article.category}
                       </p>
                       <h3 className="font-serif text-base md:text-lg leading-snug text-charcoal group-hover:text-oxblood transition-colors">
                         {article.title}
                       </h3>
-                      <p className="mt-2 text-[10px] uppercase tracking-wider text-charcoal/40">
+                      <p className="mt-2 text-[11px] uppercase tracking-wider text-charcoal/60">
                         {article.date}
                       </p>
                     </div>
@@ -678,11 +710,11 @@ export function Home() {
       >
         <div className="mx-auto max-w-editorial px-6 md:px-10 lg:px-14 py-20 md:py-24">
           <div className="max-w-xl">
-            <p className="text-[11px] uppercase tracking-folio text-ivory/50 mb-4">
+            <p className="text-[11px] uppercase tracking-folio text-ivory/65 mb-4">
               Notes from the Beauty Desk
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-ivory mb-4">The Edit</h2>
-            <p className="font-serif italic text-sm text-ivory/60 mb-10">
+            <p className="font-serif italic text-base text-ivory/75 mb-10">
               Curated beauty intelligence, delivered with intention.
             </p>
 
@@ -691,7 +723,7 @@ export function Home() {
               onSubmit={(e) => e.preventDefault()}
             >
               <label className="flex-1 flex flex-col gap-2">
-                <span className="text-[10px] uppercase tracking-folio text-ivory/45">
+                <span className="text-[11px] uppercase tracking-folio text-ivory/65">
                   Email Address
                 </span>
                 <input

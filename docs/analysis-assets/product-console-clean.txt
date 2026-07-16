@@ -1,0 +1,21 @@
+## Console messages
+Showing 1-19 of 19 (Page 1 of 1).
+msgid=72 [error] Uncaught TypeError: Cannot read properties of undefined (reading 'on') (0 args)
+msgid=73 [log] Ver: 3 (1 args)
+msgid=74 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=75 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=77 [debug] Error (1 args)
+msgid=78 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=79 [error] Uncaught TypeError: Cannot read properties of null (reading 'name') (0 args) [4 times]
+msgid=83 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=84 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=85 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=86 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=87 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=88 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=89 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=90 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=91 [log] skipping embed on:  [node HTMLHeadElement] (2 args) [4 times]
+msgid=95 [log] [object Object]   (3 args)
+msgid=96 [log] [object Object] (1 args)
+msgid=97 [log] https://mcqg7tb-yjgl2414mz73fvhqnjg1.pub.sfmc-content.com/d4u0s5pjfxq?statType=Impression&isControl=false&campaignId=undefined&experienceId=L1OJc&campaignName=undefined&experienceName=undefined&userId=c57c315c3005a064&pageType=product+detail&url=https%3A%2F%2Fwww.aesop.com%2Fhand-body%2Fbody-cleansers-scrubs%2Fantithesis-intense-body-cleanser%2FBT26.html&customerID=abCjDoY7n6lgnOqd3LIoTbdHpG&uniqueVariable=1784215389&brand_code=AEO&brand_country=USA (1 args)

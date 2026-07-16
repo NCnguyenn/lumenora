@@ -1,0 +1,170 @@
+{
+  "navigation": {
+    "dcl": 1150,
+    "load": 1207,
+    "ttfb": 476,
+    "transferSize": 967567
+  },
+  "paints": [
+    {
+      "name": "first-paint",
+      "t": 560
+    },
+    {
+      "name": "first-contentful-paint",
+      "t": 560
+    }
+  ],
+  "slowest": [
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_productmainaction",
+      "type": "fetch",
+      "duration": 517,
+      "size": 1245
+    },
+    {
+      "name": "/edd8a9329ddd/d35c47fb739d46bb89ff41ba22601a04/wpt.json",
+      "type": "xmlhttprequest",
+      "duration": 489,
+      "size": 320
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/Sprinklr-GetCartProducts",
+      "type": "fetch",
+      "duration": 477,
+      "size": 440
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 467,
+      "size": 0
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 462,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/InteractionStudio-GetRecommendations",
+      "type": "fetch",
+      "duration": 424,
+      "size": 573
+    },
+    {
+      "name": "/events",
+      "type": "beacon",
+      "duration": 421,
+      "size": 300
+    },
+    {
+      "name": "/c2/518009173/track_page_view",
+      "type": "img",
+      "duration": 357,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_menucustomerinfo",
+      "type": "fetch",
+      "duration": 340,
+      "size": 703
+    },
+    {
+      "name": "/a.gif",
+      "type": "img",
+      "duration": 337,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_onetrustconsentgpc",
+      "type": "fetch",
+      "duration": 335,
+      "size": 301
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_headercustomerinfo",
+      "type": "fetch",
+      "duration": 332,
+      "size": 753
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_embeddedpage",
+      "type": "fetch",
+      "duration": 328,
+      "size": 558
+    },
+    {
+      "name": "/v1/events",
+      "type": "xmlhttprequest",
+      "duration": 325,
+      "size": 300
+    },
+    {
+      "name": "/cfw/consent/v1/cp/list",
+      "type": "xmlhttprequest",
+      "duration": 324,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSHtml-common_recommendations",
+      "type": "fetch",
+      "duration": 318,
+      "size": 11641
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_geodetect",
+      "type": "fetch",
+      "duration": 317,
+      "size": 301
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_minicarticon",
+      "type": "fetch",
+      "duration": 314,
+      "size": 598
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_productmainaction",
+      "type": "fetch",
+      "duration": 312,
+      "size": 1246
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 309,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CookiesManagement-UpdateTrackingStatus",
+      "type": "fetch",
+      "duration": 309,
+      "size": 422
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_productmainaction",
+      "type": "fetch",
+      "duration": 309,
+      "size": 1226
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_productmainaction",
+      "type": "fetch",
+      "duration": 309,
+      "size": 1254
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/Utils-Csrf",
+      "type": "fetch",
+      "duration": 308,
+      "size": 564
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 304,
+      "size": 0
+    }
+  ]
+}

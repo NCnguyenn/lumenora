@@ -1,0 +1,4555 @@
+﻿\n======== homepage ========
+TYPE SCALE:
+[
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 242
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 210
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Antithesis Intense Body Cleanser",
+    "count": 192
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New additions",
+    "count": 159
+  },
+  {
+    "tag": "span",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Old price",
+    "count": 85
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 69
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 67
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 63
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Shop all",
+    "count": 49
+  },
+  {
+    "tag": "li",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "14px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Shop all",
+    "count": 46
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 37
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 30
+  },
+  {
+    "tag": "a",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 28
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 27
+  },
+  {
+    "tag": "p",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Two-minute watch",
+    "count": 24
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Shop all",
+    "count": 23
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "New additions",
+    "count": 20
+  },
+  {
+    "tag": "h3",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "15.12px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Geranium Leaf Trio",
+    "count": 19
+  },
+  {
+    "tag": "li",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "17.6px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 15
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 13
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Stores",
+    "count": 8
+  },
+  {
+    "tag": "h2",
+    "fontSize": "30px",
+    "fontWeight": "400",
+    "lineHeight": "39.9px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "A rich repertoire",
+    "count": 7
+  },
+  {
+    "tag": "h3",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "27.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Skin Care",
+    "count": 7
+  },
+  {
+    "tag": "a",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "13.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Terms & Conditions",
+    "count": 7
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Film",
+    "count": 6
+  }
+]
+CARDS:
+[
+  {
+    "text": "New & Notable",
+    "w": 131,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Uniquely Aesop",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "A sensory juxtaposition",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Seasonal Skin Care",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Find your skin type",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Hand & Body",
+    "w": 119,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  }
+]
+BODY: {"tag":"body","cls":"page-homepage header-transparent m-transparent-light no-apple-pay","text":"SKIP TO CONTENT SKIP TO FOOTER NAVIGATION Stores Customer service Email sign up Account My","w":1440,"h":9407,"fontFamily":"SuisseIntl, sans-serif","fontSize":"12px","fontWeight":"400","lineHeight":"18px","letterSpacing":"normal","color":"rgb(51, 51, 51)","backgroundColor":"rgb(255, 254, 242)","border":"0px none rgb(51, 51, 51)","padding":"0px","margin":"0px","display":"block","gap":"normal","maxWidth":"none","textTransform":"none","boxShadow":"none","borderRadius":"0px"}
+PERF: {"navigation":{"dcl":432,"load":701,"ttfb":339,"transferSize":1003553},"paints":[{"name":"first-paint","t":396},{"name":"first-contentful-paint","t":396}],"slowest":[{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":494,"size":0},{"name":"/edd8a9329ddd/d35c47fb739d46bb89ff41ba22601a04/wpt.json","type":"xmlhttprequest","duration":485,"size":320},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":475,"size":0},{"name":"/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping","type":"xmlhttprequest","duration":329,"size":0},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":322,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CookiesManagement-UpdateTrackingStatus","type":"fetch","duration":322,"size":422},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_headercustomerinfo","type":"fetch","duration":321,"size":753},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_geodetect","type":"fetch","duration":320,"size":301},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":316,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_onetrustconsentgpc","type":"fetch","duration":313,"size":301},{"name":"/cfw/consent/v1/cp/list","type":"xmlhttprequest","duration":306,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_minicarticon","type":"fetch","duration":304,"size":598},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/__Analytics-Start","type":"img","duration":304,"size":335},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/Page-Resources","type":"fetch","duration":300,"size":823},{"name":"/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping","type":"xmlhttprequest","duration":294,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CookiesManagement-UpdateTrackingStatus","type":"fetch","duration":289,"size":422},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/Forter-Token","type":"fetch","duration":288,"size":402},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/Forter-Token","type":"fetch","duration":288,"size":402},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CookiesManagement-UpdateTrackingStatus","type":"fetch","duration":285,"size":422},{"name":"/v1/health/events","type":"fetch","duration":275,"size":0},{"name":"/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping","type":"xmlhttprequest","duration":267,"size":0},{"name":"/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping","type":"xmlhttprequest","duration":263,"size":0},{"name":"/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping","type":"xmlhttprequest","duration":260,"size":0},{"name":"/v1/health/events","type":"fetch","duration":259,"size":0},{"name":"/pr","type":"beacon","duration":258,"size":300}]}
+CONSOLE: ## Console messages
+Showing 1-14 of 14 (Page 1 of 1).
+msgid=29 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=30 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=31 [log] Ver: 3 (1 args)
+msgid=32 [log] skipping embed on:  [node HTMLHeadElement] (2 args)
+msgid=33 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=34 [debug] Error (1 args)
+msgid=36 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=37 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=38 [error] Uncaught TypeError: window.sprChat is not a function (0 args) [2 times]
+msgid=40 [error] Uncaught TypeError: Cannot read properties of null (reading 'na
+NAV sample: [{"t":"Aesop - Go to the homepage","href":"https://www.aesop.com/"},{"t":"Stores","href":"https://www.aesop.com/stores"},{"t":"Shop all","href":"https://www.aesop.com/shop-all/"},{"t":"New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New additions","href":"https://www.aesop.com/new-notable/new-additions/"},{"t":"Antithesis Intense Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/antithesis-intense-body-cleanser/BT26.html"},{"t":"Solais Replenishing Hand Serum","href":"https://www.aesop.com/hand-body/hand-washes-balms/solais-replenishing-hand-serum/BM19.html"},{"t":"Resolute Facial Concentrate","href":"https://www.aesop.com/skin-care/concentrates-serums/resolute-facial-concentrate/SK76.html"},{"t":"Above Us, Steorra Eau de Parfum","href":"https://www.aesop.com/fragrance/opulent/above-us--steorra-eau-de-parfum/FR32.html"},{"t":"Lucent Facial Refiner","href":"https://www.aesop.com/skin-care/exfoliants-masks/lucent-facial-refiner/SK75.html"},{"t":"Eleos Nourishing Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/eleos-nourishing-body-cleanser/BT25.html"},{"t":"Discover Notable formulations","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Shop all","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Animal","href":"https://www.aesop.com/home-fragrance/bathroom-deodorisers-pets/animal/BS09.html"}]
+BUTTONS sample: [
+  {
+    "tag": "button",
+    "cls": "l-header__top-nav-link",
+    "text": "Customer service",
+    "w": 111,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(255, 254, 242)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(255, 254, 242)",
+    "padding": "0px 0px 0px 12px",
+    "margin": "0px 0px 0px 12px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-signup-link",
+    "text": "Email sign up",
+    "w": 75,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(255, 254, 242)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(255, 254, 242)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-user__link m-login",
+    "text": "Account",
+    "w": 46,
+    "h": 15,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(255, 254, 242)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(255, 254, 242)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-minicart-icon__link ",
+    "text": "My cart 0 0 product in cart",
+    "w": 63,
+    "h": 20,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(255, 254, 242)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(255, 254, 242)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "flex",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-navigation__button m-level-1",
+    "text": "",
+    "w": 131,
+    "h": 51,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(0, 0, 0)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  }
+]
+CONTAINERS: [
+  {
+    "tag": "header",
+    "cls": "l-header",
+    "w": 1440,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "nav",
+    "cls": "c-navigation",
+    "w": 989,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "flex",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  }
+]
+SECTIONS: [
+  {
+    "cls": "l-header__banner",
+    "h": 0,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "experience-region experience-main",
+    "h": 8234,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-carousel m-style-hero m-arrows-small-for-medium-down m-slidesperview-1-for-sma",
+    "h": 721,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero l-section__row m-unstack",
+    "h": 720,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__media-wrapper",
+    "h": 720,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__media",
+    "h": 720,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__media",
+    "h": 720,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__caption m-caption-flex h-text-justify-content-flex-start h-text-",
+    "h": 720,
+    "w": 1200,
+    "padding": "0px 15px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__body h-text-align-left h-text-align-center-for-large m-width-100",
+    "h": 317,
+    "w": 1170,
+    "padding": "40px 0px 30px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__label h-color-light h-color-light-for-large",
+    "h": 21,
+    "w": 1170,
+    "padding": "0px",
+    "margin": "0px 0px 12px",
+    "bg": "rgba(0, 0, 0, 0)"
+  }
+]
+ROOT VARS: {}
+MOBILE type: [
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 340
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 218
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 203
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 163
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 87
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 63
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 52
+  },
+  {
+    "tag": "li",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "14px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Shop all",
+    "count": 46
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 37
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 31
+  },
+  {
+    "tag": "a",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 28
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 28
+  }
+]
+\n======== shop ========
+TYPE SCALE:
+[
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New additions",
+    "count": 251
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 231
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 217
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Antithesis Intense Body Cleanser",
+    "count": 148
+  },
+  {
+    "tag": "span",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Old price",
+    "count": 96
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Sign in or create an account",
+    "count": 80
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 74
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 67
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 63
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Sign in or create an account",
+    "count": 49
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 33
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 30
+  },
+  {
+    "tag": "p",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Two-minute watch",
+    "count": 24
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Shop all",
+    "count": 21
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "New additions",
+    "count": 20
+  },
+  {
+    "tag": "a",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 18
+  },
+  {
+    "tag": "h2",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "15.12px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Antithesis Intense Body Cleanser",
+    "count": 16
+  },
+  {
+    "tag": "li",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "17.6px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 15
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 15
+  },
+  {
+    "tag": "label",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "16px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Select a Size for Antithesis Intense Bod",
+    "count": 14
+  },
+  {
+    "tag": "span",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "New addition",
+    "count": 13
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Stores",
+    "count": 8
+  },
+  {
+    "tag": "h3",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "15.12px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Resurrection Aromatique Hand Wash",
+    "count": 8
+  },
+  {
+    "tag": "button",
+    "fontSize": "0px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 7
+  },
+  {
+    "tag": "label",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "24px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Sort:",
+    "count": 7
+  }
+]
+CARDS:
+[
+  {
+    "text": "New & Notable",
+    "w": 131,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Uniquely Aesop",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "A sensory juxtaposition",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Seasonal Skin Care",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Find your skin type",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Hand & Body",
+    "w": 119,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  }
+]
+BODY: {"tag":"body","cls":"page-search no-apple-pay","text":"SKIP TO CONTENT SKIP TO FOOTER NAVIGATION Stores Customer service Email sign up Account My","w":1425,"h":4634,"fontFamily":"SuisseIntl, sans-serif","fontSize":"12px","fontWeight":"400","lineHeight":"18px","letterSpacing":"normal","color":"rgb(51, 51, 51)","backgroundColor":"rgb(255, 254, 242)","border":"0px none rgb(51, 51, 51)","padding":"0px","margin":"0px","display":"block","gap":"normal","maxWidth":"none","textTransform":"none","boxShadow":"none","borderRadius":"0px"}
+PERF: {"navigation":{"dcl":1150,"load":1207,"ttfb":476,"transferSize":967567},"paints":[{"name":"first-paint","t":560},{"name":"first-contentful-paint","t":560}],"slowest":[{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_productmainaction","type":"fetch","duration":517,"size":1245},{"name":"/edd8a9329ddd/d35c47fb739d46bb89ff41ba22601a04/wpt.json","type":"xmlhttprequest","duration":489,"size":320},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/Sprinklr-GetCartProducts","type":"fetch","duration":477,"size":440},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":467,"size":0},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":462,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/InteractionStudio-GetRecommendations","type":"fetch","duration":424,"size":573},{"name":"/events","type":"beacon","duration":421,"size":300},{"name":"/c2/518009173/track_page_view","type":"img","duration":357,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_menucustomerinfo","type":"fetch","duration":340,"size":703},{"name":"/a.gif","type":"img","duration":337,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_onetrustconsentgpc","type":"fetch","duration":335,"size":301},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_headercustomerinfo","type":"fetch","duration":332,"size":753},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_embeddedpage","type":"fetch","duration":328,"size":558},{"name":"/v1/events","type":"xmlhttprequest","duration":325,"size":300},{"name":"/cfw/consent/v1/cp/list","type":"xmlhttprequest","duration":324,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSHtml-common_recommendations","type":"fetch","duration":318,"size":11641},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_geodetect","type":"fetch","duration":317,"size":301},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_minicarticon","type":"fetch","duration":314,"size":598},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_productmainaction","type":"fetch","duration":312,"size":1246},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":309,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CookiesManagement-UpdateTrackingStatus","type":"fetch","duration":309,"size":422},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_productmainaction","type":"fetch","duration":309,"size":1226},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_productmainaction","type":"fetch","duration":309,"size":1254},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/Utils-Csrf","type":"fetch","duration":308,"size":564},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":304,"size":0}]}
+CONSOLE: ## Console messages
+Showing 1-9 of 9 (Page 1 of 1).
+msgid=59 [debug] Error (1 args)
+msgid=60 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=61 [error] Uncaught TypeError: Cannot read properties of undefined (reading 'on') (0 args)
+msgid=62 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=63 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=65 [error] Uncaught TypeError: Cannot read properties of null (reading 'name') (0 args) [4 times]
+msgid=69 [log] [object Object]   (3 args)
+msgid=70 [log] [object Object] (1 args)
+msgid=71 [log] https://mcqg7tb-yjgl2414mz73fvhqnjg1.pub.sfmc-content.com/d4u0s5pjfxq?statType=Impression&isControl=false&campaignId=undefined&experienceId=o8978&campaignName=u
+NAV sample: [{"t":"Aesop - Go to the homepage","href":"https://www.aesop.com/"},{"t":"Stores","href":"https://www.aesop.com/stores"},{"t":"Shop all","href":"https://www.aesop.com/shop-all/"},{"t":"New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New additions","href":"https://www.aesop.com/new-notable/new-additions/"},{"t":"Antithesis Intense Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/antithesis-intense-body-cleanser/BT26.html"},{"t":"Solais Replenishing Hand Serum","href":"https://www.aesop.com/hand-body/hand-washes-balms/solais-replenishing-hand-serum/BM19.html"},{"t":"Resolute Facial Concentrate","href":"https://www.aesop.com/skin-care/concentrates-serums/resolute-facial-concentrate/SK76.html"},{"t":"Above Us, Steorra Eau de Parfum","href":"https://www.aesop.com/fragrance/opulent/above-us--steorra-eau-de-parfum/FR32.html"},{"t":"Lucent Facial Refiner","href":"https://www.aesop.com/skin-care/exfoliants-masks/lucent-facial-refiner/SK75.html"},{"t":"Eleos Nourishing Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/eleos-nourishing-body-cleanser/BT25.html"},{"t":"Discover Notable formulations","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Shop all","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Animal","href":"https://www.aesop.com/home-fragrance/bathroom-deodorisers-pets/animal/BS09.html"}]
+BUTTONS sample: [
+  {
+    "tag": "button",
+    "cls": "l-header__top-nav-link",
+    "text": "Customer service",
+    "w": 111,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px 0px 0px 12px",
+    "margin": "0px 0px 0px 12px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-signup-link",
+    "text": "Email sign up",
+    "w": 75,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-user__link m-login",
+    "text": "Account",
+    "w": 46,
+    "h": 15,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-minicart-icon__link ",
+    "text": "My cart 0 0 product in cart",
+    "w": 63,
+    "h": 20,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "flex",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-navigation__button m-level-1",
+    "text": "",
+    "w": 131,
+    "h": 51,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(0, 0, 0)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  }
+]
+CONTAINERS: [
+  {
+    "tag": "header",
+    "cls": "l-header",
+    "w": 1425,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "nav",
+    "cls": "c-navigation",
+    "w": 989,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "flex",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  }
+]
+SECTIONS: [
+  {
+    "cls": "l-header__banner",
+    "h": 0,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-plp__top",
+    "h": 222,
+    "w": 1200,
+    "padding": "0px 15px",
+    "margin": "0px 112.5px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-plp-top-banner",
+    "h": 0,
+    "w": 1170,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-plp-top-banner__category-name",
+    "h": 0,
+    "w": 0,
+    "padding": "0px",
+    "margin": "32px 20px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-plp__complementary-tools l-row h-hide-for-large",
+    "h": 0,
+    "w": 0,
+    "padding": "0px 16px",
+    "margin": "16px 0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-plp-top-banner__results-count ",
+    "h": 0,
+    "w": 0,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-plp__main m-no-refinements",
+    "h": 2300,
+    "w": 1200,
+    "padding": "0px 15px",
+    "margin": "0px 112.5px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-plp__content",
+    "h": 2300,
+    "w": 1200,
+    "padding": "0px 15px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "",
+    "h": 0,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-section m-full-width",
+    "h": 0,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  }
+]
+ROOT VARS: {}
+MOBILE type: [
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 349
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 251
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 225
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 159
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 87
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 63
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 57
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 49
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 35
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 34
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 30
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Home",
+    "count": 27
+  }
+]
+\n======== product ========
+TYPE SCALE:
+[
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 255
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New additions",
+    "count": 240
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 212
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Antithesis Intense Body Cleanser",
+    "count": 150
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Sign in or create an account",
+    "count": 85
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 69
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 67
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 67
+  },
+  {
+    "tag": "span",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Old price",
+    "count": 64
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Sign in or create an account",
+    "count": 45
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 41
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 34
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "New additions",
+    "count": 26
+  },
+  {
+    "tag": "p",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Two-minute watch",
+    "count": 24
+  },
+  {
+    "tag": "a",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 21
+  },
+  {
+    "tag": "h3",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "15.12px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Moroccan Neroli Post-Shave Lotion",
+    "count": 16
+  },
+  {
+    "tag": "li",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "17.6px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 15
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Shop all",
+    "count": 14
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 14
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Home",
+    "count": 14
+  },
+  {
+    "tag": "span",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "24px",
+    "letterSpacing": "normal",
+    "fontFamily": "\"work sans\", avenir",
+    "sample": "",
+    "count": 12
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "\"work sans\", avenir",
+    "sample": "",
+    "count": 12
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Stores",
+    "count": 10
+  },
+  {
+    "tag": "label",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "16px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Select a Size for Antithesis Intense Bod",
+    "count": 10
+  },
+  {
+    "tag": "button",
+    "fontSize": "0px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 9
+  }
+]
+CARDS:
+[
+  {
+    "text": "SKIP TO CONTENT SKIP TO FOOTER NAVIGATION Stores Customer service Email sign up Account My cart 0 0 product in cart Shop all New & Notable Skin Care Hand & Body Fragrance Home Hair",
+    "w": 1425,
+    "padding": "0px",
+    "backgroundColor": "rgb(255, 254, 242)",
+    "imgAlt": "Aesop",
+    "imgW": 3000,
+    "imgH": 945,
+    "fonts": [
+      {
+        "t": "SKIP TO CONTENT",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "SKIP TO FOOTER NAVIGATION",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "0px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(255, 254, 242)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "Search...",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "New & Notable",
+    "w": 131,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Uniquely Aesop",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "A sensory juxtaposition",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Seasonal Skin Care",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Find your skin type",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  }
+]
+BODY: {"tag":"body","cls":"page-productdetail no-apple-pay m-sticky-layout","text":"SKIP TO CONTENT SKIP TO FOOTER NAVIGATION Stores Customer service Email sign up Account My","w":1425,"h":6324,"fontFamily":"SuisseIntl, sans-serif","fontSize":"12px","fontWeight":"400","lineHeight":"18px","letterSpacing":"normal","color":"rgb(51, 51, 51)","backgroundColor":"rgb(255, 254, 242)","border":"0px none rgb(51, 51, 51)","padding":"0px","margin":"0px","display":"block","gap":"normal","maxWidth":"none","textTransform":"none","boxShadow":"none","borderRadius":"0px"}
+PERF: {"navigation":{"dcl":821,"load":2665,"ttfb":645,"transferSize":898533},"paints":[{"name":"first-paint","t":804},{"name":"first-contentful-paint","t":804}],"slowest":[{"name":"/deployments/aesop-us/main_site/production/en_US/swat_reviews-config.js","type":"script","duration":992,"size":0},{"name":"/deployments/aesop-us/main_site/production/en_US/rating_summary-config.js","type":"script","duration":986,"size":0},{"name":"/cast/sdk/libs/sender/1.0/cast_framework.js","type":"script","duration":912,"size":0},{"name":"/web/public/native/config/media/7f3a3570-b133-4bc6-b9a7-6d1f636ab090","type":"fetch","duration":904,"size":0},{"name":"/web/public/native/config/media/234a5a3e-796b-4f93-8406-013b0ecf925e","type":"fetch","duration":892,"size":0},{"name":"/web/public/native/config/media/35a170cd-6c46-49d1-949c-46a73b85eea0","type":"fetch","duration":889,"size":0},{"name":"/web/public/native/config/media/8496ff63-e978-46e2-9593-af630daa7803","type":"fetch","duration":886,"size":0},{"name":"/eureka/clank/150/cast_sender.js","type":"script","duration":872,"size":0},{"name":"1211/images/products/BT26/Antithesis_2026_PDP_Secondary_Image_1_50-50_Desktop_Mobile_2000x2084px.jpg","type":"img","duration":870,"size":5434},{"name":"wd38893ec/images/products/BT26/Aesop_Body_Antithesis_Intense_Body_Cleanser_500mL_NGL_2000x2000px.jpg","type":"img","duration":869,"size":11556},{"name":"/default/dw2d43a759/images/products/BS14/New/Aesop_Top_20_2025_PDP_Texture_Deodorant_2000x2000px.jpg","type":"img","duration":852,"size":0},{"name":"ult/dwed7d6e47/images/products/BS14/New/Aesop_Personal_Care_Deodorant_50mL_Web_Front_2000x2000px.jpg","type":"img","duration":851,"size":0},{"name":"catalog/default/dweee82e92/images/products/BT26/Antithesis_2026_PDP_Carousel_Image_1_2000x2000px.jpg","type":"img","duration":850,"size":8219},{"name":"efault/dwf23087a3/images/products/HR32/New/Aesop_Top_20_2025_PDP_Texture_Conditioner_2000x2000px.jpg","type":"img","duration":827,"size":0},{"name":"/hls/7f3a3570-b133-4bc6-b9a7-6d1f636ab090/playlist_1080_0_3_3.m3u8","type":"xmlhttprequest","duration":810,"size":0},{"name":"/d4u0s5pjfxq","type":"fetch","duration":800,"size":0},{"name":"/msreceiver","type":"beacon","duration":762,"size":300},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-product_availability","type":"fetch","duration":602,"size":542},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_onetrustconsentgpc","type":"fetch","duration":602,"size":301},{"name":"g/default/dw49f804ab/images/products/HR32/New/Aesop_Hair_Conditioner_100mL_Web_Front_2000x2000px.jpg","type":"img","duration":586,"size":15801},{"name":"/edd8a9329ddd/d35c47fb739d46bb89ff41ba22601a04/wpt.json","type":"xmlhttprequest","duration":575,"size":320},{"name":"M06/ContentEnhancement/Aesop_Hand_Resurrection_Aromatique_Hand_Balm_75mL_Web_Front_A_2000x2000px.jpg","type":"img","duration":520,"size":0},{"name":"roducts/BM06/ContentEnhancement/Aesop_Top_20_2025_PDP_Texture_Resurrection_Hand_Balm_2000x2000px.jpg","type":"img","duration":520,"size":0},{"name":"ducts/BD11/Aesop_Geranium_Leaf_Hydrating_Body_Treatment_100mL-NGL_In-Situ_01_Product_2000x2000px.jpg","type":"img","duration":519,"size":0},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":518,"size":0}]}
+CONSOLE: ## Console messages
+Showing 1-19 of 19 (Page 1 of 1).
+msgid=72 [error] Uncaught TypeError: Cannot read properties of undefined (reading 'on') (0 args)
+msgid=73 [log] Ver: 3 (1 args)
+msgid=74 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=75 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=77 [debug] Error (1 args)
+msgid=78 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=79 [error] Uncaught TypeError: Cannot read properties of null (reading 'name') (0 args) [4 times]
+msgid=83 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=84 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=85 [log] flowplayer.cloud(cha
+NAV sample: [{"t":"Aesop - Go to the homepage","href":"https://www.aesop.com/"},{"t":"Stores","href":"https://www.aesop.com/stores"},{"t":"Shop all","href":"https://www.aesop.com/shop-all/"},{"t":"New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New additions","href":"https://www.aesop.com/new-notable/new-additions/"},{"t":"Antithesis Intense Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/antithesis-intense-body-cleanser/BT26.html"},{"t":"Solais Replenishing Hand Serum","href":"https://www.aesop.com/hand-body/hand-washes-balms/solais-replenishing-hand-serum/BM19.html"},{"t":"Resolute Facial Concentrate","href":"https://www.aesop.com/skin-care/concentrates-serums/resolute-facial-concentrate/SK76.html"},{"t":"Above Us, Steorra Eau de Parfum","href":"https://www.aesop.com/fragrance/opulent/above-us--steorra-eau-de-parfum/FR32.html"},{"t":"Lucent Facial Refiner","href":"https://www.aesop.com/skin-care/exfoliants-masks/lucent-facial-refiner/SK75.html"},{"t":"Eleos Nourishing Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/eleos-nourishing-body-cleanser/BT25.html"},{"t":"Discover Notable formulations","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Shop all","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Animal","href":"https://www.aesop.com/home-fragrance/bathroom-deodorisers-pets/animal/BS09.html"}]
+BUTTONS sample: [
+  {
+    "tag": "button",
+    "cls": "l-header__top-nav-link",
+    "text": "Customer service",
+    "w": 111,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px 0px 0px 12px",
+    "margin": "0px 0px 0px 12px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-signup-link",
+    "text": "Email sign up",
+    "w": 75,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-user__link m-login",
+    "text": "Account",
+    "w": 46,
+    "h": 15,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-minicart-icon__link ",
+    "text": "My cart 0 0 product in cart",
+    "w": 63,
+    "h": 20,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "flex",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-navigation__button m-level-1",
+    "text": "",
+    "w": 131,
+    "h": 51,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(0, 0, 0)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  }
+]
+CONTAINERS: [
+  {
+    "tag": "body",
+    "cls": "page-productdetail no-apple-pay m-sticky-layout",
+    "w": 1425,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "header",
+    "cls": "l-header",
+    "w": 1425,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "nav",
+    "cls": "c-navigation",
+    "w": 989,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "flex",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  }
+]
+SECTIONS: [
+  {
+    "cls": "l-header__banner",
+    "h": 0,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-pdp__top",
+    "h": 95,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-pdp__main",
+    "h": 5026,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-carousel m-slidesperview-1 m-horizontal m-ready",
+    "h": 18,
+    "w": 701,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-carousel m-center m-arrows-medium m-style-thumbs m-slidesperview-3-for-medium-",
+    "h": 100,
+    "w": 580,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-section m-plain",
+    "h": 275,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "l-section m-full-width h-bgcolor-global-background",
+    "h": 948,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgb(246, 245, 232)"
+  },
+  {
+    "cls": "h-text-self-align-center c-content-hero__body h-text-align-left m-width-75--larg",
+    "h": 363,
+    "w": 534,
+    "padding": "24px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__label h-color-primary",
+    "h": 21,
+    "w": 486,
+    "padding": "0px",
+    "margin": "0px 0px 12px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__label h-color-primary h-margin-bottom-0",
+    "h": 21,
+    "w": 486,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  }
+]
+ROOT VARS: {}
+MOBILE type: [
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 337
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 240
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 220
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 160
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 84
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 76
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 51
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 47
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 44
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 43
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 34
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Home",
+    "count": 30
+  }
+]
+\n======== cart ========
+TYPE SCALE:
+[
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 222
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 207
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New additions",
+    "count": 164
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Antithesis Intense Body Cleanser",
+    "count": 115
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 67
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 63
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 55
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Sign in or create an account",
+    "count": 39
+  },
+  {
+    "tag": "span",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Old price",
+    "count": 32
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Sign in or create an account",
+    "count": 29
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "New additions",
+    "count": 20
+  },
+  {
+    "tag": "li",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "17.6px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 15
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 14
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Shop all",
+    "count": 12
+  },
+  {
+    "tag": "a",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 11
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 11
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 10
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Stores",
+    "count": 8
+  },
+  {
+    "tag": "h3",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "15.12px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Resurrection Aromatique Hand Wash",
+    "count": 8
+  },
+  {
+    "tag": "a",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "13.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Terms & Conditions",
+    "count": 7
+  },
+  {
+    "tag": "button",
+    "fontSize": "0px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 6
+  },
+  {
+    "tag": "p",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Two-minute watch",
+    "count": 5
+  },
+  {
+    "tag": "span",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Beloved formulation",
+    "count": 5
+  },
+  {
+    "tag": "li",
+    "fontSize": "0px",
+    "fontWeight": "400",
+    "lineHeight": "0px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 5
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Customer service",
+    "count": 4
+  }
+]
+CARDS:
+[
+  {
+    "text": "New & Notable",
+    "w": 131,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Uniquely Aesop",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "A sensory juxtaposition",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Seasonal Skin Care",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Find your skin type",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Hand & Body",
+    "w": 119,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  }
+]
+BODY: {"tag":"body","cls":"page-cart no-apple-pay","text":"SKIP TO CONTENT SKIP TO FOOTER NAVIGATION Stores Customer service Email sign up Account My","w":1425,"h":1641,"fontFamily":"SuisseIntl, sans-serif","fontSize":"12px","fontWeight":"400","lineHeight":"18px","letterSpacing":"normal","color":"rgb(51, 51, 51)","backgroundColor":"rgb(255, 254, 242)","border":"0px none rgb(51, 51, 51)","padding":"0px","margin":"0px","display":"block","gap":"normal","maxWidth":"none","textTransform":"none","boxShadow":"none","borderRadius":"0px"}
+PERF: {"navigation":{"dcl":862,"load":935,"ttfb":474,"transferSize":529103},"paints":[{"name":"first-paint","t":872},{"name":"first-contentful-paint","t":872}],"slowest":[{"name":"/c2/518009173/track_page_view","type":"img","duration":1223,"size":0},{"name":"/d4u0s5pjfxq","type":"fetch","duration":824,"size":0},{"name":"/msreceiver","type":"beacon","duration":767,"size":300},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":763,"size":0},{"name":"/request/v1/consentreceipts/anonymous","type":"xmlhttprequest","duration":709,"size":0},{"name":"/events","type":"beacon","duration":689,"size":300},{"name":"/a.gif","type":"img","duration":516,"size":0},{"name":"op-us-navigation/default/dw7aa355db/images/navigation/Aesop_Amenities_Primary_Mobile_1080x1080px.jpg","type":"img","duration":492,"size":0},{"name":"ge/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-navigation/default/dweb553ebd/Aesop%20boxes.png","type":"img","duration":492,"size":0},{"name":"RD/on/demandware.static/-/Sites-aesop-us-navigation/default/dwde9f59df/Aesop%20Corporate%20Gifts.png","type":"img","duration":491,"size":0},{"name":"NG_PRD/on/demandware.static/-/Sites-aesop-us-navigation/default/dw4a59ef4e/Digital%20Gift%20Card.png","type":"img","duration":491,"size":0},{"name":"-navigation/default/dw0989a807/images/navigation/Salone_2026_Navigation_Desktop_Mobile_440x330px.jpg","type":"img","duration":490,"size":0},{"name":"ion/default/dw3ba39367/images/navigation/Aesop_Festive_2025_NGL_Navigation_Gift_Finder_440x330px.jpg","type":"img","duration":490,"size":0},{"name":"lt/dw751f156b/images/navigation/Antithesis_2026_LP_Navigation_Image_2_Desktop_Mobile_1080x1080px.jpg","type":"img","duration":489,"size":0},{"name":"-/Sites-aesop-us-navigation/default/dw4692f42a/images/navigation/aesop-mega-nav-fragrance-scents.jpg","type":"img","duration":489,"size":0},{"name":"emandware.static/-/Sites-aesop-us-navigation/default/dw4c075c40/Aesop_Fragrance_Finder_2000x2000.jpg","type":"img","duration":489,"size":0},{"name":"ation/default/dwa6822d27/images/navigation/Aesop_Scents_2026_Web_Navigation_Desktop_US_440x330px.jpg","type":"img","duration":489,"size":0},{"name":"/edd8a9329ddd/d35c47fb739d46bb89ff41ba22601a04/wpt.json","type":"xmlhttprequest","duration":489,"size":320},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/__Analytics-Start","type":"img","duration":441,"size":335},{"name":"/a.gif","type":"img","duration":440,"size":0},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/InteractionStudio-GetRecommendations","type":"fetch","duration":392,"size":565},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/Page-Resources","type":"fetch","duration":392,"size":823},{"name":"catalog/default/dweee82e92/images/products/BT26/Antithesis_2026_PDP_Carousel_Image_1_2000x2000px.jpg","type":"img","duration":377,"size":7200},{"name":"wd38893ec/images/products/BT26/Aesop_Body_Antithesis_Intense_Body_Cleanser_500mL_NGL_2000x2000px.jpg","type":"img","duration":371,"size":9963},{"name":"/on/demandware.store/Sites-aesop-us-Site/en_US/CDSHtml-common_recommendations","type":"fetch","duration":368,"size":11620}]}
+CONSOLE: ## Console messages
+Showing 1-9 of 9 (Page 1 of 1).
+msgid=98 [log] Ver: 3 (1 args)
+msgid=99 [debug] Error (1 args)
+msgid=100 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=101 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=102 [error] Uncaught TypeError: Cannot read properties of undefined (reading 'on') (0 args)
+msgid=103 [log] [object Object]   (3 args)
+msgid=104 [log]  (1 args)
+msgid=105 [log] https://mcqg7tb-yjgl2414mz73fvhqnjg1.pub.sfmc-content.com/d4u0s5pjfxq?statType=Impression&isControl=false&campaignId=undefined&experienceId=ry5BV&campaignName=undefined&experienceName=undefined&userId=undefined&pageType=undefined&url=undefined&customerID=abCjDoY7n6lgnOqd3LIoTbdHpG&uniqueVariable=1784215397&brand_code=AEO&brand_country=U
+NAV sample: [{"t":"Aesop - Go to the homepage","href":"https://www.aesop.com/"},{"t":"Stores","href":"https://www.aesop.com/stores"},{"t":"Shop all","href":"https://www.aesop.com/shop-all/"},{"t":"New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New additions","href":"https://www.aesop.com/new-notable/new-additions/"},{"t":"Antithesis Intense Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/antithesis-intense-body-cleanser/BT26.html"},{"t":"Solais Replenishing Hand Serum","href":"https://www.aesop.com/hand-body/hand-washes-balms/solais-replenishing-hand-serum/BM19.html"},{"t":"Resolute Facial Concentrate","href":"https://www.aesop.com/skin-care/concentrates-serums/resolute-facial-concentrate/SK76.html"},{"t":"Above Us, Steorra Eau de Parfum","href":"https://www.aesop.com/fragrance/opulent/above-us--steorra-eau-de-parfum/FR32.html"},{"t":"Lucent Facial Refiner","href":"https://www.aesop.com/skin-care/exfoliants-masks/lucent-facial-refiner/SK75.html"},{"t":"Eleos Nourishing Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/eleos-nourishing-body-cleanser/BT25.html"},{"t":"Discover Notable formulations","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Shop all","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Animal","href":"https://www.aesop.com/home-fragrance/bathroom-deodorisers-pets/animal/BS09.html"}]
+BUTTONS sample: [
+  {
+    "tag": "button",
+    "cls": "l-header__top-nav-link",
+    "text": "Customer service",
+    "w": 111,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px 0px 0px 12px",
+    "margin": "0px 0px 0px 12px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-signup-link",
+    "text": "Email sign up",
+    "w": 75,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-user__link m-login",
+    "text": "Account",
+    "w": 46,
+    "h": 15,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-minicart-icon__link ",
+    "text": "My cart 0 0 product in cart",
+    "w": 63,
+    "h": 20,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "flex",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-navigation__button m-level-1",
+    "text": "",
+    "w": 131,
+    "h": 51,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(0, 0, 0)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  }
+]
+CONTAINERS: [
+  {
+    "tag": "header",
+    "cls": "l-header",
+    "w": 1425,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "nav",
+    "cls": "c-navigation",
+    "w": 989,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "flex",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  }
+]
+SECTIONS: [
+  {
+    "cls": "l-header__banner",
+    "h": 0,
+    "w": 1425,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-cart-empty",
+    "h": 196,
+    "w": 770,
+    "padding": "0px",
+    "margin": "0px 0px 30px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-carousel m-style-product l-section__row m-slidesperview-4 m-slidesperview-2-fo",
+    "h": 569,
+    "w": 1140,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-cart-box",
+    "h": 283,
+    "w": 370,
+    "padding": "0px",
+    "margin": "0px 0px 8px",
+    "bg": "rgb(246, 245, 232)"
+  }
+]
+ROOT VARS: {}
+MOBILE type: [
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 276
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 215
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 164
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 126
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 87
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 63
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 38
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 29
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 17
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 14
+  },
+  {
+    "tag": "a",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 11
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 11
+  }
+]
+\n======== library ========
+TYPE SCALE:
+[
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 231
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 210
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Antithesis Intense Body Cleanser",
+    "count": 159
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New additions",
+    "count": 126
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Sign in or create an account",
+    "count": 80
+  },
+  {
+    "tag": "a",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 69
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 67
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 64
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 56
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Film",
+    "count": 51
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Discover New & Notable",
+    "count": 50
+  },
+  {
+    "tag": "span",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "24px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "A virtual nook in which you can discover",
+    "count": 49
+  },
+  {
+    "tag": "h3",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "27.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Above Us, Steorra Eau de Parfum: celesti",
+    "count": 48
+  },
+  {
+    "tag": "p",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Two-minute watch",
+    "count": 24
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Sign in or create an account",
+    "count": 23
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "New additions",
+    "count": 20
+  },
+  {
+    "tag": "li",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "17.6px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 15
+  },
+  {
+    "tag": "button",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 15
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Shop all",
+    "count": 14
+  },
+  {
+    "tag": "li",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "14px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Shop all",
+    "count": 13
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Stores",
+    "count": 8
+  },
+  {
+    "tag": "p",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "27.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Literature and culture",
+    "count": 7
+  },
+  {
+    "tag": "a",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "13.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Terms & Conditions",
+    "count": 7
+  },
+  {
+    "tag": "label",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "40px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Email address*",
+    "count": 5
+  },
+  {
+    "tag": "button",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Customer service",
+    "count": 4
+  }
+]
+CARDS:
+[
+  {
+    "text": "New & Notable",
+    "w": 131,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "New & Notable",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Uniquely Aesop",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Uniquely Aesop",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "A sensory juxtaposition",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "A sensory juxtaposition",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Seasonal Skin Care",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Seasonal Skin Care",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Find your skin type",
+    "w": 0,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Find your skin type",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  },
+  {
+    "text": "Hand & Body",
+    "w": 119,
+    "padding": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "imgAlt": null,
+    "imgW": 220,
+    "imgH": 165,
+    "fonts": [
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "Hand & Body",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl-Medium"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "ff": "SuisseIntl"
+      },
+      {
+        "t": "",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(51, 51, 51)",
+        "ff": "SuisseIntl"
+      }
+    ]
+  }
+]
+BODY: {"tag":"body","cls":"page-contentpage no-apple-pay","text":"SKIP TO CONTENT SKIP TO FOOTER NAVIGATION Stores Customer service Email sign up Account My","w":1440,"h":10778,"fontFamily":"SuisseIntl, sans-serif","fontSize":"12px","fontWeight":"400","lineHeight":"18px","letterSpacing":"normal","color":"rgb(51, 51, 51)","backgroundColor":"rgb(255, 254, 242)","border":"0px none rgb(51, 51, 51)","padding":"0px","margin":"0px","display":"block","gap":"normal","maxWidth":"none","textTransform":"none","boxShadow":"none","borderRadius":"0px"}
+PERF: {"navigation":{"dcl":515,"load":630,"ttfb":333,"transferSize":988982},"paints":[{"name":"first-paint","t":520},{"name":"first-contentful-paint","t":520}],"slowest":[{"name":"esop-us-Library/default/dwfe0a1c36/Aesop_NGL_Library_Thumbnail_Design_Approach_Mobile_1080x800px.jpg","type":"img","duration":2632,"size":131577},{"name":"images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Harvest_Festival_2022_Mobile_1080x800px.jpg","type":"img","duration":2264,"size":120827},{"name":"pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_A_Guide_to_Summer_Skin_Care_Desktop_1080x720px.jpg","type":"img","duration":1609,"size":88803},{"name":"/events","type":"beacon","duration":1505,"size":300},{"name":"ibrary/default/dw19aef3c9/images/pages/the-athenaeum/Aesop_Queer_Cities_Guide_Web_Primary_Mobile.jpg","type":"img","duration":1398,"size":112147},{"name":"p-us-Library/default/dw2062758d/Aesop_NGL_Library_Thumbnail_Product_Philosophy_Mobile_1080x800px.jpg","type":"img","duration":1391,"size":147163},{"name":"ites-aesop-us-Library/default/dw2633aa79/Aesop_NGL_Library_Thumbnail_Our_Story_Mobile_1080x800px.jpg","type":"img","duration":1351,"size":82430},{"name":"lt/dw8547e0f8/images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Ouranon_Mobile_1080x800px.jpg","type":"img","duration":1317,"size":109149},{"name":"/images/pages/the-athenaeum/Aesop_View_From_Above_Web_Primary_A_Full_Width_Video_Fallback_Mobile.jpg","type":"img","duration":1313,"size":63574},{"name":"mages/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Objects_of_Inspiration_Mobile_1080x800px.jpg","type":"img","duration":1239,"size":94182},{"name":"-us-Library/default/dw3a3a25af/Aesop_NGL_Library_Thumbnail_Product_Philosophy_Desktop_1080x720px.jpg","type":"img","duration":1230,"size":145923},{"name":"sop-us-Library/default/dw07a347ab/Aesop_NGL_Library_Thumbnail_Design_Approach_Desktop_1080x720px.jpg","type":"img","duration":1219,"size":117961},{"name":"tes-aesop-us-Library/default/dw6c1686a7/Aesop_NGL_Library_Thumbnail_Our_Story_Desktop_1080x720px.jpg","type":"img","duration":1201,"size":78055},{"name":"images/pages/the-athenaeum/Aesop_View_From_Above_Web_Primary_A_Full_Width_Video_Fallback_Desktop.jpg","type":"img","duration":1196,"size":57613},{"name":"ages/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Objects_of_Inspiration_Desktop_1080x720px.jpg","type":"img","duration":1196,"size":78887},{"name":"mages/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Harvest_Festival_2022_Desktop_1080x720px.jpg","type":"img","duration":1188,"size":113183},{"name":"t/dw54b4b99c/images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Ouranon_Desktop_1080x720px.jpg","type":"img","duration":1174,"size":100509},{"name":"images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_An_Aesop_Filmography_Desktop_1080x720px.jpg","type":"img","duration":1138,"size":54679},{"name":"images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_Echoes_of_You_Eidesis_Mobile_1080x800px.jpg","type":"img","duration":1132,"size":61600},{"name":"b/images/pages/the-athenaeum/Aesop_Gift_Kits_2024-25_Web_Athenaeum_The_Soap_Service_Film-Desktop.jpg","type":"img","duration":1130,"size":30174},{"name":"he-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_A_Guide_to_Nurturing_Sensitive_Skin_Mobile_1080x800px.jpg","type":"img","duration":1127,"size":73635},{"name":"w07f69455/images/pages/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_On_Blending_Mobile_1080x800px.jpg","type":"img","duration":1126,"size":75587},{"name":"/dwfcff9782/images/pages/the-athenaeum/Aesop_International_Womens_Day_2022_Web_Athenaeum_Primary.jpg","type":"img","duration":1084,"size":72320},{"name":"s/the-athenaeum/Aesop_NGL_Athenaeum_Thumbnail_A_Guide_to_Caring_for_Oily_Skin_Desktop_1080x720px.jpg","type":"img","duration":1074,"size":74163},{"name":"/Sites-aesop-us-Library/default/dw75342f44/images/pages/the-athenaeum/The-sound-of-Aesop-desktop.jpg","type":"img","duration":1068,"size":66695}]}
+CONSOLE: ## Console messages
+Showing 1-6 of 6 (Page 1 of 1).
+msgid=111 [log] Ver: 3 (1 args)
+msgid=113 [debug] Error (1 args)
+msgid=114 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=115 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=116 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=117 [error] Uncaught TypeError: Cannot read properties of null (reading 'name') (0 args) [4 times]
+NAV sample: [{"t":"Aesop - Go to the homepage","href":"https://www.aesop.com/"},{"t":"Stores","href":"https://www.aesop.com/stores"},{"t":"Shop all","href":"https://www.aesop.com/shop-all/"},{"t":"New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New & Notable","href":"https://www.aesop.com/new-notable.html"},{"t":"Discover New additions","href":"https://www.aesop.com/new-notable/new-additions/"},{"t":"Antithesis Intense Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/antithesis-intense-body-cleanser/BT26.html"},{"t":"Solais Replenishing Hand Serum","href":"https://www.aesop.com/hand-body/hand-washes-balms/solais-replenishing-hand-serum/BM19.html"},{"t":"Resolute Facial Concentrate","href":"https://www.aesop.com/skin-care/concentrates-serums/resolute-facial-concentrate/SK76.html"},{"t":"Above Us, Steorra Eau de Parfum","href":"https://www.aesop.com/fragrance/opulent/above-us--steorra-eau-de-parfum/FR32.html"},{"t":"Lucent Facial Refiner","href":"https://www.aesop.com/skin-care/exfoliants-masks/lucent-facial-refiner/SK75.html"},{"t":"Eleos Nourishing Body Cleanser","href":"https://www.aesop.com/hand-body/body-cleansers-scrubs/eleos-nourishing-body-cleanser/BT25.html"},{"t":"Discover Notable formulations","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Shop all","href":"https://www.aesop.com/new-notable/notable-formulations/"},{"t":"Animal","href":"https://www.aesop.com/home-fragrance/bathroom-deodorisers-pets/animal/BS09.html"}]
+BUTTONS sample: [
+  {
+    "tag": "button",
+    "cls": "l-header__top-nav-link",
+    "text": "Customer service",
+    "w": 111,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px 0px 0px 12px",
+    "margin": "0px 0px 0px 12px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-signup-link",
+    "text": "Email sign up",
+    "w": 75,
+    "h": 14,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-user__link m-login",
+    "text": "Account",
+    "w": 46,
+    "h": 15,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-minicart-icon__link ",
+    "text": "My cart 0 0 product in cart",
+    "w": 63,
+    "h": 20,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "14.4px",
+    "letterSpacing": "normal",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "flex",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  },
+  {
+    "tag": "button",
+    "cls": "c-navigation__button m-level-1",
+    "text": "",
+    "w": 131,
+    "h": 51,
+    "fontFamily": "SuisseIntl, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(0, 0, 0)",
+    "padding": "0px",
+    "margin": "0px",
+    "display": "block",
+    "gap": "normal",
+    "maxWidth": "none",
+    "textTransform": "none",
+    "boxShadow": "none",
+    "borderRadius": "0px"
+  }
+]
+CONTAINERS: [
+  {
+    "tag": "header",
+    "cls": "l-header",
+    "w": 1440,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "nav",
+    "cls": "c-navigation",
+    "w": 989,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "flex",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-2",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  },
+  {
+    "tag": "div",
+    "cls": "c-navigation__container m-level-3",
+    "w": 0,
+    "maxWidth": "none",
+    "padding": "0px",
+    "display": "block",
+    "grid": "none",
+    "gap": "normal"
+  }
+]
+SECTIONS: [
+  {
+    "cls": "l-header__banner",
+    "h": 0,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "experience-region experience-main",
+    "h": 9590,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "experience-component experience-assets-hero",
+    "h": 318,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero l-section__row ",
+    "h": 318,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__image-wrapper",
+    "h": 318,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__image",
+    "h": 318,
+    "w": 1440,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__caption m-caption-flex h-text-justify-content-flex-start h-text-",
+    "h": 318,
+    "w": 1200,
+    "padding": "0px 15px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__body h-text-align-left h-text-align-left-for-large m-width-50--l",
+    "h": 173,
+    "w": 585,
+    "padding": "40px 0px 30px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__title h-color-dark h-color-light-for-large",
+    "h": 40,
+    "w": 585,
+    "padding": "0px",
+    "margin": "0px 0px 15px",
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "cls": "c-content-hero__description h-color-dark h-color-light-for-large",
+    "h": 48,
+    "w": 585,
+    "padding": "0px",
+    "margin": "0px",
+    "bg": "rgba(0, 0, 0, 0)"
+  }
+]
+ROOT VARS: {}
+MOBILE type: [
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 249
+  },
+  {
+    "tag": "li",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 218
+  },
+  {
+    "tag": "a",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 169
+  },
+  {
+    "tag": "span",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "19.2px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "",
+    "count": 126
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 87
+  },
+  {
+    "tag": "a",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "18px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "SKIP TO CONTENT",
+    "count": 69
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "16.8px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "Search...",
+    "count": 68
+  },
+  {
+    "tag": "span",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "",
+    "count": 58
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "ΓÇÿThe Soap ServiceΓÇÖ: a gift-giving specta",
+    "count": 56
+  },
+  {
+    "tag": "p",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "21px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Film",
+    "count": 51
+  },
+  {
+    "tag": "span",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "24px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl, sans-serif",
+    "sample": "A virtual nook in which you can discover",
+    "count": 49
+  },
+  {
+    "tag": "h3",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "24px",
+    "letterSpacing": "normal",
+    "fontFamily": "SuisseIntl-Medium, sans-serif",
+    "sample": "Above Us, Steorra Eau de Parfum: celesti",
+    "count": 48
+  }
+]

@@ -1,0 +1,8 @@
+## Console messages
+Showing 1-6 of 6 (Page 1 of 1).
+msgid=111 [log] Ver: 3 (1 args)
+msgid=113 [debug] Error (1 args)
+msgid=114 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=115 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=116 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=117 [error] Uncaught TypeError: Cannot read properties of null (reading 'name') (0 args) [4 times]

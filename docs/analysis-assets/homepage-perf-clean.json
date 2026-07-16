@@ -1,0 +1,170 @@
+{
+  "navigation": {
+    "dcl": 432,
+    "load": 701,
+    "ttfb": 339,
+    "transferSize": 1003553
+  },
+  "paints": [
+    {
+      "name": "first-paint",
+      "t": 396
+    },
+    {
+      "name": "first-contentful-paint",
+      "t": 396
+    }
+  ],
+  "slowest": [
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 494,
+      "size": 0
+    },
+    {
+      "name": "/edd8a9329ddd/d35c47fb739d46bb89ff41ba22601a04/wpt.json",
+      "type": "xmlhttprequest",
+      "duration": 485,
+      "size": 320
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 475,
+      "size": 0
+    },
+    {
+      "name": "/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping",
+      "type": "xmlhttprequest",
+      "duration": 329,
+      "size": 0
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 322,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CookiesManagement-UpdateTrackingStatus",
+      "type": "fetch",
+      "duration": 322,
+      "size": 422
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_headercustomerinfo",
+      "type": "fetch",
+      "duration": 321,
+      "size": 753
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_geodetect",
+      "type": "fetch",
+      "duration": 320,
+      "size": 301
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 316,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-common_onetrustconsentgpc",
+      "type": "fetch",
+      "duration": 313,
+      "size": 301
+    },
+    {
+      "name": "/cfw/consent/v1/cp/list",
+      "type": "xmlhttprequest",
+      "duration": 306,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSLazyload-header_minicarticon",
+      "type": "fetch",
+      "duration": 304,
+      "size": 598
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/__Analytics-Start",
+      "type": "img",
+      "duration": 304,
+      "size": 335
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/Page-Resources",
+      "type": "fetch",
+      "duration": 300,
+      "size": 823
+    },
+    {
+      "name": "/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping",
+      "type": "xmlhttprequest",
+      "duration": 294,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CookiesManagement-UpdateTrackingStatus",
+      "type": "fetch",
+      "duration": 289,
+      "size": 422
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/Forter-Token",
+      "type": "fetch",
+      "duration": 288,
+      "size": 402
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/Forter-Token",
+      "type": "fetch",
+      "duration": 288,
+      "size": 402
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CookiesManagement-UpdateTrackingStatus",
+      "type": "fetch",
+      "duration": 285,
+      "size": 422
+    },
+    {
+      "name": "/v1/health/events",
+      "type": "fetch",
+      "duration": 275,
+      "size": 0
+    },
+    {
+      "name": "/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping",
+      "type": "xmlhttprequest",
+      "duration": 267,
+      "size": 0
+    },
+    {
+      "name": "/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping",
+      "type": "xmlhttprequest",
+      "duration": 263,
+      "size": 0
+    },
+    {
+      "name": "/vod/d7183658-9999-4c1b-a30c-5989a54b8c3e/ping",
+      "type": "xmlhttprequest",
+      "duration": 260,
+      "size": 0
+    },
+    {
+      "name": "/v1/health/events",
+      "type": "fetch",
+      "duration": 259,
+      "size": 0
+    },
+    {
+      "name": "/pr",
+      "type": "beacon",
+      "duration": 258,
+      "size": 300
+    }
+  ]
+}

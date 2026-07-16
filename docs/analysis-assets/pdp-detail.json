@@ -1,0 +1,75 @@
+{
+  "url": "https://www.aesop.com/hand-body/body-cleansers-scrubs/antithesis-intense-body-cleanser/BT26.html",
+  "title": "Antithesis Intense Body Cleanser | Aesop",
+  "h1": {
+    "text": "Antithesis Intense Body Cleanser",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(51, 51, 51)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "w": 280,
+    "h": 22,
+    "ff": "CircularStd, sans-serif"
+  },
+  "price": {
+    "text": "$55.00",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(51, 51, 51)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "w": 453,
+    "h": 39,
+    "ff": "SuisseIntl, sans-serif"
+  },
+  "addToCart": {
+    "text": "$55.00\n \n \n― Add to cart\n Add the Antithesis Intense Body Cleanser to cart",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "color": "rgb(255, 254, 242)",
+    "bg": "rgb(51, 51, 51)",
+    "border": "1px solid rgba(0, 0, 0, 0)",
+    "padding": "5px 20px",
+    "w": 469,
+    "h": 40,
+    "ff": "SuisseIntl-Medium, sans-serif"
+  },
+  "sizeControl": {
+    "text": "Film",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "color": "rgb(51, 51, 51)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "border": "0px none rgb(51, 51, 51)",
+    "padding": "0px",
+    "w": 0,
+    "h": 0,
+    "ff": "SuisseIntl-Medium, sans-serif"
+  },
+  "breadcrumbs": [
+    "Home",
+    "Hand & Body",
+    "Body Cleansers & Scrubs",
+    "...",
+    "Hand & Body",
+    "Body Cleansers & Scrubs"
+  ],
+  "imageCount": 64,
+  "mainImg": {
+    "alt": "Aesop",
+    "w": 3000,
+    "h": 945
+  },
+  "accordion": [
+    "Ingredients",
+    "Description\n\nAntithesis Intense Body Cleanser offers a braci",
+    "Description\n\nAntithesis Intense Body Cleanser offers a braci",
+    "Antithesis Intense Body Cleanser offers a bracing sensory ex",
+    "Ingredients",
+    "Ingredients",
+    "Ingredients"
+  ]
+}

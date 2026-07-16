@@ -5,11 +5,138 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   body {
     @apply bg-background text-primary font-sans antialiased;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.charcoal');
+    outline-offset: 2px;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus,
+  .focus\:not-sr-only:focus-visible {
+    position: fixed;
+    width: auto;
+    height: auto;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+@layer components {
+  .editorial-image {
+    transform: scale(1);
+    transition:
+      transform 900ms cubic-bezier(0.2, 0.75, 0.25, 1),
+      filter 500ms ease;
+  }
+
+  .group:hover .editorial-image,
+  .group:focus-within .editorial-image {
+    transform: scale(1.025);
+    filter: saturate(1.04) contrast(1.02);
+  }
+
+  .editorial-link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    padding-bottom: 0.2rem;
+    transition:
+      background-position 450ms cubic-bezier(0.2, 0.75, 0.25, 1),
+      background-size 450ms cubic-bezier(0.2, 0.75, 0.25, 1),
+      color 250ms ease;
+  }
+
+  .group:hover .editorial-link,
+  .group:focus-visible .editorial-link {
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    color: theme('colors.oxblood');
+  }
+
+  .hero-ken-burns {
+    transform: scale(1);
+    transition: transform 10000ms ease-out;
+  }
+
+  .hero-ken-burns.is-active {
+    transform: scale(1.05);
+  }
+
+  .cta-primary {
+    @apply inline-flex min-h-11 items-center justify-center border border-charcoal bg-charcoal px-8 text-[11px] font-medium uppercase tracking-folio text-ivory transition-colors hover:border-oxblood hover:bg-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal;
+  }
+
+  .cta-ghost-light {
+    @apply inline-flex min-h-11 items-center justify-center border border-white/90 bg-white/10 px-8 text-[11px] font-medium uppercase tracking-folio text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+
+  .cta-text {
+    @apply inline-flex min-h-11 items-center text-[11px] font-medium uppercase tracking-folio text-charcoal border-b border-charcoal/40 transition-colors hover:border-oxblood hover:text-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-charcoal;
+  }
+}
+
+@keyframes editorial-reveal {
+  from {
+    opacity: 0.45;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .editorial-reveal {
+      animation: editorial-reveal both linear;
+      animation-timeline: view();
+      animation-range: entry 4% cover 28%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-image,
+  .editorial-link,
+  .hero-ken-burns,
+  .hero-ken-burns.is-active {
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
   }
 }

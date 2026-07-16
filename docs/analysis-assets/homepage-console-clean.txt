@@ -1,0 +1,16 @@
+## Console messages
+Showing 1-14 of 14 (Page 1 of 1).
+msgid=29 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=30 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=31 [log] Ver: 3 (1 args)
+msgid=32 [log] skipping embed on:  [node HTMLHeadElement] (2 args)
+msgid=33 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=34 [debug] Error (1 args)
+msgid=36 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=37 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=38 [error] Uncaught TypeError: window.sprChat is not a function (0 args) [2 times]
+msgid=40 [error] Uncaught TypeError: Cannot read properties of null (reading 'name') (0 args) [4 times]
+msgid=44 [error] Uncaught TypeError: window.sprChat is not a function (0 args) [2 times]
+msgid=46 [error] Failed to load resource: the server responded with a status of 400 () (0 args) [2 times]
+msgid=48 [error] Uncaught (in promise) (0 args)
+msgid=49 [error] Uncaught TypeError: window.sprChat is not a function (0 args)

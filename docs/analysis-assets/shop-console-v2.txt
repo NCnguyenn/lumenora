@@ -1,0 +1,12 @@
+## Console messages
+Showing 1-10 of 10 (Page 1 of 1).
+msgid=24 [debug] Error (1 args)
+msgid=25 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=26 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=27 [log] Ver: 3 (1 args)
+msgid=28 [error] Failed to load resource: the server responded with a status of 404 () (0 args)
+msgid=29 [issue] No label associated with a form field (count: 1)
+msgid=30 [issue] Response was blocked by CORB (Cross-Origin Read Blocking) (count: 1)
+msgid=32 [log] [object Object]   (3 args)
+msgid=33 [log] [object Object] (1 args)
+msgid=34 [log] https://mcqg7tb-yjgl2414mz73fvhqnjg1.pub.sfmc-content.com/d4u0s5pjfxq?statType=Impression&isControl=false&campaignId=undefined&experienceId=o8978&campaignName=undefined&experienceName=undefined&userId=c57c315c3005a064&pageType=product+selector+page&url=https%3A%2F%2Fwww.aesop.com%2Fshop-all%2F&customerID=abCjDoY7n6lgnOqd3LIoTbdHpG&uniqueVariable=1784215166&brand_code=AEO&brand_country=USA (1 args)

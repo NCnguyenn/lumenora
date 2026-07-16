@@ -1,0 +1,17 @@
+## Console messages
+Showing 1-15 of 15 (Page 1 of 1).
+msgid=72 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=73 [issue] A form field element should have an id or name attribute (count: 1)
+msgid=75 [issue] No label associated with a form field (count: 1)
+msgid=76 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=77 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=78 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=79 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=80 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=81 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=82 [log] flowplayer.cloud(channel: %s) 3/stable (2 args)
+msgid=83 [error] Flowplayer load API promise rejected : TypeError: this.selectors.videoPlayer.play is not a function (1 args)
+msgid=84 [log] skipping embed on:  [node HTMLHeadElement] (2 args) [4 times]
+msgid=88 [log] [object Object]   (3 args)
+msgid=89 [log] [object Object] (1 args)
+msgid=90 [log] https://mcqg7tb-yjgl2414mz73fvhqnjg1.pub.sfmc-content.com/d4u0s5pjfxq?statType=Impression&isControl=false&campaignId=undefined&experienceId=L1OJc&campaignName=undefined&experienceName=undefined&userId=c57c315c3005a064&pageType=product+detail&url=https%3A%2F%2Fwww.aesop.com%2Fhand-body%2Fbody-cleansers-scrubs%2Fantithesis-intense-body-cleanser%2FBT26.html&customerID=abCjDoY7n6lgnOqd3LIoTbdHpG&uniqueVariable=1784215229&brand_code=AEO&brand_country=USA (1 args)

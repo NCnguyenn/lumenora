@@ -1,0 +1,8 @@
+## Console messages
+Showing 1-6 of 6 (Page 1 of 1).
+msgid=60 [issue] No label associated with a form field (count: 2)
+msgid=61 [issue] A form field element should have an id or name attribute (count: 7)
+msgid=62 [issue] An element doesn't have an autocomplete attribute (count: 1)
+msgid=63 [issue] Incorrect use of <label for=FORM_ELEMENT> (count: 1)
+msgid=64 [issue] Page layout may be unexpected due to Quirks Mode (count: 1)
+msgid=65 [warn] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> (0 args)

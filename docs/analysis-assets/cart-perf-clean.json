@@ -1,0 +1,170 @@
+{
+  "navigation": {
+    "dcl": 862,
+    "load": 935,
+    "ttfb": 474,
+    "transferSize": 529103
+  },
+  "paints": [
+    {
+      "name": "first-paint",
+      "t": 872
+    },
+    {
+      "name": "first-contentful-paint",
+      "t": 872
+    }
+  ],
+  "slowest": [
+    {
+      "name": "/c2/518009173/track_page_view",
+      "type": "img",
+      "duration": 1223,
+      "size": 0
+    },
+    {
+      "name": "/d4u0s5pjfxq",
+      "type": "fetch",
+      "duration": 824,
+      "size": 0
+    },
+    {
+      "name": "/msreceiver",
+      "type": "beacon",
+      "duration": 767,
+      "size": 300
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 763,
+      "size": 0
+    },
+    {
+      "name": "/request/v1/consentreceipts/anonymous",
+      "type": "xmlhttprequest",
+      "duration": 709,
+      "size": 0
+    },
+    {
+      "name": "/events",
+      "type": "beacon",
+      "duration": 689,
+      "size": 300
+    },
+    {
+      "name": "/a.gif",
+      "type": "img",
+      "duration": 516,
+      "size": 0
+    },
+    {
+      "name": "op-us-navigation/default/dw7aa355db/images/navigation/Aesop_Amenities_Primary_Mobile_1080x1080px.jpg",
+      "type": "img",
+      "duration": 492,
+      "size": 0
+    },
+    {
+      "name": "ge/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-navigation/default/dweb553ebd/Aesop%20boxes.png",
+      "type": "img",
+      "duration": 492,
+      "size": 0
+    },
+    {
+      "name": "RD/on/demandware.static/-/Sites-aesop-us-navigation/default/dwde9f59df/Aesop%20Corporate%20Gifts.png",
+      "type": "img",
+      "duration": 491,
+      "size": 0
+    },
+    {
+      "name": "NG_PRD/on/demandware.static/-/Sites-aesop-us-navigation/default/dw4a59ef4e/Digital%20Gift%20Card.png",
+      "type": "img",
+      "duration": 491,
+      "size": 0
+    },
+    {
+      "name": "-navigation/default/dw0989a807/images/navigation/Salone_2026_Navigation_Desktop_Mobile_440x330px.jpg",
+      "type": "img",
+      "duration": 490,
+      "size": 0
+    },
+    {
+      "name": "ion/default/dw3ba39367/images/navigation/Aesop_Festive_2025_NGL_Navigation_Gift_Finder_440x330px.jpg",
+      "type": "img",
+      "duration": 490,
+      "size": 0
+    },
+    {
+      "name": "lt/dw751f156b/images/navigation/Antithesis_2026_LP_Navigation_Image_2_Desktop_Mobile_1080x1080px.jpg",
+      "type": "img",
+      "duration": 489,
+      "size": 0
+    },
+    {
+      "name": "-/Sites-aesop-us-navigation/default/dw4692f42a/images/navigation/aesop-mega-nav-fragrance-scents.jpg",
+      "type": "img",
+      "duration": 489,
+      "size": 0
+    },
+    {
+      "name": "emandware.static/-/Sites-aesop-us-navigation/default/dw4c075c40/Aesop_Fragrance_Finder_2000x2000.jpg",
+      "type": "img",
+      "duration": 489,
+      "size": 0
+    },
+    {
+      "name": "ation/default/dwa6822d27/images/navigation/Aesop_Scents_2026_Web_Navigation_Desktop_US_440x330px.jpg",
+      "type": "img",
+      "duration": 489,
+      "size": 0
+    },
+    {
+      "name": "/edd8a9329ddd/d35c47fb739d46bb89ff41ba22601a04/wpt.json",
+      "type": "xmlhttprequest",
+      "duration": 489,
+      "size": 320
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/__Analytics-Start",
+      "type": "img",
+      "duration": 441,
+      "size": 335
+    },
+    {
+      "name": "/a.gif",
+      "type": "img",
+      "duration": 440,
+      "size": 0
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/InteractionStudio-GetRecommendations",
+      "type": "fetch",
+      "duration": 392,
+      "size": 565
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/Page-Resources",
+      "type": "fetch",
+      "duration": 392,
+      "size": 823
+    },
+    {
+      "name": "catalog/default/dweee82e92/images/products/BT26/Antithesis_2026_PDP_Carousel_Image_1_2000x2000px.jpg",
+      "type": "img",
+      "duration": 377,
+      "size": 7200
+    },
+    {
+      "name": "wd38893ec/images/products/BT26/Aesop_Body_Antithesis_Intense_Body_Cleanser_500mL_NGL_2000x2000px.jpg",
+      "type": "img",
+      "duration": 371,
+      "size": 9963
+    },
+    {
+      "name": "/on/demandware.store/Sites-aesop-us-Site/en_US/CDSHtml-common_recommendations",
+      "type": "fetch",
+      "duration": 368,
+      "size": 11620
+    }
+  ]
+}

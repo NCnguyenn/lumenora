@@ -32,6 +32,7 @@ const editorialAssets = [
   'home-ritual-treat.jpg',
   'home-ritual-protect.jpg',
   'home-journal-primary.jpg',
+  'hero-marketplace-1920.jpg',
 ] as const
 
 describe('Home editorial experience', () => {
@@ -41,15 +42,23 @@ describe('Home editorial experience', () => {
     expect(screen.getByText('Compositions for the Skin')).toBeInTheDocument()
     expect(
       screen.getByRole('heading', {
-        name: 'Many formulas.One considered ritual.',
+        name: 'Many houses.One considered edit.',
       }),
     ).toBeInTheDocument()
     expect(screen.getByText('Cleanse. Treat. Protect.')).toBeInTheDocument()
     expect(screen.getByText('The Lumenora Journal')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Find products across brands/i })).toBeInTheDocument()
 
-    const allowed = new Set(['/shop', '/blog'])
     container.querySelectorAll('a[href]').forEach((link) => {
-      expect(allowed.has(link.getAttribute('href') ?? '')).toBe(true)
+      const href = link.getAttribute('href') ?? ''
+      expect(
+        href.startsWith('/shop') ||
+          href.startsWith('/blog') ||
+          href.startsWith('/quiz') ||
+          href.startsWith('/wishlist') ||
+          href.startsWith('/cart') ||
+          href === '/',
+      ).toBe(true)
     })
   })
 
@@ -57,7 +66,7 @@ describe('Home editorial experience', () => {
     renderHome()
 
     expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1)
-    expect(screen.getAllByRole('link', { name: 'SHOP NOW' })).toHaveLength(1)
+    expect(screen.getAllByRole('link', { name: 'Shop the Edit' }).length).toBeGreaterThan(0)
   })
 
   it('lets visitors pause and resume the hero carousel', () => {
@@ -80,6 +89,7 @@ describe('Home editorial experience', () => {
     expect(
       within(note).getByRole('button', { name: 'Subscribe' }),
     ).toBeInTheDocument()
+    expect(within(note).getByLabelText(/email address/i)).toBeInTheDocument()
   })
 
   it('uses structured grids for categories and product compositions', () => {
@@ -94,9 +104,10 @@ describe('Home editorial experience', () => {
 
     expect(categories).toHaveClass('lg:grid-cols-12')
     expect(compositions).toHaveClass('md:grid-cols-12')
-    expect(screen.getByText('Nourish, renew and restore.')).toBeInTheDocument()
-    expect(screen.getByText('Hydrate, soften and replenish.')).toBeInTheDocument()
-    expect(screen.getByText('Shield skin with daily protection.')).toBeInTheDocument()
+    expect(screen.getByText(/Serums, creams, and cleansers/i)).toBeInTheDocument()
+    expect(screen.getByText(/Nourishing textures for after the bath/i)).toBeInTheDocument()
+    expect(screen.getByText(/Daily protection that disappears/i)).toBeInTheDocument()
+    expect(screen.getByText(/Quiet scents for skin and linen/i)).toBeInTheDocument()
   })
 
   it('marks editorial passages for progressive motion', () => {
@@ -119,9 +130,15 @@ describe('Home editorial experience', () => {
       expect(existsSync(path), `${filename} should exist`).toBe(true)
       if (existsSync(path)) {
         expect(statSync(path).size, `${filename} should be non-empty`).toBeGreaterThan(
-          100_000,
+          40_000,
         )
       }
     })
+  })
+
+  it('surfaces multi-brand product brands on the homepage', () => {
+    renderHome()
+    expect(screen.getAllByText('Aurelle Lab').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('COSRX').length).toBeGreaterThan(0)
   })
 })

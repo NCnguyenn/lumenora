@@ -100,49 +100,33 @@ const heroSlides = [
 
 const categories = [
   {
-    name: 'Skin',
+    name: 'Skincare',
     href: '/shop?category=skin',
-    cta: 'Explore Skincare',
-    copy: 'Serums, creams, and cleansers from houses that treat the barrier with care.',
     image: '/assets/generated/home-contents-skin.jpg',
     fallback: '/assets/generated/product-serum.png',
-    alt: 'Curated skincare still-life',
-    aspect: 'aspect-[4/5]',
-    className: 'lg:col-span-5',
+    alt: 'Curated skincare close-up',
   },
   {
-    name: 'Body',
+    name: 'Bodycare',
     href: '/shop?category=body',
-    cta: 'Explore Body',
-    copy: 'Nourishing textures for after the bath — oils, butters, and cleansers.',
     image: '/assets/generated/home-contents-body.jpg',
     fallback: '/assets/generated/home-feature-lotion.png',
     alt: 'Body care cream texture',
-    aspect: 'aspect-[4/3]',
-    className: 'md:mt-10 lg:col-span-4 lg:mt-16',
   },
   {
-    name: 'Sun',
+    name: 'Suncare',
     href: '/shop?category=sun',
-    cta: 'Explore Sun Care',
-    copy: 'Daily protection that disappears into ritual, not into compromise.',
     image: '/assets/generated/home-contents-sun.jpg',
     fallback: '/assets/generated/product-sunscreen.png',
     alt: 'Sun care with foliage',
-    aspect: 'aspect-[3/4]',
-    className: 'md:col-start-2 lg:col-span-3 lg:col-start-auto lg:mt-28',
   },
-  {
-    name: 'Fragrance',
-    href: '/shop?category=fragrance',
-    cta: 'Explore Fragrance',
-    copy: 'Quiet scents for skin and linen — layered notes, never noise.',
-    image: '/assets/generated/home-brand-interlude.jpg',
-    fallback: '/assets/generated/home-composition-sunscreen.jpg',
-    alt: 'Fragrance and botanical mineral texture',
-    aspect: 'aspect-[4/3]',
-    className: 'md:col-span-2 lg:col-span-12 lg:mt-6 lg:max-w-md lg:ml-auto',
-  },
+] as const;
+
+const trustBadges = [
+  { label: 'Authentic Products', detail: 'Authentic Products' },
+  { label: 'Free Shipping $50+', detail: 'Free Shipping $50+' },
+  { label: 'Expert Curated', detail: 'Expert Curated' },
+  { label: 'Easy Returns', detail: 'Easy Returns' },
 ] as const;
 
 const dailyEditNames = [
@@ -468,8 +452,8 @@ export function Home() {
 
       {/* ── Categories ── */}
       <section id="home-categories" className="border-b border-charcoal/10 bg-ivory">
-        <div className="mx-auto max-w-editorial px-5 py-16 sm:px-6 md:px-10 md:py-24 lg:px-14 lg:py-28">
-          <div className="editorial-reveal mb-12 max-w-2xl md:mb-16">
+        <div className="mx-auto max-w-editorial px-5 pt-16 pb-12 sm:px-6 md:px-10 md:pt-24 md:pb-16 lg:px-14 lg:pt-28">
+          <div className="editorial-reveal max-w-2xl">
             <p className="text-[11px] font-medium uppercase tracking-folio text-brass">
               Shop by collection
             </p>
@@ -478,43 +462,55 @@ export function Home() {
               many brands, rather than a catalogue of one house.
             </p>
           </div>
+        </div>
 
-          <div
-            data-layout="home-categories"
-            className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-12 lg:gap-7 xl:gap-10"
-          >
-            {categories.map((cat) => (
-              <Link
-                key={cat.name}
-                to={cat.href}
-                className={cn(
-                  'editorial-reveal group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-charcoal',
-                  cat.className
-                )}
-              >
-                <figure>
-                  <div className={cn('overflow-hidden bg-parchment', cat.aspect)}>
-                    <EditorialImg
-                      src={cat.image}
-                      fallback={cat.fallback}
-                      alt={cat.alt}
-                      width={800}
-                      height={1000}
-                      className="editorial-image h-full w-full object-cover"
-                    />
-                  </div>
-                  <figcaption className="mt-5 border-t border-charcoal/20 pt-4">
-                    <div className="flex items-baseline justify-between gap-4">
-                      <h2 className="font-serif text-2xl text-charcoal">{cat.name}</h2>
-                      <span className="editorial-link text-[11px] uppercase tracking-folio text-charcoal/75">
-                        {cat.cta}
-                      </span>
-                    </div>
-                    <p className="mt-2 font-serif text-[15px] text-charcoal/75">{cat.copy}</p>
-                  </figcaption>
-                </figure>
-              </Link>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {categories.map((cat) => (
+            <Link
+              key={cat.name}
+              to={cat.href}
+              className="editorial-reveal group relative block aspect-[4/3] overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-white"
+            >
+              <EditorialImg
+                src={cat.image}
+                fallback={cat.fallback}
+                alt={cat.alt}
+                width={800}
+                height={600}
+                className="editorial-image h-full w-full object-cover"
+              />
+              {/* Dark gradient overlay for text legibility */}
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+                aria-hidden
+              />
+              <div className="absolute inset-x-0 bottom-0 p-6 text-center md:p-8">
+                <h2 className="font-sans text-xl font-medium uppercase tracking-[0.15em] text-white md:text-2xl lg:text-[1.7rem]">
+                  {cat.name}
+                </h2>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Trust bar */}
+        <div className="border-t border-charcoal/10 bg-ivory">
+          <div className="mx-auto max-w-editorial">
+            <div className="grid grid-cols-2 divide-x divide-charcoal/10 md:grid-cols-4">
+              {trustBadges.map((badge) => (
+                <div
+                  key={badge.label}
+                  className="flex flex-col items-center justify-center gap-1 px-4 py-5 text-center md:py-6"
+                >
+                  <span className="text-[10px] font-medium uppercase tracking-folio text-charcoal/50">
+                    {badge.label}
+                  </span>
+                  <span className="text-xs font-medium text-charcoal md:text-sm">
+                    {badge.detail}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

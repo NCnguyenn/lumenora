@@ -120,6 +120,13 @@ const categories = [
     fallback: '/assets/generated/product-sunscreen.png',
     alt: 'Sun care with foliage',
   },
+  {
+    name: 'Fragrance',
+    href: '/shop?category=fragrance',
+    image: '/assets/generated/home-contents-fragrance.jpg',
+    fallback: '/assets/generated/product-serum.png',
+    alt: 'Fragrance bottle with ingredients',
+  },
 ] as const;
 
 const trustBadges = [
@@ -464,7 +471,7 @@ export function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4">
           {categories.map((cat) => (
             <Link
               key={cat.name}

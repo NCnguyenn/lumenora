@@ -1,8 +1,9 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Heart, Menu, ShoppingBag, X } from 'lucide-react';
+import { Heart, Menu, ShoppingBag, X, Search } from 'lucide-react';
 import { useAppStore } from '../../store/useAppStore';
 import { cn } from '../../lib/utils';
+import { SearchModal } from './SearchModal';
 
 const navItems = [
   { to: '/', label: 'Home', end: true },
@@ -18,6 +19,7 @@ export function Header() {
   const { cart, wishlist } = useAppStore();
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const menuId = useId();
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const location = useLocation();
@@ -43,10 +45,11 @@ export function Header() {
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     cn(
-      'inline-flex min-h-11 min-w-11 items-center justify-center px-1 text-[11px] font-medium uppercase tracking-folio border-b transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-charcoal',
+      'relative inline-flex min-h-11 min-w-11 items-center justify-center px-1 text-[11px] font-medium uppercase tracking-folio transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-charcoal',
+      'after:absolute after:bottom-1.5 after:left-0 after:h-[1.5px] after:w-full after:origin-left after:bg-charcoal after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100',
       isActive
-        ? 'border-charcoal text-charcoal'
-        : 'border-transparent text-charcoal/70 hover:text-charcoal'
+        ? 'text-charcoal after:scale-x-100'
+        : 'text-charcoal/70 hover:text-charcoal after:scale-x-0'
     );
 
   const mobileNavClass = ({ isActive }: { isActive: boolean }) =>
@@ -83,6 +86,14 @@ export function Header() {
           </Link>
 
           <div className="flex items-center justify-end gap-1 text-charcoal">
+            <button
+              type="button"
+              className={iconBtnClass}
+              onClick={() => setIsSearchOpen(true)}
+              aria-label="Open search"
+            >
+              <Search className="h-[18px] w-[18px] stroke-[1.5]" aria-hidden />
+            </button>
             <Link
               to="/wishlist"
               className={iconBtnClass}
@@ -143,6 +154,14 @@ export function Header() {
           </Link>
 
           <div className="flex items-center gap-0.5 text-charcoal">
+            <button
+              type="button"
+              className={iconBtnClass}
+              onClick={() => setIsSearchOpen(true)}
+              aria-label="Open search"
+            >
+              <Search className="h-[18px] w-[18px] stroke-[1.5]" aria-hidden />
+            </button>
             <Link
               to="/wishlist"
               className={iconBtnClass}
@@ -242,6 +261,8 @@ export function Header() {
           </div>
         </div>
       )}
+
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </header>
   );
 }

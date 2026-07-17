@@ -17,20 +17,20 @@ export function ProductCard({ product, className }: ProductCardProps) {
   return (
     <article
       className={cn(
-        'group relative flex h-full flex-col border border-charcoal/10 bg-ivory',
+        'group relative flex h-full flex-col bg-ivory',
         className
       )}
     >
-      <div className="relative aspect-[4/5] overflow-hidden bg-parchment">
+      <div className="relative aspect-square overflow-hidden bg-parchment">
         {(product.isNew || product.isBestSeller) && (
-          <span className="absolute left-3 top-3 z-10 bg-charcoal px-2 py-1 text-[10px] font-medium uppercase tracking-wider text-ivory">
+          <span className="absolute left-3 top-3 z-10 bg-ivory/95 px-2 py-1 text-[9px] font-medium uppercase tracking-folio text-brass">
             {product.isBestSeller ? 'Bestseller' : 'New'}
           </span>
         )}
         <button
           type="button"
           onClick={() => toggleWishlist(product.id)}
-          className="absolute right-2 top-2 z-10 inline-flex h-11 w-11 items-center justify-center bg-ivory/90 text-charcoal transition-colors hover:bg-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+          className="absolute right-2 top-2 z-10 inline-flex h-11 w-11 items-center justify-center bg-ivory/85 text-charcoal transition-colors hover:bg-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
           aria-label={
             isWishlisted
               ? `Remove ${product.name} from wishlist`
@@ -50,7 +50,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
           <img
             src={product.image}
             alt={`${product.brand} — ${product.name}`}
-            width={640}
+            width={800}
             height={800}
             loading="lazy"
             decoding="async"
@@ -59,7 +59,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         </Link>
       </div>
 
-      <div className="flex flex-1 flex-col gap-1.5 p-4">
+      <div className="flex flex-1 flex-col gap-1.5 pt-4">
         <p className="text-[10px] font-medium uppercase tracking-folio text-brass">
           {product.brand}
         </p>
@@ -69,21 +69,21 @@ export function ProductCard({ product, className }: ProductCardProps) {
         >
           {product.name}
         </Link>
-        <p className="text-[11px] uppercase tracking-wider text-charcoal/55">
+        <p className="text-[11px] leading-relaxed text-charcoal/60">
           {categoryLabel(product.category)}
         </p>
-        <div className="mt-auto flex items-center justify-between gap-3 pt-3">
-          <p className="text-sm tabular-nums text-charcoal">
+        <div className="mt-auto flex flex-col gap-3 pt-3">
+          <p className="text-sm font-medium tabular-nums text-charcoal">
             {formatPrice(product.price)}
           </p>
           <button
             type="button"
             onClick={() => addToCart(product)}
-            className="inline-flex h-11 min-w-11 items-center justify-center gap-2 border border-charcoal/25 px-3 text-[10px] font-medium uppercase tracking-folio text-charcoal transition-colors hover:border-charcoal hover:bg-charcoal hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+            className="inline-flex min-h-11 w-full items-center justify-center gap-2 border border-charcoal/20 px-3 text-[10px] font-medium uppercase tracking-folio text-charcoal transition-colors hover:border-oxblood hover:bg-oxblood hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
             aria-label={`Add ${product.name} to cart`}
           >
             <ShoppingBag className="h-3.5 w-3.5" aria-hidden />
-            <span className="hidden sm:inline">Add</span>
+            <span>Quick add</span>
           </button>
         </div>
       </div>

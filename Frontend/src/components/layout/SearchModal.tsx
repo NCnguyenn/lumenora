@@ -45,14 +45,23 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     const filtered = products.filter((p) => {
       return (
         p.name.toLowerCase().includes(q) ||
+        p.brand.toLowerCase().includes(q) ||
         p.category.toLowerCase().includes(q) ||
-        p.description.toLowerCase().includes(q)
+        p.id.toLowerCase().includes(q)
       );
     });
     setResults(filtered);
   }, [query]);
 
   if (!isOpen) return null;
+
+  const shopResultHref = (product: Product) => {
+    const params = new URLSearchParams();
+    const normalizedQuery = query.trim();
+    if (normalizedQuery) params.set('q', normalizedQuery);
+    params.set('category', product.category);
+    return `/shop?${params.toString()}`;
+  };
 
   return (
     <div
@@ -122,7 +131,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               {results.map((product) => (
                 <Link
                   key={product.id}
-                  to={`/shop?category=${product.category}`}
+                  to={shopResultHref(product)}
                   onClick={onClose}
                   className="group block text-charcoal decoration-transparent"
                 >

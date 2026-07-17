@@ -92,22 +92,29 @@ describe('Home editorial experience', () => {
     expect(within(note).getByLabelText(/email address/i)).toBeInTheDocument()
   })
 
-  it('uses structured grids for categories and product compositions', () => {
+  it('uses the approved collection gallery and product composition grid', () => {
     const { container } = renderHome()
 
-    const categories = container.querySelector(
-      '[data-layout="home-categories"]',
-    )
+    const categories = container.querySelector('#home-categories')
+    const categoryGrid = categories?.querySelector(':scope > .grid')
     const compositions = container.querySelector(
       '[data-layout="home-compositions"]',
     )
 
-    expect(categories).toHaveClass('lg:grid-cols-12')
+    expect(categoryGrid).toHaveClass('grid-cols-2', 'lg:grid-cols-4')
     expect(compositions).toHaveClass('md:grid-cols-12')
-    expect(screen.getByText(/Serums, creams, and cleansers/i)).toBeInTheDocument()
-    expect(screen.getByText(/Nourishing textures for after the bath/i)).toBeInTheDocument()
-    expect(screen.getByText(/Daily protection that disappears/i)).toBeInTheDocument()
-    expect(screen.getByText(/Quiet scents for skin and linen/i)).toBeInTheDocument()
+    expect(within(categories as HTMLElement).getByRole('link', { name: /Skincare/i })).toHaveAttribute(
+      'href',
+      '/shop?category=skin',
+    )
+    expect(within(categories as HTMLElement).getByRole('link', { name: /Bodycare/i })).toHaveAttribute(
+      'href',
+      '/shop?category=body',
+    )
+    expect(within(categories as HTMLElement).getByRole('link', { name: /Suncare/i })).toHaveAttribute(
+      'href',
+      '/shop?category=sun',
+    )
   })
 
   it('marks editorial passages for progressive motion', () => {

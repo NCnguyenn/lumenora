@@ -45,8 +45,9 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     const filtered = products.filter((p) => {
       return (
         p.name.toLowerCase().includes(q) ||
+        p.brand.toLowerCase().includes(q) ||
         p.category.toLowerCase().includes(q) ||
-        p.description.toLowerCase().includes(q)
+        p.id.toLowerCase().includes(q)
       );
     });
     setResults(filtered);

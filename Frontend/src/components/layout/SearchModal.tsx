@@ -55,6 +55,14 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   if (!isOpen) return null;
 
+  const shopResultHref = (product: Product) => {
+    const params = new URLSearchParams();
+    const normalizedQuery = query.trim();
+    if (normalizedQuery) params.set('q', normalizedQuery);
+    params.set('category', product.category);
+    return `/shop?${params.toString()}`;
+  };
+
   return (
     <div
       className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-ivory/95 p-6 backdrop-blur-md md:p-12"
@@ -123,7 +131,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               {results.map((product) => (
                 <Link
                   key={product.id}
-                  to={`/shop?category=${product.category}`}
+                  to={shopResultHref(product)}
                   onClick={onClose}
                   className="group block text-charcoal decoration-transparent"
                 >

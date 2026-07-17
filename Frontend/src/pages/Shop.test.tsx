@@ -50,6 +50,22 @@ describe('Shop All editorial marketplace', () => {
     expect(screen.getAllByRole('article')).toHaveLength(2)
   })
 
+  it('discards a draft category when filters close without applying', () => {
+    renderShop()
+
+    fireEvent.click(screen.getByRole('button', { name: 'Open filters' }))
+    fireEvent.change(screen.getByRole('combobox', { name: 'Category' }), {
+      target: { value: 'body' },
+    })
+    fireEvent.click(screen.getByRole('button', { name: 'Close filters' }))
+
+    expect(screen.getByRole('tab', { name: 'All' })).toHaveAttribute(
+      'aria-selected',
+      'true',
+    )
+    expect(screen.getAllByRole('article')).toHaveLength(14)
+  })
+
   it('changes category and sort through URL-backed controls', () => {
     renderShop('/shop?category=skin')
 
@@ -80,5 +96,14 @@ describe('Shop All editorial marketplace', () => {
         name: /Remove .* from wishlist/i,
       }),
     ).toBeInTheDocument()
+  })
+
+  it('clears a no-result search from the empty state', () => {
+    renderShop('/shop?q=not-a-real-product')
+
+    expect(screen.getByText('No products match your filters.')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: 'Clear filters' }))
+
+    expect(screen.getAllByRole('article')).toHaveLength(14)
   })
 })

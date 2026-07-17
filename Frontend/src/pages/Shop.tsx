@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { SlidersHorizontal, X } from 'lucide-react';
 import { products, type ProductCategory } from '../data/products';
@@ -27,18 +27,25 @@ const sortOptions = [
   { value: 'price-high', label: 'Price: high to low' },
 ];
 
+const brandOptions = [...new Set(products.map((product) => product.brand))].sort();
+
 function parsePriceParam(value: string | null) {
   if (!value) return '';
   const parsed = Number(value);
-  return Number.isFinite(parsed) && parsed > 0 ? String(parsed) : '';
+  const normalized = Number.isFinite(parsed) && parsed > 0 ? String(parsed) : '';
+  return priceOptions.some((option) => option.value === normalized) ? normalized : '';
 }
 
 export function Shop() {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get('category');
   const queryParam = searchParams.get('q') ?? '';
-  const sortParam = searchParams.get('sort') ?? 'featured';
-  const brandParam = searchParams.get('brand') ?? '';
+  const rawSortParam = searchParams.get('sort') ?? 'featured';
+  const sortParam = sortOptions.some((option) => option.value === rawSortParam)
+    ? rawSortParam
+    : 'featured';
+  const rawBrandParam = searchParams.get('brand') ?? '';
+  const brandParam = brandOptions.includes(rawBrandParam) ? rawBrandParam : '';
   const priceParam = parsePriceParam(searchParams.get('maxPrice'));
 
   const initialTab: 'all' | ProductCategory =
@@ -50,15 +57,19 @@ export function Shop() {
       : 'all';
 
   const [activeTab, setActiveTab] = useState<'all' | ProductCategory>(initialTab);
+  const [draftCategory, setDraftCategory] = useState<'all' | ProductCategory>(initialTab);
   const [query, setQuery] = useState(queryParam);
   const [brandFilter, setBrandFilter] = useState(brandParam);
   const [priceMax, setPriceMax] = useState(priceParam);
   const [draftBrand, setDraftBrand] = useState(brandParam);
   const [draftPriceMax, setDraftPriceMax] = useState(priceParam);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const filterButtonRef = useRef<HTMLButtonElement>(null);
+  const filterHeadingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     setActiveTab(initialTab);
+    setDraftCategory(initialTab);
     setQuery(queryParam);
     setBrandFilter(brandParam);
     setPriceMax(priceParam);
@@ -66,10 +77,9 @@ export function Shop() {
     setDraftPriceMax(priceParam);
   }, [brandParam, initialTab, priceParam, queryParam]);
 
-  const brandOptions = useMemo(
-    () => [...new Set(products.map((product) => product.brand))].sort(),
-    [],
-  );
+  useEffect(() => {
+    if (isFilterOpen) filterHeadingRef.current?.focus();
+  }, [isFilterOpen]);
 
   const filteredProducts = useMemo(() => {
     let list = activeTab === 'all'
@@ -122,10 +132,24 @@ export function Shop() {
   };
 
   const applyFilters = () => {
+    setActiveTab(draftCategory);
     setBrandFilter(draftBrand);
     setPriceMax(draftPriceMax);
-    updateParams({ brand: draftBrand || null, maxPrice: draftPriceMax || null });
+    updateParams({
+      category: draftCategory === 'all' ? null : draftCategory,
+      brand: draftBrand || null,
+      maxPrice: draftPriceMax || null,
+    });
     setIsFilterOpen(false);
+    queueMicrotask(() => filterButtonRef.current?.focus());
+  };
+
+  const closeFilters = () => {
+    setDraftCategory(activeTab);
+    setDraftBrand(brandFilter);
+    setDraftPriceMax(priceMax);
+    setIsFilterOpen(false);
+    queueMicrotask(() => filterButtonRef.current?.focus());
   };
 
   const clearFilters = () => {
@@ -133,7 +157,9 @@ export function Shop() {
     setPriceMax('');
     setDraftBrand('');
     setDraftPriceMax('');
-    updateParams({ category: null, brand: null, maxPrice: null });
+    setDraftCategory('all');
+    setQuery('');
+    updateParams({ category: null, brand: null, maxPrice: null, q: null });
     setActiveTab('all');
   };
 
@@ -222,6 +248,7 @@ export function Shop() {
 
           <div className="flex min-h-12 shrink-0 items-center gap-3 text-[10px] font-medium uppercase tracking-folio text-charcoal/70">
             <button
+              ref={filterButtonRef}
               type="button"
               aria-expanded={isFilterOpen}
               aria-controls="shop-filters"
@@ -229,6 +256,7 @@ export function Shop() {
               onClick={() => {
                 setDraftBrand(brandFilter);
                 setDraftPriceMax(priceMax);
+                setDraftCategory(activeTab);
                 setIsFilterOpen((open) => !open);
               }}
               className="inline-flex min-h-11 items-center gap-2 border border-charcoal/60 px-4 text-charcoal transition-colors hover:border-charcoal hover:bg-charcoal hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
@@ -263,16 +291,23 @@ export function Shop() {
           id="shop-filters"
           role="dialog"
           aria-modal="false"
-          aria-label="Product filters"
+          aria-labelledby="shop-filter-title"
           className="border-b border-charcoal/15 bg-parchment"
         >
           <div className="mx-auto max-w-editorial px-5 py-6 sm:px-6 md:px-10 lg:px-14">
             <div className="flex items-center justify-between gap-4">
-              <h2 className="font-serif text-2xl text-charcoal">Filter the selection</h2>
+              <h2
+                ref={filterHeadingRef}
+                id="shop-filter-title"
+                tabIndex={-1}
+                className="font-serif text-2xl text-charcoal outline-none"
+              >
+                Product filters
+              </h2>
               <button
                 type="button"
                 aria-label="Close filters"
-                onClick={() => setIsFilterOpen(false)}
+                onClick={closeFilters}
                 className="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors hover:text-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
               >
                 <X className="h-4 w-4" aria-hidden />
@@ -283,8 +318,8 @@ export function Shop() {
                 Category
                 <select
                   aria-label="Category"
-                  value={activeTab}
-                  onChange={(event) => selectTab(event.target.value as 'all' | ProductCategory)}
+                  value={draftCategory}
+                  onChange={(event) => setDraftCategory(event.target.value as 'all' | ProductCategory)}
                   className="min-h-12 border-b border-charcoal/30 bg-transparent text-sm normal-case tracking-normal text-charcoal outline-none focus:border-charcoal"
                 >
                   {tabs.map((tab) => <option key={tab.id} value={tab.id}>{tab.label}</option>)}

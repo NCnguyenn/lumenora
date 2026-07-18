@@ -53,6 +53,7 @@ describe('Home editorial experience', () => {
       const href = link.getAttribute('href') ?? ''
       expect(
         href.startsWith('/shop') ||
+          href.startsWith('/products/') ||
           href.startsWith('/blog') ||
           href.startsWith('/quiz') ||
           href.startsWith('/wishlist') ||

@@ -21,7 +21,7 @@ describe('SearchModal', () => {
 
     expect(
       screen.getByRole('link', {
-        name: /Advanced Snail Mucin 96% Power Repairing Essence Serum/i,
+        name: /Advanced Snail 96 Mucin Power Essence/i,
       }),
     ).toHaveAttribute('href', '/shop?q=COSRX&category=skin')
   })

@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, ShoppingBag } from 'lucide-react';
+import { Heart, ShoppingBag, Star } from 'lucide-react';
 import type { Product } from '../../data/products';
-import { categoryLabel, formatPrice } from '../../data/products';
+import { formatPrice } from '../../data/products';
+import { getHoverImage, getPrimaryImage } from '../../data/productSelectors';
 import { useAppStore } from '../../store/useAppStore';
 import { cn } from '../../lib/utils';
 
@@ -11,8 +13,20 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, className }: ProductCardProps) {
+  const [hoverImageFailed, setHoverImageFailed] = useState(false);
   const { wishlist, toggleWishlist, addToCart } = useAppStore();
   const isWishlisted = wishlist.includes(product.id);
+  const primaryImage = getPrimaryImage(product);
+  const hoverImage = getHoverImage(product);
+  const canHoverSwap = Boolean(hoverImage) && !hoverImageFailed;
+  const defaultVariant =
+    product.variants.find((variant) => variant.id === product.defaultVariantId) ??
+    product.variants[0];
+  const badge = (['bestseller', 'new', 'limited'] as const).find((candidate) =>
+    product.badges.includes(candidate),
+  );
+
+  if (!primaryImage) return null;
 
   return (
     <article
@@ -21,10 +35,14 @@ export function ProductCard({ product, className }: ProductCardProps) {
         className
       )}
     >
-      <div className="relative aspect-square overflow-hidden bg-parchment">
-        {(product.isNew || product.isBestSeller) && (
+      <div className="group/image relative aspect-square overflow-hidden bg-parchment">
+        {badge && (
           <span className="absolute left-3 top-3 z-10 bg-ivory/95 px-2 py-1 text-[9px] font-medium uppercase tracking-folio text-brass">
-            {product.isBestSeller ? 'Bestseller' : 'New'}
+            {badge === 'bestseller'
+              ? 'Bestseller'
+              : badge === 'limited'
+                ? 'Limited'
+                : 'New'}
           </span>
         )}
         <button
@@ -44,18 +62,35 @@ export function ProductCard({ product, className }: ProductCardProps) {
           />
         </button>
         <Link
-          to={`/shop?category=${product.category}`}
+          to={`/products/${product.slug}`}
           className="block h-full w-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-charcoal"
         >
           <img
-            src={product.image}
-            alt={`${product.brand} — ${product.name}`}
-            width={800}
-            height={800}
+            src={primaryImage.src}
+            alt={primaryImage.alt}
+            width={primaryImage.width}
+            height={primaryImage.height}
             loading="lazy"
             decoding="async"
-            className="editorial-image h-full w-full object-cover"
+            className={cn(
+              'editorial-image absolute inset-0 h-full w-full object-cover transition-opacity duration-300 motion-reduce:transition-none',
+              canHoverSwap &&
+                '[@media(hover:hover)]:group-hover/image:opacity-0',
+            )}
           />
+          {hoverImage && canHoverSwap && (
+            <img
+              src={hoverImage.src}
+              alt=""
+              aria-hidden="true"
+              width={hoverImage.width}
+              height={hoverImage.height}
+              loading="lazy"
+              decoding="async"
+              onError={() => setHoverImageFailed(true)}
+              className="editorial-image absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 motion-reduce:transition-none [@media(hover:hover)]:group-hover/image:opacity-100"
+            />
+          )}
         </Link>
       </div>
 
@@ -64,14 +99,40 @@ export function ProductCard({ product, className }: ProductCardProps) {
           {product.brand}
         </p>
         <Link
-          to={`/shop?category=${product.category}`}
+          to={`/products/${product.slug}`}
           className="font-serif text-[15px] leading-snug text-charcoal transition-colors hover:text-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal line-clamp-2"
         >
           {product.name}
         </Link>
         <p className="text-[11px] leading-relaxed text-charcoal/60">
-          {categoryLabel(product.category)}
+          {product.productType}
         </p>
+        <div
+          className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11px] text-charcoal/65"
+          role="img"
+          aria-label={`Rated ${product.rating.value.toFixed(1)} out of 5 from ${product.rating.count} reviews`}
+        >
+          <span className="flex items-center gap-0.5 text-brass" aria-hidden="true">
+            {Array.from({ length: 5 }, (_, index) => (
+              <Star
+                key={index}
+                className={cn(
+                  'h-3 w-3',
+                  index < Math.round(product.rating.value)
+                    ? 'fill-current'
+                    : 'text-brass/30',
+                )}
+              />
+            ))}
+          </span>
+          <span className="font-medium tabular-nums text-charcoal">
+            {product.rating.value.toFixed(1)}
+          </span>
+          <span>({product.rating.count} reviews)</span>
+        </div>
+        {defaultVariant?.size && (
+          <p className="text-[11px] text-charcoal/55">{defaultVariant.size}</p>
+        )}
         <div className="mt-auto flex flex-col gap-3 pt-3">
           <p className="text-sm font-medium tabular-nums text-charcoal">
             {formatPrice(product.price)}

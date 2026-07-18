@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Heart, Minus, Plus, ShoppingBag, Star } from 'lucide-react'
+import { Heart, Minus, Plus, ShoppingBag, Star, Truck } from 'lucide-react'
 import type { Product } from '../../data/products'
 import { formatPrice } from '../../data/productSelectors'
 import { cn } from '../../lib/utils'
@@ -73,19 +73,11 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
   }, [showSticky])
 
   return (
-    <section aria-labelledby="product-title" className="lg:sticky lg:top-24">
+    <section aria-labelledby="product-title">
       <div className="flex flex-wrap items-center gap-2">
         <p className="text-[10px] font-medium uppercase tracking-folio text-brass">
           {product.brand}
         </p>
-        {product.badges.map((badge) => (
-          <span
-            key={badge}
-            className="border border-charcoal/15 px-2 py-1 text-[9px] font-medium uppercase tracking-folio text-charcoal/65"
-          >
-            {badgeLabels[badge]}
-          </span>
-        ))}
       </div>
 
       <h1
@@ -122,126 +114,154 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
         <span>({product.rating.count} reviews)</span>
       </div>
 
-      <p
-        data-product-price
-        className="mt-6 text-xl font-medium tabular-nums text-charcoal"
-      >
-        {formatPrice(selectedVariant?.price ?? product.price)}
-      </p>
-
-      <div className="mt-6 border-y border-charcoal/10 py-5">
-        {product.variants.length > 1 ? (
-          <fieldset>
-            <legend className="text-[10px] font-medium uppercase tracking-folio text-charcoal/65">
-              Select size
-            </legend>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {product.variants.map((variant) => (
-                <label
-                  key={variant.id}
-                  className={cn(
-                    'cursor-pointer border px-4 py-3 text-xs transition-colors focus-within:ring-2 focus-within:ring-oxblood focus-within:ring-offset-2 focus-within:ring-offset-ivory',
-                    selectedVariantId === variant.id
-                      ? 'border-charcoal bg-charcoal text-ivory'
-                      : 'border-charcoal/20 text-charcoal',
-                    !variant.inStock && 'cursor-not-allowed opacity-45',
-                  )}
-                >
-                  <input
-                    type="radio"
-                    name={`${product.id}-variant`}
-                    value={variant.id}
-                    checked={selectedVariantId === variant.id}
-                    disabled={!variant.inStock}
-                    onChange={() => setSelectedVariantId(variant.id)}
-                    aria-label={`${variant.size} — ${formatPrice(variant.price)}`}
-                    className="sr-only"
-                  />
-                  <span>{variant.size}</span>
-                  <span className="ml-2 opacity-70">{formatPrice(variant.price)}</span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
-        ) : (
-          <div className="flex items-center justify-between gap-4 text-sm">
-            <span className="text-charcoal/60">Size</span>
-            <span className="font-medium text-charcoal">
-              {selectedVariant?.size ?? 'Unavailable'}
-            </span>
-          </div>
-        )}
-        <p className="mt-3 text-[10px] font-medium uppercase tracking-wider text-olive">
-          {selectedVariant?.inStock ? 'In stock' : 'Out of stock'}
+      <div className="mt-6 flex flex-wrap items-center gap-3">
+        <p
+          data-product-price
+          className="text-xl font-medium tabular-nums text-charcoal"
+        >
+          {formatPrice(selectedVariant?.price ?? product.price)}
         </p>
+        {product.badges.map((badge) => (
+          <span
+            key={badge}
+            className="bg-[#B6935E] px-2 py-1 flex items-center gap-1 text-[9px] font-medium uppercase tracking-folio text-white"
+          >
+            <Star className="h-2.5 w-2.5 fill-current" />
+            {badgeLabels[badge]}
+          </span>
+        ))}
       </div>
 
-      <p className="mt-6 text-sm leading-relaxed text-charcoal/75">
-        {product.shortDescription}
+      {product.relatedTags && product.relatedTags.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {product.relatedTags.slice(0, 3).map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-charcoal/20 px-3 py-1 text-[10px] font-medium capitalize text-charcoal/75"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      <div className="mt-6 border-t border-charcoal/10 pt-5 flex flex-col gap-6">
+        <div className="flex flex-row items-end justify-between gap-6">
+          {product.variants.length > 1 ? (
+            <fieldset>
+              <legend className="mb-3 text-[10px] font-medium uppercase tracking-folio text-charcoal/65">
+                SIZE
+              </legend>
+              <div className="flex flex-wrap gap-2">
+                {product.variants.map((variant) => (
+                  <label
+                    key={variant.id}
+                    className={cn(
+                      'cursor-pointer border px-4 py-3 text-xs transition-colors focus-within:ring-2 focus-within:ring-oxblood focus-within:ring-offset-2 focus-within:ring-offset-ivory',
+                      selectedVariantId === variant.id
+                        ? 'border-charcoal bg-charcoal text-ivory'
+                        : 'border-charcoal/20 text-charcoal',
+                      !variant.inStock && 'cursor-not-allowed opacity-45',
+                    )}
+                  >
+                    <input
+                      type="radio"
+                      name={`${product.id}-variant`}
+                      value={variant.id}
+                      checked={selectedVariantId === variant.id}
+                      disabled={!variant.inStock}
+                      onChange={() => setSelectedVariantId(variant.id)}
+                      aria-label={`${variant.size} — ${formatPrice(variant.price)}`}
+                      className="sr-only"
+                    />
+                    <span>{variant.size}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          ) : (
+            <div className="flex flex-col gap-3">
+              <span className="text-[10px] font-medium uppercase tracking-folio text-charcoal/65">SIZE</span>
+              <div className="border border-charcoal text-charcoal px-4 py-3 text-xs font-medium inline-block w-fit">
+                {selectedVariant?.size ?? 'Unavailable'}
+              </div>
+            </div>
+          )}
+
+          <div>
+            <p className="mb-3 text-[10px] font-medium uppercase tracking-folio text-charcoal/65 lg:text-left text-right">
+              <span className="hidden lg:inline">QUANTITY</span>
+              <span className="inline lg:hidden">QTY</span>
+            </p>
+            <div className="flex min-h-12 w-fit items-center border border-charcoal/20">
+              <button
+                type="button"
+                onClick={() => setQuantity((current) => Math.max(1, current - 1))}
+                disabled={quantity === 1}
+                aria-label="Decrease quantity"
+                className="inline-flex h-12 w-12 items-center justify-center text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal disabled:opacity-35"
+              >
+                <Minus className="h-4 w-4" aria-hidden="true" />
+              </button>
+              <output
+                aria-label="Quantity"
+                className="w-9 text-center text-sm font-medium tabular-nums"
+              >
+                {quantity}
+              </output>
+              <button
+                type="button"
+                onClick={() => setQuantity((current) => Math.min(10, current + 1))}
+                disabled={quantity === 10}
+                aria-label="Increase quantity"
+                className="inline-flex h-12 w-12 items-center justify-center text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal disabled:opacity-35"
+              >
+                <Plus className="h-4 w-4" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p className="mt-3 text-[10px] font-medium uppercase tracking-wider text-olive hidden">
+        {selectedVariant?.inStock ? 'In stock' : 'Out of stock'}
       </p>
 
       {/* Sentinel sits with primary ATC so sticky appears after buy box leaves view */}
       <div ref={sentinelRef} className="h-px w-full" aria-hidden="true" />
 
-      <div className="mt-7 flex items-stretch gap-3">
-        <div className="flex min-h-12 items-center border border-charcoal/20">
-          <button
-            type="button"
-            onClick={() => setQuantity((current) => Math.max(1, current - 1))}
-            disabled={quantity === 1}
-            aria-label="Decrease quantity"
-            className="inline-flex h-12 w-12 items-center justify-center text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal disabled:opacity-35"
-          >
-            <Minus className="h-4 w-4" aria-hidden="true" />
-          </button>
-          <output
-            aria-label="Quantity"
-            className="w-9 text-center text-sm font-medium tabular-nums"
-          >
-            {quantity}
-          </output>
-          <button
-            type="button"
-            onClick={() => setQuantity((current) => Math.min(10, current + 1))}
-            disabled={quantity === 10}
-            aria-label="Increase quantity"
-            className="inline-flex h-12 w-12 items-center justify-center text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal disabled:opacity-35"
-          >
-            <Plus className="h-4 w-4" aria-hidden="true" />
-          </button>
-        </div>
+      <div className="mt-7 flex flex-col gap-3">
         <button
           type="button"
           onClick={handleAddToCart}
           disabled={!canAddToCart}
           aria-label={compactAddLabel}
-          className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 bg-charcoal px-5 text-[10px] font-medium uppercase tracking-folio text-ivory transition-colors hover:bg-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal disabled:pointer-events-none disabled:opacity-45"
+          className="inline-flex min-h-12 w-full items-center justify-center gap-2 bg-charcoal px-5 text-[10px] font-medium uppercase tracking-folio text-ivory transition-colors hover:bg-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal disabled:pointer-events-none disabled:opacity-45"
         >
-          <ShoppingBag className="h-4 w-4" aria-hidden="true" />
-          Add to cart
+          ADD TO CART
+        </button>
+
+        <button
+          type="button"
+          onClick={() => toggleWishlist(product.id)}
+          aria-label={
+            isWishlisted
+              ? `Remove ${product.name} from wishlist`
+              : `Add ${product.name} to wishlist`
+          }
+          aria-pressed={isWishlisted}
+          className="inline-flex min-h-12 w-full items-center justify-center gap-2 border border-charcoal/20 px-5 text-[10px] font-medium uppercase tracking-folio text-charcoal transition-colors hover:border-charcoal hover:bg-charcoal/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+        >
+          <Heart
+            className={cn(
+              'h-4 w-4',
+              isWishlisted && 'fill-oxblood text-oxblood',
+            )}
+            aria-hidden="true"
+          />
+          {isWishlisted ? 'SAVED TO WISHLIST' : 'ADD TO WISHLIST'}
         </button>
       </div>
-
-      <button
-        type="button"
-        onClick={() => toggleWishlist(product.id)}
-        aria-label={
-          isWishlisted
-            ? `Remove ${product.name} from wishlist`
-            : `Add ${product.name} to wishlist`
-        }
-        aria-pressed={isWishlisted}
-        className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 border border-charcoal/20 px-5 text-[10px] font-medium uppercase tracking-folio text-charcoal transition-colors hover:border-oxblood hover:text-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
-      >
-        <Heart
-          className={cn(
-            'h-4 w-4',
-            isWishlisted && 'fill-oxblood text-oxblood',
-          )}
-          aria-hidden="true"
-        />
-        {isWishlisted ? 'Saved to wishlist' : 'Add to wishlist'}
-      </button>
 
       <p
         role="status"
@@ -255,9 +275,11 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
       >
         {cartNotice.message}
       </p>
-      <p className="mt-4 border-t border-charcoal/10 pt-4 text-xs leading-relaxed text-charcoal/60">
-        {product.shippingNote}
-      </p>
+      
+      <div className="mt-4 flex items-center gap-2 border-t border-charcoal/10 pt-4 text-[10px] font-medium uppercase tracking-folio text-olive">
+        <Truck className="h-4 w-4" aria-hidden="true" />
+        <span>Free shipping over $50</span>
+      </div>
 
       {/* Sticky Mobile ATC — hidden on lg+ (desktop uses sticky info column) */}
       <div

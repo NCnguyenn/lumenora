@@ -45,6 +45,10 @@ describe('ProductDetail', () => {
     expect(breadcrumb).toHaveTextContent('Skincare')
     expect(screen.getAllByRole('button', { name: /^View image/ })).toHaveLength(3)
     expect(screen.getByRole('button', { name: 'Add 1 to cart' })).toBeInTheDocument()
+    const highlights = screen.getByRole('region', { name: 'Product highlights' })
+    expect(within(highlights).getByText('Why it works')).toBeInTheDocument()
+    expect(within(highlights).getByText('How to use')).toBeInTheDocument()
+    expect(within(highlights).getByText('Ingredients')).toBeInTheDocument()
     expect(screen.getByRole('region', { name: 'Product details' })).toBeInTheDocument()
   })
 

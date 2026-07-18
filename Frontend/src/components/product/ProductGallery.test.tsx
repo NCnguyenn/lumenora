@@ -11,7 +11,9 @@ afterEach(() => {
 
 describe('ProductGallery', () => {
   it('renders three scenes and lets visitors select the active image', () => {
-    render(<ProductGallery product={product} />)
+    const { container } = render(<ProductGallery product={product} />)
+
+    expect(container.querySelector('[data-gallery-layout="mosaic"]')).toBeInTheDocument()
 
     expect(
       screen.getByRole('img', { name: product.images[0].alt }),

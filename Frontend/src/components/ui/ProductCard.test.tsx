@@ -84,7 +84,8 @@ describe('ProductCard', () => {
       screen.getByRole('button', { name: `Add ${product.name} to cart` }),
     )
     expect(useAppStore.getState().cart[0]).toMatchObject({
-      id: product.id,
+      productId: product.id,
+      variantId: product.defaultVariantId,
       quantity: 1,
     })
   })

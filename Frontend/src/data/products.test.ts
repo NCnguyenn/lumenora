@@ -80,6 +80,23 @@ describe('Product Selectors', () => {
       const similar = getSimilarProducts(p1, 4);
       expect(similar.length).toBe(4);
       expect(similar.find(p => p.id === p1.id)).toBeUndefined();
+      // relatedIds for p1 seed the list when present
+      if (p1.relatedIds?.length) {
+        expect(similar[0].id).toBe(p1.relatedIds[0]);
+      }
+    }
+  });
+
+  it('getSimilarProducts respects excludeIds', () => {
+    const p1 = getProductById('p1');
+    expect(p1).toBeDefined();
+    if (!p1) return;
+    const firstPass = getSimilarProducts(p1, 4);
+    const blocked = firstPass.map((p) => p.id);
+    const second = getSimilarProducts(p1, 4, blocked);
+    for (const item of second) {
+      expect(blocked).not.toContain(item.id);
+      expect(item.id).not.toBe(p1.id);
     }
   });
 
@@ -88,9 +105,41 @@ describe('Product Selectors', () => {
     expect(p1).toBeDefined();
     if (p1) {
       const routine = getRoutinePairings(p1, 4);
-      // P1 is Toner (step 2), should pair with Cleanse (step 1) or Treat (step 3)
+      // P1 is Toner — should pair with Cleanse / Treat / other ritual partners
       expect(routine.length).toBeGreaterThan(0);
       expect(routine.find(p => p.id === p1.id)).toBeUndefined();
     }
+  });
+
+  it('getRoutinePairings excludes ids already used on the similar rail', () => {
+    const p1 = getProductById('p1');
+    expect(p1).toBeDefined();
+    if (!p1) return;
+    const similar = getSimilarProducts(p1, 4);
+    const routine = getRoutinePairings(p1, 4, similar.map((p) => p.id));
+    for (const item of routine) {
+      expect(similar.map((s) => s.id)).not.toContain(item.id);
+      expect(item.id).not.toBe(p1.id);
+    }
+  });
+
+  it('getRoutinePairings prefers not stacking SPF with another SPF for sun products', () => {
+    const spf = getProductById('p11');
+    expect(spf).toBeDefined();
+    if (!spf) return;
+    const routine = getRoutinePairings(spf, 4);
+    const isSpfProtector = (p: { productType: string; category: string; routineStep: string }) => {
+      const type = p.productType.toLowerCase();
+      if (type.includes('after-sun') || type.includes('after sun')) return false;
+      return (
+        type.includes('sunscreen') ||
+        type.includes('sun milk') ||
+        type.includes('sun stick') ||
+        type.includes('spf') ||
+        (p.category === 'sun' && p.routineStep === 'Protect')
+      );
+    };
+    const sunscreenCount = routine.filter(isSpfProtector).length;
+    expect(sunscreenCount).toBeLessThanOrEqual(1);
   });
 });

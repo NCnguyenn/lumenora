@@ -6,6 +6,7 @@ import { Quiz } from './pages/Quiz';
 import { Cart } from './pages/Cart';
 import { Wishlist } from './pages/Wishlist';
 import { Blog } from './pages/Blog';
+import { ProductDetail } from './pages/ProductDetail';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="cart" element={<Cart />} />
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="products/:slug" element={<ProductDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

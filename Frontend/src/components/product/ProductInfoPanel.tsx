@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Heart, Minus, Plus, ShoppingBag, Star } from 'lucide-react'
 import type { Product } from '../../data/products'
 import { formatPrice } from '../../data/productSelectors'
@@ -24,6 +24,8 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
   )
   const [quantity, setQuantity] = useState(1)
   const [cartNotice, setCartNotice] = useState({ message: '', sequence: 0 })
+  const [showSticky, setShowSticky] = useState(false)
+  const sentinelRef = useRef<HTMLDivElement>(null)
   const { wishlist, toggleWishlist, addToCart } = useAppStore()
   const selectedVariant = product.variants.find(
     (variant) => variant.id === selectedVariantId,
@@ -40,6 +42,21 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
       sequence: current.sequence + 1,
     }))
   }
+
+  useEffect(() => {
+    const el = sentinelRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowSticky(!entry.isIntersecting && entry.boundingClientRect.top < 0)
+      },
+      { threshold: 0 }
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <section aria-labelledby="product-title" className="lg:sticky lg:top-24">
@@ -224,6 +241,37 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
       <p className="mt-4 border-t border-charcoal/10 pt-4 text-xs leading-relaxed text-charcoal/60">
         {product.shippingNote}
       </p>
+
+      {/* Sentinel for sticky ATC */}
+      <div ref={sentinelRef} className="h-px w-full" aria-hidden="true" />
+
+      {/* Sticky Mobile ATC */}
+      <div
+        className={cn(
+          'fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between border-t border-charcoal/15 bg-ivory p-4 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] transition-transform duration-300 ease-in-out lg:hidden motion-reduce:transition-none',
+          showSticky ? 'translate-y-0' : 'translate-y-full'
+        )}
+        aria-hidden={!showSticky}
+      >
+        <div className="flex flex-col">
+          <span className="text-[10px] font-medium uppercase tracking-folio text-charcoal/70">
+            {selectedVariant?.size ?? 'Size'}
+          </span>
+          <span className="font-medium tabular-nums text-charcoal">
+            {formatPrice(selectedVariant?.price ?? product.price)}
+          </span>
+        </div>
+        <button
+          type="button"
+          onClick={handleAddToCart}
+          disabled={!canAddToCart}
+          tabIndex={showSticky ? 0 : -1}
+          className="inline-flex min-h-11 items-center justify-center gap-2 bg-charcoal px-6 text-[10px] font-medium uppercase tracking-folio text-ivory transition-colors hover:bg-oxblood disabled:pointer-events-none disabled:opacity-45"
+        >
+          <ShoppingBag className="h-4 w-4" aria-hidden="true" />
+          Add to cart
+        </button>
+      </div>
     </section>
   )
 }

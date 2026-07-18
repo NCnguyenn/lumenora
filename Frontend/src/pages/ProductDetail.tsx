@@ -45,6 +45,10 @@ export function ProductDetail() {
 
   return (
     <article className="bg-ivory text-charcoal">
+      <title>{product.name} | Lumenora</title>
+      <meta name="description" content={product.shortDescription} />
+      <link rel="canonical" href={`/products/${product.slug}`} />
+
       <div className="mx-auto max-w-editorial px-5 pb-20 pt-6 sm:px-6 md:px-10 lg:px-14 lg:pb-28">
         <nav
           aria-label="Breadcrumb"

@@ -22,8 +22,8 @@ describe('ProductInfoPanel', () => {
 
     expect(screen.getByRole('heading', { name: product.name })).toBeInTheDocument()
     expect(screen.getByText(product.subtitle)).toBeInTheDocument()
-    expect(screen.getByText('$45.00')).toBeInTheDocument()
-    expect(screen.getByText(product.variants[0].size)).toBeInTheDocument()
+    expect(screen.getAllByText('$45.00')[0]).toBeInTheDocument()
+    expect(screen.getAllByText(product.variants[0].size)[0]).toBeInTheDocument()
     expect(
       screen.getByLabelText('Rated 4.8 out of 5 from 310 reviews'),
     ).toBeInTheDocument()

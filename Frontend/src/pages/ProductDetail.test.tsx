@@ -1,4 +1,4 @@
-import { cleanup, render, screen, within } from '@testing-library/react'
+import { cleanup, render, screen, waitFor, within } from '@testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import App from '../App'
@@ -91,6 +91,31 @@ describe('ProductDetail', () => {
     expect(
       screen.queryByRole('region', { name: 'You May Also Like' }),
     ).not.toBeInTheDocument()
+  })
+
+  it('exposes SEO light metadata and Product JSON-LD for a valid slug', async () => {
+    const { container } = renderProductRoute(`/products/${product.slug}`)
+
+    await waitFor(() => {
+      expect(document.title).toBe(`${product.name} | Lumenora`)
+    })
+    const jsonLd = container.querySelector('script[type="application/ld+json"]')
+    expect(jsonLd).toBeTruthy()
+    const parsed = JSON.parse(jsonLd?.textContent ?? '{}') as {
+      '@type': string
+      name: string
+      offers: { price: string }
+    }
+    expect(parsed['@type']).toBe('Product')
+    expect(parsed.name).toBe(product.name)
+    expect(parsed.offers.price).toBe(product.price.toFixed(2))
+  })
+
+  it('sets not-found document title', async () => {
+    renderProductRoute('/products/not-a-real-product')
+    await waitFor(() => {
+      expect(document.title).toMatch(/Product Not Found/i)
+    })
   })
 
   it('registers the canonical product route in the application router', () => {

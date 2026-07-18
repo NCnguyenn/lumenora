@@ -145,4 +145,23 @@ describe('ProductInfoPanel', () => {
     expect(screen.getByText('Unavailable')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Add 1 to cart' })).toBeDisabled()
   })
+
+  it('keeps sticky mobile ATC labelled and out of the a11y tree when hidden', () => {
+    render(<ProductInfoPanel product={product} />)
+
+    const sticky = document.querySelector('[data-sticky-atc]')
+    expect(sticky).toBeTruthy()
+    expect(sticky).toHaveAttribute('data-visible', 'false')
+    expect(sticky).toHaveAttribute('aria-hidden', 'true')
+
+    // Primary ATC stays compact-labelled; sticky uses product-qualified label when queryable
+    expect(
+      screen.getByRole('button', { name: 'Add 1 to cart' }),
+    ).toBeInTheDocument()
+    expect(
+      screen.queryByRole('button', {
+        name: `Add 1 ${product.name} to cart`,
+      }),
+    ).not.toBeInTheDocument()
+  })
 })

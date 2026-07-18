@@ -44,4 +44,35 @@ describe('ProductGallery', () => {
       container.querySelector(`img[src="${product.images[2].src}"]`),
     ).toBeNull()
   })
+
+  it('opens a lightbox and closes it with Escape', () => {
+    render(<ProductGallery product={product} />)
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Open larger view: ${product.images[0].alt}`,
+      }),
+    )
+
+    expect(
+      screen.getByRole('dialog', { name: product.images[0].alt }),
+    ).toBeInTheDocument()
+
+    fireEvent.keyDown(window, { key: 'Escape' })
+
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+  })
+
+  it('closes the lightbox with the close control', () => {
+    render(<ProductGallery product={product} />)
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Open larger view: ${product.images[0].alt}`,
+      }),
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'Close larger image view' }))
+
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+  })
 })

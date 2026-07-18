@@ -27,7 +27,7 @@ export default {
         folio: '0.22em',
       },
       maxWidth: {
-        editorial: '1440px',
+        editorial: '1920px',
       },
     },
   },

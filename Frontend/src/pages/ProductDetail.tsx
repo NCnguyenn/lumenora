@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { ProductDetailsAccordion } from '../components/product/ProductDetailsAccordion'
 import { ProductGallery } from '../components/product/ProductGallery'
 import { ProductInfoPanel } from '../components/product/ProductInfoPanel'
+import { QuickInfoGrid } from '../components/product/QuickInfoGrid'
 import { RoutinePairings } from '../components/product/RoutinePairings'
 import { SimilarProducts } from '../components/product/SimilarProducts'
 import type { Product } from '../data/types'
@@ -127,6 +128,10 @@ export function ProductDetail() {
   const { slug } = useParams<{ slug: string }>()
   const product = slug ? getProductBySlug(slug) : undefined
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [slug])
+
   if (!product) {
     return <ProductNotFound />
   }
@@ -173,16 +178,17 @@ function ProductDetailContent({ product }: { product: Product }) {
           </span>
         </nav>
 
-        <div className="mt-7 grid gap-10 lg:grid-cols-12 lg:gap-14">
+        <div className="mt-7 grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <ProductGallery key={product.id} product={product} />
           </div>
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 flex flex-col lg:sticky lg:top-24">
             <ProductInfoPanel key={product.id} product={product} />
           </div>
         </div>
 
-        <div className="mt-16 max-w-4xl lg:mt-24">
+        <div className="mt-16 max-w-5xl mx-auto lg:mt-24 border border-charcoal/10 rounded-sm bg-ivory">
+          <QuickInfoGrid />
           <ProductDetailsAccordion product={product} brand={brand} />
         </div>
 

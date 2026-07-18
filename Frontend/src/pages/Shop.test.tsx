@@ -63,7 +63,7 @@ describe('Shop All editorial marketplace', () => {
       'aria-selected',
       'true',
     )
-    expect(screen.getAllByRole('article')).toHaveLength(14)
+    expect(screen.getAllByRole('article')).toHaveLength(20)
   })
 
   it('changes category and sort through URL-backed controls', () => {
@@ -104,6 +104,6 @@ describe('Shop All editorial marketplace', () => {
     expect(screen.getByText('No products match your filters.')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: 'Clear filters' }))
 
-    expect(screen.getAllByRole('article')).toHaveLength(14)
+    expect(screen.getAllByRole('article')).toHaveLength(20)
   })
 })

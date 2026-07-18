@@ -1,6 +1,7 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, describe, expect, it } from 'vitest'
+import { products } from '../../data/products'
 import { SearchModal } from './SearchModal'
 
 afterEach(() => {
@@ -8,10 +9,12 @@ afterEach(() => {
 })
 
 describe('SearchModal', () => {
-  it('preserves the typed query when linking to Shop results', () => {
+  it('links search results to the product PDP and closes on navigate', () => {
+    let closed = false
+
     render(
       <MemoryRouter>
-        <SearchModal isOpen onClose={() => undefined} />
+        <SearchModal isOpen onClose={() => { closed = true }} />
       </MemoryRouter>,
     )
 
@@ -19,10 +22,42 @@ describe('SearchModal', () => {
       target: { value: 'COSRX' },
     })
 
-    expect(
-      screen.getByRole('link', {
-        name: /Advanced Snail 96 Mucin Power Essence/i,
-      }),
-    ).toHaveAttribute('href', '/shop?q=COSRX&category=skin')
+    const snail = products.find((product) => product.id === 'p8')
+    expect(snail).toBeDefined()
+    if (!snail) return
+
+    const link = screen.getByRole('link', {
+      name: new RegExp(snail.name, 'i'),
+    })
+    expect(link).toHaveAttribute('href', `/products/${snail.slug}`)
+
+    fireEvent.click(link)
+    expect(closed).toBe(true)
+  })
+
+  it('does not advertise tags without matching SKUs', () => {
+    render(
+      <MemoryRouter>
+        <SearchModal isOpen onClose={() => undefined} />
+      </MemoryRouter>,
+    )
+
+    expect(screen.queryByRole('button', { name: 'Lip oil' })).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Serum' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Cleanser' })).toBeInTheDocument()
+  })
+
+  it('shows popular products with brand, name, and price when query is empty', () => {
+    render(
+      <MemoryRouter>
+        <SearchModal isOpen onClose={() => undefined} />
+      </MemoryRouter>,
+    )
+
+    expect(screen.getByText('Popular Products')).toBeInTheDocument()
+    const pdpLinks = screen
+      .getAllByRole('link')
+      .filter((link) => (link.getAttribute('href') ?? '').startsWith('/products/'))
+    expect(pdpLinks.length).toBeGreaterThan(0)
   })
 })

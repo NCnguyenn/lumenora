@@ -107,82 +107,276 @@ export function sortProducts(productsToSort: Product[], sort: string): Product[]
   return result;
 }
 
-export function getSimilarProducts(product: Product, limit: number = 4): Product[] {
+function uniqueById(items: Product[]): Product[] {
+  const seen = new Set<string>();
+  const unique: Product[] = [];
+  for (const item of items) {
+    if (seen.has(item.id)) continue;
+    seen.add(item.id);
+    unique.push(item);
+  }
+  return unique;
+}
+
+function resolveHardcodedIds(
+  ids: string[] | undefined,
+  selfId: string,
+  excludeIds: Set<string> = new Set(),
+): Product[] {
+  if (!ids?.length) return [];
+  return uniqueById(
+    ids
+      .map((id) => getProductById(id))
+      .filter((p): p is Product => p !== undefined && p.id !== selfId && !excludeIds.has(p.id)),
+  );
+}
+
+/** True for daily SPF protectors — not after-sun recovery gels. */
+function isSunscreenLike(product: Product): boolean {
+  const type = product.productType.toLowerCase();
+  if (type.includes('after-sun') || type.includes('after sun')) return false;
+  return (
+    type.includes('sunscreen') ||
+    type.includes('sun milk') ||
+    type.includes('sun stick') ||
+    type.includes('spf') ||
+    (product.category === 'sun' && product.routineStep === 'Protect')
+  );
+}
+
+export function getSimilarProducts(
+  product: Product,
+  limit: number = 4,
+  excludeIds: string[] = [],
+): Product[] {
+  const blocked = new Set(excludeIds);
+
   const scored = products
-    .filter((p) => p.id !== product.id)
+    .filter((p) => p.id !== product.id && !blocked.has(p.id))
     .map((p) => {
       let score = 0;
       if (p.productType === product.productType) score += 40;
       if (p.category === product.category) score += 25;
-      
-      const concernOverlap = p.concerns.filter(c => product.concerns.includes(c)).length;
+
+      const concernOverlap = p.concerns.filter((c) => product.concerns.includes(c)).length;
       score += concernOverlap * 10;
-      
-      const skinTypeOverlap = p.skinTypes.filter(s => product.skinTypes.includes(s)).length;
+
+      const skinTypeOverlap = p.skinTypes.filter((s) => product.skinTypes.includes(s)).length;
       score += skinTypeOverlap * 6;
-      
-      const pTags = [...p.relatedTags, ...p.keyIngredients.map(i => i.name.toLowerCase())];
-      const productTags = [...product.relatedTags, ...product.keyIngredients.map(i => i.name.toLowerCase())];
-      const tagOverlap = pTags.filter(t => productTags.includes(t)).length;
+
+      const pTags = [
+        ...p.relatedTags,
+        ...p.keyIngredients.map((i) => i.name.toLowerCase()),
+      ];
+      const productTags = [
+        ...product.relatedTags,
+        ...product.keyIngredients.map((i) => i.name.toLowerCase()),
+      ];
+      const tagOverlap = pTags.filter((t) => productTags.includes(t)).length;
       score += tagOverlap * 5;
-      
-      if (Math.abs(p.price - product.price) / product.price <= 0.25) score += 8;
-      
+
+      if (product.price > 0 && Math.abs(p.price - product.price) / product.price <= 0.25) {
+        score += 8;
+      }
+
       if (p.brandId === product.brandId) score += 4;
       if (p.badges.includes('bestseller')) score += 2;
-      
+
       return { p, score };
     });
 
-  scored.sort((a, b) => b.score - a.score || b.p.rating.value - a.p.rating.value || a.p.name.localeCompare(b.p.name));
-  
-  let results = scored.slice(0, limit).map((s) => s.p);
-  
-  if (product.relatedIds && product.relatedIds.length > 0) {
-    const hardcoded = product.relatedIds.map(id => getProductById(id)).filter(Boolean) as Product[];
-    results = [...hardcoded, ...results].slice(0, limit);
-    results = Array.from(new Set(results));
+  scored.sort(
+    (a, b) =>
+      b.score - a.score ||
+      b.p.rating.value - a.p.rating.value ||
+      a.p.name.localeCompare(b.p.name),
+  );
+
+  const scoredResults = scored.map((s) => s.p);
+  const hardcoded = resolveHardcodedIds(product.relatedIds, product.id, blocked);
+  let results = uniqueById([...hardcoded, ...scoredResults]).slice(0, limit);
+
+  // Fallback: same category → featured/bestsellers when scorer is thin
+  if (results.length < limit) {
+    const fallback = sortProducts(
+      products.filter(
+        (p) =>
+          p.id !== product.id &&
+          !blocked.has(p.id) &&
+          p.category === product.category &&
+          !results.some((r) => r.id === p.id),
+      ),
+      'bestsellers',
+    );
+    results = uniqueById([...results, ...fallback]).slice(0, limit);
   }
 
   return results;
 }
 
-const routineOrder = ['Cleanse', 'Tone', 'Treat', 'Moisturize', 'Protect', 'Body', 'Fragrance'];
+const routineOrder = [
+  'Cleanse',
+  'Tone',
+  'Treat',
+  'Moisturize',
+  'Protect',
+  'Body',
+  'Fragrance',
+] as const;
 
-export function getRoutinePairings(product: Product, limit: number = 4): Product[] {
-  let results: Product[] = [];
-  
-  if (product.pairsWithIds && product.pairsWithIds.length > 0) {
-    const hardcoded = product.pairsWithIds.map(id => getProductById(id)).filter(Boolean) as Product[];
-    results = [...hardcoded];
+function normalizeTag(value: string): string {
+  return value.toLowerCase().trim();
+}
+
+function scoreRoutineCandidate(product: Product, candidate: Product): number {
+  let score = 0;
+
+  const stepIndex = routineOrder.indexOf(
+    product.routineStep as (typeof routineOrder)[number],
+  );
+  const candidateStepIndex = routineOrder.indexOf(
+    candidate.routineStep as (typeof routineOrder)[number],
+  );
+
+  if (stepIndex >= 0 && candidateStepIndex >= 0) {
+    const distance = Math.abs(stepIndex - candidateStepIndex);
+    if (distance === 1) score += 30;
+    else if (distance === 2) score += 12;
   }
 
+  const pairs = product.pairsWithTags.map(normalizeTag);
+  const candidateTokens = [
+    ...candidate.relatedTags,
+    candidate.productType,
+    candidate.routineStep,
+    candidate.category,
+  ].map(normalizeTag);
+
+  for (const tag of pairs) {
+    if (candidateTokens.some((token) => token.includes(tag) || tag.includes(token))) {
+      score += 18;
+    }
+  }
+
+  // Body cleanser ↔ lotion/butter/scrub complementarity
+  if (product.category === 'body' && candidate.category === 'body') {
+    const a = product.productType.toLowerCase();
+    const b = candidate.productType.toLowerCase();
+    const aWash = a.includes('cleanser') || a.includes('scrub') || a.includes('polish');
+    const bMoist =
+      b.includes('lotion') || b.includes('butter') || b.includes('body');
+    const bWash = b.includes('cleanser') || b.includes('scrub') || b.includes('polish');
+    const aMoist =
+      a.includes('lotion') || a.includes('butter');
+    if ((aWash && bMoist) || (aMoist && bWash)) score += 20;
+  }
+
+  // Fragrance: prefer mist with EDP (or reverse), not two near-identical EDPs only
+  if (product.category === 'fragrance' && candidate.category === 'fragrance') {
+    const aMist = product.productType.toLowerCase().includes('mist');
+    const bMist = candidate.productType.toLowerCase().includes('mist');
+    if (aMist !== bMist) score += 16;
+    else score += 6;
+  }
+
+  // Prefer adjacent skin steps over same step
+  if (product.category === 'skin' && candidate.category === 'skin') {
+    if (candidate.routineStep !== product.routineStep) score += 10;
+  }
+
+  // Sun: prefer moisturize/cleanse pairings over stacking SPF
+  if (isSunscreenLike(product)) {
+    if (candidate.routineStep === 'Moisturize' || candidate.routineStep === 'Cleanse') {
+      score += 22;
+    }
+    if (isSunscreenLike(candidate)) score -= 25;
+  }
+
+  if (candidate.badges.includes('bestseller')) score += 2;
+  score += candidate.rating.value;
+
+  return score;
+}
+
+export function getRoutinePairings(
+  product: Product,
+  limit: number = 4,
+  excludeIds: string[] = [],
+): Product[] {
+  const blocked = new Set(excludeIds);
+  const hardcoded = resolveHardcodedIds(product.pairsWithIds, product.id, blocked);
+  let results = [...hardcoded];
+
+  if (results.length >= limit) {
+    return uniqueById(results).slice(0, limit);
+  }
+
+  const taken = new Set(results.map((r) => r.id));
+  taken.add(product.id);
+  for (const id of blocked) taken.add(id);
+
+  const candidates = products
+    .filter((p) => !taken.has(p.id))
+    .map((p) => ({ p, score: scoreRoutineCandidate(product, p) }))
+    .filter(({ score, p }) => {
+      // Keep only meaningful ritual partners
+      if (score < 8) return false;
+      // Soft gate: avoid second near-identical SPF when current is SPF
+      if (isSunscreenLike(product) && isSunscreenLike(p) && score < 20) return false;
+      return true;
+    })
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        b.p.rating.value - a.p.rating.value ||
+        a.p.name.localeCompare(b.p.name),
+    );
+
+  for (const { p } of candidates) {
+    if (results.length >= limit) break;
+    // Prefer not stacking two SPF products in the ritual rail
+    if (
+      isSunscreenLike(product) &&
+      isSunscreenLike(p) &&
+      results.some((r) => isSunscreenLike(r))
+    ) {
+      continue;
+    }
+    results.push(p);
+  }
+
+  // Last resort: adjacent routine steps within category
   if (results.length < limit) {
-    const stepIndex = routineOrder.indexOf(product.routineStep);
-    let targetSteps: string[] = [];
-    
-    if (product.category === 'skin') {
-       if (stepIndex >= 0 && stepIndex < 4) targetSteps.push(routineOrder[stepIndex + 1]);
-       if (stepIndex > 0 && stepIndex <= 4) targetSteps.push(routineOrder[stepIndex - 1]);
-    } else if (product.category === 'body') {
-       targetSteps = product.productType.toLowerCase().includes('cleanser') || product.productType.toLowerCase().includes('scrub') 
-         ? ['Body'] 
-         : ['Body']; 
-    } else if (product.category === 'fragrance') {
-       targetSteps = ['Fragrance'];
+    const stepIndex = routineOrder.indexOf(
+      product.routineStep as (typeof routineOrder)[number],
+    );
+    const targetSteps = new Set<string>();
+    if (stepIndex >= 0) {
+      if (stepIndex < routineOrder.length - 1) targetSteps.add(routineOrder[stepIndex + 1]);
+      if (stepIndex > 0) targetSteps.add(routineOrder[stepIndex - 1]);
+    }
+    if (product.category === 'body') targetSteps.add('Body');
+    if (product.category === 'fragrance') targetSteps.add('Fragrance');
+    if (product.category === 'sun') {
+      targetSteps.add('Moisturize');
+      targetSteps.add('Cleanse');
+      targetSteps.add('Protect');
     }
 
-    const matched = products.filter(p => 
-      p.id !== product.id && 
-      !results.find(r => r.id === p.id) &&
-      targetSteps.includes(p.routineStep) &&
-      p.category === product.category
+    const fallback = products.filter(
+      (p) =>
+        !taken.has(p.id) &&
+        !results.some((r) => r.id === p.id) &&
+        targetSteps.has(p.routineStep) &&
+        (p.category === product.category ||
+          (product.category === 'sun' &&
+            (p.category === 'skin' || p.category === 'body' || p.category === 'sun'))),
     );
-    
-    results = [...results, ...matched].slice(0, limit);
+
+    results = uniqueById([...results, ...fallback]).slice(0, limit);
   }
 
-  return results;
+  return uniqueById(results).slice(0, limit);
 }
 
 export function formatPrice(price: number): string {

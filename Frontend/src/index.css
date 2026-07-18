@@ -140,3 +140,14 @@
     filter: none !important;
   }
 }
+
+/* Phase 7: extra bottom inset while PDP sticky ATC is on-screen (mobile only) */
+body.pdp-sticky-atc-visible {
+  padding-bottom: 5.5rem;
+}
+
+@media (min-width: 1024px) {
+  body.pdp-sticky-atc-visible {
+    padding-bottom: 0;
+  }
+}

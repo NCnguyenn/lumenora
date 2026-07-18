@@ -63,6 +63,28 @@ describe('Home editorial experience', () => {
     })
   })
 
+  it('resolves featured products by id and routes product clicks to PDP', () => {
+    renderHome()
+
+    // Daily edit / composition / ritual products from master §6.1
+    const pdpNames = [
+      'Bamboo Ultra Hydrating Toner',
+      'Advanced Snail 96 Mucin Power Essence',
+      'Green Tea Deep Cleansing Gel',
+      'Invisible Fluid Sunscreen SPF 50+ PA++++',
+    ]
+
+    for (const name of pdpNames) {
+      const links = screen
+        .getAllByRole('link')
+        .filter((link) => (link.textContent ?? '').includes(name))
+      expect(links.length).toBeGreaterThan(0)
+      for (const link of links) {
+        expect(link.getAttribute('href') ?? '').toMatch(/^\/products\//)
+      }
+    }
+  })
+
   it('keeps inactive hero slides out of the accessibility tree', () => {
     renderHome()
 

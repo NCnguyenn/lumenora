@@ -139,7 +139,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
           </p>
           <button
             type="button"
-            onClick={() => addToCart(product)}
+            onClick={() => {
+              if (!defaultVariant) return;
+              addToCart(product.id, defaultVariant.id);
+            }}
             className="inline-flex min-h-11 w-full items-center justify-center gap-2 border border-charcoal/20 px-3 text-[10px] font-medium uppercase tracking-folio text-charcoal transition-colors hover:border-oxblood hover:bg-oxblood hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
             aria-label={`Add ${product.name} to cart`}
           >

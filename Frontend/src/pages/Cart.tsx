@@ -1,33 +1,67 @@
-import { useAppStore } from '../store/useAppStore';
 import { Link } from 'react-router-dom';
+import { ArrowLeft, Trash2 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { Trash2, ArrowLeft } from 'lucide-react';
+import {
+  formatPrice,
+  getPrimaryImage,
+  getProductById,
+} from '../data/productSelectors';
+import { useAppStore } from '../store/useAppStore';
 
 export function Cart() {
   const { cart, removeFromCart, updateQuantity } = useAppStore();
 
-  const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+  const lines = cart
+    .map((item) => {
+      const product = getProductById(item.productId);
+      if (!product) return null;
+      const variant =
+        product.variants.find((entry) => entry.id === item.variantId) ??
+        product.variants.find((entry) => entry.id === product.defaultVariantId) ??
+        product.variants[0];
+      if (!variant) return null;
+      const image = getPrimaryImage(product);
+      return {
+        key: `${item.productId}:${item.variantId}`,
+        productId: item.productId,
+        variantId: item.variantId,
+        quantity: item.quantity,
+        product,
+        variant,
+        unitPrice: variant.price,
+        lineTotal: variant.price * item.quantity,
+        imageSrc: image?.src ?? product.image,
+        imageAlt: image?.alt ?? product.name,
+      };
+    })
+    .filter((line): line is NonNullable<typeof line> => Boolean(line));
+
+  const subtotal = lines.reduce((acc, line) => acc + line.lineTotal, 0);
   const shipping = subtotal > 0 ? 5.99 : 0;
   const tax = subtotal * 0.08;
   const total = subtotal + shipping + tax;
 
   return (
-    <div className="bg-[#F8F6F4] min-h-[70vh] py-16 px-6 md:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto w-full">
-        <h1 className="text-3xl md:text-4xl font-serif mb-12">Shopping Cart <span className="text-muted italic text-2xl">({cart.length})</span></h1>
+    <div className="min-h-[70vh] bg-ivory px-5 py-16 text-charcoal sm:px-6 md:px-10 lg:px-14">
+      <div className="mx-auto w-full max-w-editorial">
+        <h1 className="mb-12 font-serif text-3xl md:text-4xl">
+          Shopping Cart{' '}
+          <span className="text-2xl italic text-charcoal/55">({lines.length})</span>
+        </h1>
 
-        {cart.length === 0 ? (
-          <div className="text-center py-24">
-            <p className="text-muted mb-6 font-serif text-lg">Your cart is currently empty.</p>
+        {lines.length === 0 ? (
+          <div className="py-24 text-center">
+            <p className="mb-6 font-serif text-lg text-charcoal/60">
+              Your cart is currently empty.
+            </p>
             <Link to="/shop">
               <Button>CONTINUE SHOPPING</Button>
             </Link>
           </div>
         ) : (
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-            {/* Cart Items */}
+          <div className="flex flex-col gap-12 lg:flex-row lg:gap-24">
             <div className="w-full lg:w-2/3">
-              <div className="hidden md:grid grid-cols-12 gap-4 pb-4 border-b border-border text-[10px] font-bold uppercase tracking-widest text-muted">
+              <div className="hidden grid-cols-12 gap-4 border-b border-charcoal/15 pb-4 text-[10px] font-medium uppercase tracking-folio text-charcoal/55 md:grid">
                 <div className="col-span-6">Product</div>
                 <div className="col-span-2 text-center">Price</div>
                 <div className="col-span-2 text-center">Qty</div>
@@ -35,84 +69,167 @@ export function Cart() {
               </div>
 
               <div className="flex flex-col gap-6 pt-6">
-                {cart.map(item => (
-                  <div key={item.id} className="flex flex-col md:grid md:grid-cols-12 gap-4 items-center pb-6 border-b border-border">
-                    <div className="col-span-6 flex gap-6 w-full">
-                      <div className="w-24 h-30 bg-gray-100 flex-shrink-0">
-                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                      </div>
+                {lines.map((line) => (
+                  <div
+                    key={line.key}
+                    className="flex flex-col items-center gap-4 border-b border-charcoal/15 pb-6 md:grid md:grid-cols-12"
+                  >
+                    <div className="col-span-6 flex w-full gap-6">
+                      <Link
+                        to={`/products/${line.product.slug}`}
+                        className="h-28 w-24 shrink-0 overflow-hidden bg-parchment"
+                      >
+                        <img
+                          src={line.imageSrc}
+                          alt={line.imageAlt}
+                          className="h-full w-full object-cover"
+                          width={96}
+                          height={112}
+                        />
+                      </Link>
                       <div className="flex flex-col justify-center">
-                        <p className="text-[10px] font-bold uppercase tracking-widest text-muted mb-1">{item.brand}</p>
-                        <Link to="/shop" className="text-sm font-serif leading-tight hover:underline mb-2">{item.name}</Link>
-                        <button 
-                          onClick={() => removeFromCart(item.id)}
-                          className="text-[10px] font-bold uppercase tracking-widest text-red-700 flex items-center gap-1 hover:opacity-70 transition-opacity w-fit mt-auto"
+                        <p className="mb-1 text-[10px] font-medium uppercase tracking-folio text-brass">
+                          {line.product.brand}
+                        </p>
+                        <Link
+                          to={`/products/${line.product.slug}`}
+                          className="mb-1 font-serif text-sm leading-tight text-charcoal transition-colors hover:text-oxblood"
                         >
-                          <Trash2 className="w-3 h-3" /> REMOVE
+                          {line.product.name}
+                        </Link>
+                        <p className="mb-2 text-[11px] text-charcoal/55">
+                          {line.variant.size || line.variant.label}
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            removeFromCart(line.productId, line.variantId)
+                          }
+                          className="mt-auto flex w-fit items-center gap-1 text-[10px] font-medium uppercase tracking-folio text-oxblood transition-opacity hover:opacity-70"
+                        >
+                          <Trash2 className="h-3 w-3" aria-hidden />
+                          Remove
                         </button>
                       </div>
                     </div>
-                    
-                    <div className="col-span-2 text-sm font-medium text-center hidden md:block">
-                      ${item.price.toFixed(2)}
+
+                    <div className="col-span-2 hidden text-center text-sm font-medium tabular-nums md:block">
+                      {formatPrice(line.unitPrice)}
                     </div>
-                    
-                    <div className="col-span-2 flex justify-center w-full md:w-auto mt-4 md:mt-0">
-                      <div className="flex items-center border border-border bg-white w-24">
-                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="w-8 h-8 flex items-center justify-center text-muted hover:text-primary">-</button>
-                        <span className="w-8 text-center text-xs font-medium">{item.quantity}</span>
-                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="w-8 h-8 flex items-center justify-center text-muted hover:text-primary">+</button>
+
+                    <div className="col-span-2 mt-4 flex w-full justify-center md:mt-0 md:w-auto">
+                      <div className="flex w-28 items-center border border-charcoal/20 bg-ivory">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            updateQuantity(
+                              line.productId,
+                              line.variantId,
+                              line.quantity - 1,
+                            )
+                          }
+                          className="flex h-9 w-9 items-center justify-center text-charcoal/60 transition-colors hover:text-charcoal"
+                          aria-label={`Decrease quantity of ${line.product.name}`}
+                        >
+                          −
+                        </button>
+                        <span className="w-10 text-center text-xs font-medium tabular-nums">
+                          {line.quantity}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            updateQuantity(
+                              line.productId,
+                              line.variantId,
+                              line.quantity + 1,
+                            )
+                          }
+                          className="flex h-9 w-9 items-center justify-center text-charcoal/60 transition-colors hover:text-charcoal"
+                          aria-label={`Increase quantity of ${line.product.name}`}
+                        >
+                          +
+                        </button>
                       </div>
                     </div>
-                    
-                    <div className="col-span-2 text-sm font-bold text-right w-full md:w-auto text-center md:text-right mt-2 md:mt-0">
-                      ${(item.price * item.quantity).toFixed(2)}
+
+                    <div className="col-span-2 mt-2 w-full text-center text-sm font-medium tabular-nums md:mt-0 md:text-right">
+                      {formatPrice(line.lineTotal)}
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="mt-8">
-                <Link to="/shop" className="text-[10px] font-bold uppercase tracking-widest hover:text-muted flex items-center gap-2 transition-colors w-fit">
-                  <ArrowLeft className="w-4 h-4" /> Continue Shopping
+                <Link
+                  to="/shop"
+                  className="inline-flex w-fit items-center gap-2 text-[10px] font-medium uppercase tracking-folio text-charcoal transition-colors hover:text-oxblood"
+                >
+                  <ArrowLeft className="h-4 w-4" aria-hidden />
+                  Continue Shopping
                 </Link>
               </div>
             </div>
 
-            {/* Order Summary */}
             <div className="w-full lg:w-1/3">
-              <div className="bg-white p-8 border border-border">
-                <h3 className="text-[10px] font-bold uppercase tracking-widest mb-6">ORDER SUMMARY</h3>
-                
-                <div className="flex flex-col gap-4 text-sm mb-6 border-b border-border pb-6">
+              <div className="border border-charcoal/15 bg-parchment/40 p-8">
+                <h2 className="mb-6 text-[10px] font-medium uppercase tracking-folio text-charcoal">
+                  Order Summary
+                </h2>
+
+                <div className="mb-6 flex flex-col gap-4 border-b border-charcoal/15 pb-6 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-muted">Subtotal</span>
-                    <span className="font-bold">${subtotal.toFixed(2)}</span>
+                    <span className="text-charcoal/60">Subtotal</span>
+                    <span className="font-medium tabular-nums">
+                      {formatPrice(subtotal)}
+                    </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted">Shipping (Standard)</span>
-                    <span className="font-bold">${shipping.toFixed(2)}</span>
+                    <span className="text-charcoal/60">Shipping (Standard)</span>
+                    <span className="font-medium tabular-nums">
+                      {formatPrice(shipping)}
+                    </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted">Estimated Tax (8%)</span>
-                    <span className="font-bold">${tax.toFixed(2)}</span>
+                    <span className="text-charcoal/60">Estimated Tax (8%)</span>
+                    <span className="font-medium tabular-nums">
+                      {formatPrice(tax)}
+                    </span>
                   </div>
                 </div>
 
-                <div className="mb-6 border-b border-border pb-6">
-                  <label className="block text-[10px] font-bold uppercase tracking-widest text-muted mb-3">DISCOUNT CODE</label>
+                <div className="mb-6 border-b border-charcoal/15 pb-6">
+                  <label className="mb-3 block text-[10px] font-medium uppercase tracking-folio text-charcoal/55">
+                    Discount Code
+                  </label>
                   <div className="flex">
-                    <input type="text" placeholder="Promo code" className="border border-border border-r-0 px-3 py-2 text-sm w-full outline-none focus:border-primary" />
-                    <button className="border border-border px-4 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-gray-50 transition-colors">APPLY</button>
+                    <input
+                      type="text"
+                      placeholder="Promo code"
+                      className="w-full border border-r-0 border-charcoal/20 bg-ivory px-3 py-2 text-sm outline-none focus:border-charcoal"
+                    />
+                    <button
+                      type="button"
+                      className="border border-charcoal/20 px-4 py-2 text-[10px] font-medium uppercase tracking-folio transition-colors hover:bg-charcoal hover:text-ivory"
+                    >
+                      Apply
+                    </button>
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center mb-8">
-                  <span className="text-[10px] font-bold uppercase tracking-widest">FINAL TOTAL</span>
-                  <span className="text-2xl font-serif">${total.toFixed(2)}</span>
+                <div className="mb-8 flex items-center justify-between">
+                  <span className="text-[10px] font-medium uppercase tracking-folio">
+                    Final Total
+                  </span>
+                  <span className="font-serif text-2xl tabular-nums">
+                    {formatPrice(total)}
+                  </span>
                 </div>
 
                 <Button className="w-full">PROCEED TO CHECKOUT</Button>
+                <p className="mt-3 text-center text-[11px] text-charcoal/50">
+                  Demo checkout — no payment is processed.
+                </p>
               </div>
             </div>
           </div>
@@ -121,4 +238,3 @@ export function Cart() {
     </div>
   );
 }
-

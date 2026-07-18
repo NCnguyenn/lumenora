@@ -14,13 +14,12 @@ import {
   type FormEvent,
   type ImgHTMLAttributes,
 } from 'react';
+import { products, type Product } from '../data/products';
 import {
-  products,
-  findProductByName,
-  formatPrice,
   categoryLabel,
-  type Product,
-} from '../data/products';
+  formatPrice,
+  getProductById,
+} from '../data/productSelectors';
 import { articles } from '../data/articles';
 import { useAppStore } from '../store/useAppStore';
 import { ProductCard } from '../components/ui/ProductCard';
@@ -136,32 +135,29 @@ const trustBadges = [
   { label: 'Easy Returns', detail: 'Easy Returns' },
 ] as const;
 
-const dailyEditNames = [
-  'Bamboo Ultra Hydrating Toner',
-  'Birch Moisturizing Soothing Gel',
-  'Mugwort Calming Cream',
-] as const;
+/** Master §6.1 — Home product map by stable id (not name). */
+const dailyEditIds = ['p1', 'p2', 'p3'] as const;
 
 const compositions = [
   {
-    name: 'Advanced Snail Mucin 96% Power Repairing Essence Serum',
+    productId: 'p8',
     descriptor: 'Viscous repair for depleted skin — a cult formula, curated for ritual.',
     image: '/assets/generated/home-composition-serum.jpg',
     fallback: '/assets/generated/product-serum.png',
   },
   {
-    name: 'Volcanic Sea Clay Detox Masque',
+    productId: 'p10',
     descriptor: 'Mineral depth. Quiet clarity.',
     image: '/assets/generated/home-composition-mask.jpg',
     fallback: '/assets/generated/product-mask.png',
   },
   {
-    name: 'Invisible Fluid Sunscreen SPF 50+ PA++++',
+    productId: 'p11',
     descriptor: 'Sheer protection that disappears into the day.',
     image: '/assets/generated/home-composition-sunscreen.jpg',
     fallback: '/assets/generated/product-sunscreen.png',
   },
-];
+] as const;
 
 const ritualScenes = [
   {
@@ -170,7 +166,7 @@ const ritualScenes = [
     image: '/assets/generated/home-ritual-cleanse.jpg',
     fallback: '/assets/generated/product-cleanser.png',
     imageFirst: true,
-    products: ['Green Tea Deep Cleansing', 'Eucalyptus Nourishing Body Cleanser'],
+    productIds: ['p7', 'p5'] as const,
   },
   {
     label: 'TREAT',
@@ -178,10 +174,7 @@ const ritualScenes = [
     image: '/assets/generated/home-ritual-treat.jpg',
     fallback: '/assets/generated/product-serum.png',
     imageFirst: false,
-    products: [
-      'Advanced Snail Mucin 96% Power Repairing Essence Serum',
-      'Mugwort Calming Cream',
-    ],
+    productIds: ['p8', 'p3'] as const,
   },
   {
     label: 'PROTECT',
@@ -189,12 +182,9 @@ const ritualScenes = [
     image: '/assets/generated/home-ritual-protect.jpg',
     fallback: '/assets/generated/product-sunscreen.png',
     imageFirst: true,
-    products: [
-      'Invisible Fluid Sunscreen SPF 50+ PA++++',
-      'Body Lotion Lavender Patchouli',
-    ],
+    productIds: ['p11', 'p4'] as const,
   },
-];
+] as const;
 
 function usePrefersReducedMotion() {
   const [reduced, setReduced] = useState(false);
@@ -214,12 +204,15 @@ function usePrefersReducedMotion() {
 function ProductLineItem({ product }: { product: Product }) {
   const { wishlist, toggleWishlist, addToCart } = useAppStore();
   const wishlisted = wishlist.includes(product.id);
+  const defaultVariant =
+    product.variants.find((variant) => variant.id === product.defaultVariantId) ??
+    product.variants[0];
 
   return (
     <li className="border-b border-charcoal/20">
       <div className="flex items-start gap-3 py-4 sm:items-center sm:gap-4">
         <Link
-          to={`/shop?category=${product.category}`}
+          to={`/products/${product.slug}`}
           className="min-w-0 flex-1 group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
         >
           <p className="text-[10px] font-medium uppercase tracking-folio text-brass">
@@ -255,7 +248,10 @@ function ProductLineItem({ product }: { product: Product }) {
             </button>
             <button
               type="button"
-              onClick={() => addToCart(product)}
+              onClick={() => {
+                if (!defaultVariant) return;
+                addToCart(product.id, defaultVariant.id);
+              }}
               className="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-opacity hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
               aria-label={`Add ${product.name} to cart`}
             >
@@ -305,18 +301,18 @@ export function Home() {
 
   const dailyEdit = useMemo(
     () =>
-      dailyEditNames
-        .map((name) => findProductByName(name))
-        .filter(Boolean) as Product[],
-    []
+      dailyEditIds
+        .map((id) => getProductById(id))
+        .filter((product): product is Product => Boolean(product)),
+    [],
   );
 
   const bestsellers = useMemo(
     () =>
       products
-        .filter((p) => p.isBestSeller || p.isNew)
+        .filter((product) => product.isBestSeller || product.isNew)
         .slice(0, 4),
-    []
+    [],
   );
 
   const onNewsletterSubmit = (e: FormEvent) => {
@@ -580,14 +576,15 @@ export function Home() {
 
           {(() => {
             const item = compositions[0];
-            const product = findProductByName(item.name);
+            const product = getProductById(item.productId);
+            const title = product?.name ?? 'Featured formula';
             return (
               <figure className="editorial-reveal group w-full">
                 <div className="aspect-[16/10] overflow-hidden bg-parchment md:aspect-[21/8]">
                   <EditorialImg
                     src={item.image}
                     fallback={item.fallback}
-                    alt={item.name}
+                    alt={title}
                     width={1600}
                     height={700}
                     className="editorial-image h-full w-full object-cover"
@@ -601,10 +598,10 @@ export function Home() {
                       </p>
                     )}
                     <Link
-                      to={product ? `/shop?category=${product.category}` : '/shop'}
+                      to={product ? `/products/${product.slug}` : '/shop'}
                       className="mt-1 block font-serif text-lg text-charcoal transition-colors hover:text-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal md:text-xl"
                     >
-                      {item.name}
+                      {title}
                     </Link>
                     <p className="mt-1 font-serif text-sm italic text-charcoal/75">
                       {item.descriptor}
@@ -627,10 +624,11 @@ export function Home() {
             className="grid grid-cols-1 items-start gap-14 md:grid-cols-12 md:gap-8 lg:gap-12"
           >
             {compositions.slice(1).map((item, i) => {
-              const product = findProductByName(item.name);
+              const product = getProductById(item.productId);
+              const title = product?.name ?? 'Featured formula';
               return (
                 <figure
-                  key={item.name}
+                  key={item.productId}
                   className={cn(
                     'editorial-reveal group',
                     i === 0 ? 'md:col-span-5' : 'md:col-span-6 md:col-start-7 md:mt-12'
@@ -640,7 +638,7 @@ export function Home() {
                     <EditorialImg
                       src={item.image}
                       fallback={item.fallback}
-                      alt={item.name}
+                      alt={title}
                       width={900}
                       height={900}
                       className="editorial-image h-full w-full object-cover"
@@ -653,10 +651,10 @@ export function Home() {
                       </p>
                     )}
                     <Link
-                      to={product ? `/shop?category=${product.category}` : '/shop'}
+                      to={product ? `/products/${product.slug}` : '/shop'}
                       className="block font-serif text-lg leading-snug text-charcoal transition-colors hover:text-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal md:text-xl"
                     >
-                      {item.name}
+                      {title}
                     </Link>
                     <p className="font-serif text-sm italic text-charcoal/75">
                       {item.descriptor}
@@ -831,8 +829,8 @@ export function Home() {
                     {scene.copy}
                   </p>
                   <ul className="border-t border-charcoal/15">
-                    {scene.products.map((name) => {
-                      const product = findProductByName(name);
+                    {scene.productIds.map((productId) => {
+                      const product = getProductById(productId);
                       if (!product) return null;
                       return <ProductLineItem key={product.id} product={product} />;
                     })}

@@ -209,7 +209,7 @@ export function Quiz() {
                       : 'bg-transparent text-[#1A1A1A] border-[#E5E0D8] hover:border-[#4A5240]'
                     }`}
                   >
-                    <div className={`mb-6 ${answers[currentQuestion.id] === opt.id ? 'text-white' : 'text-[#1A1A1A]'}`}>{opt.icon}</div>
+                    <div className={`mb-6 ${answers[currentQuestion.id] === opt.id ? 'text-white' : 'text-[#1A1A1A]'}`}>{(opt as any).icon}</div>
                     <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-center leading-relaxed">{opt.id}</span>
                   </button>
                 ))}
@@ -224,7 +224,7 @@ export function Quiz() {
                     onClick={() => handleSelectOption(currentQuestion.id, opt.id)}
                     className={`relative h-64 md:h-80 group overflow-hidden bg-white ${answers[currentQuestion.id] === opt.id ? 'ring-inset ring-[6px] ring-[#4A5240] z-10' : ''}`}
                   >
-                    <img src={opt.img} alt={opt.id} className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${answers[currentQuestion.id] === opt.id ? 'grayscale-0 opacity-100' : 'grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100'}`} />
+                    <img src={(opt as any).img} alt={opt.id} className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${answers[currentQuestion.id] === opt.id ? 'grayscale-0 opacity-100' : 'grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100'}`} />
                     <div className={`absolute inset-0 transition-colors duration-500 ${answers[currentQuestion.id] === opt.id ? 'bg-[#3A1E14]/10' : 'bg-[#3A1E14]/30 group-hover:bg-[#3A1E14]/10'}`}></div>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                       <svg className={`w-10 h-10 mb-4 transition-opacity ${answers[currentQuestion.id] === opt.id ? 'text-white opacity-100' : 'text-white opacity-80'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></svg>

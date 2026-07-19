@@ -4,6 +4,7 @@ import type { Product } from '../../data/products'
 import { formatPrice } from '../../data/productSelectors'
 import { cn } from '../../lib/utils'
 import { useAppStore } from '../../store/useAppStore'
+import { toast } from 'sonner'
 
 interface ProductInfoPanelProps {
   product: Product
@@ -39,6 +40,7 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
     if (!selectedVariant?.inStock) return
 
     addToCart(product.id, selectedVariant.id, quantity)
+    toast.success(`Added "${product.name}" to cart!`)
     setCartNotice((current) => ({
       message: `Added ${quantity} ${product.name} to cart`,
       sequence: current.sequence + 1,
@@ -243,7 +245,14 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
 
         <button
           type="button"
-          onClick={() => toggleWishlist(product.id)}
+          onClick={() => {
+            toggleWishlist(product.id)
+            if (!isWishlisted) {
+              toast.success(`Added "${product.name}" to wishlist!`)
+            } else {
+              toast(`Removed "${product.name}" from wishlist`)
+            }
+          }}
           aria-label={
             isWishlisted
               ? `Remove ${product.name} from wishlist`

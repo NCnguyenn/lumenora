@@ -24,6 +24,7 @@ import { articles } from '../data/articles';
 import { useAppStore } from '../store/useAppStore';
 import { ProductCard } from '../components/ui/ProductCard';
 import { cn } from '../lib/utils';
+import { toast } from 'sonner';
 
 /** Prefer art-directed editorial JPGs; fall back to existing generated PNGs if not copied yet. */
 function EditorialImg({
@@ -232,7 +233,14 @@ function ProductLineItem({ product }: { product: Product }) {
           <div className="flex items-center">
             <button
               type="button"
-              onClick={() => toggleWishlist(product.id)}
+              onClick={() => {
+                toggleWishlist(product.id)
+                if (!wishlisted) {
+                  toast.success(`Added "${product.name}" to wishlist!`)
+                } else {
+                  toast(`Removed "${product.name}" from wishlist`)
+                }
+              }}
               className="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-opacity hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
               aria-label={
                 wishlisted
@@ -251,6 +259,7 @@ function ProductLineItem({ product }: { product: Product }) {
               onClick={() => {
                 if (!defaultVariant) return;
                 addToCart(product.id, defaultVariant.id);
+                toast.success(`Added "${product.name}" to cart!`)
               }}
               className="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-opacity hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
               aria-label={`Add ${product.name} to cart`}

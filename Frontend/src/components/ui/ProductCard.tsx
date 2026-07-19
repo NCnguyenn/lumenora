@@ -6,6 +6,7 @@ import { formatPrice } from '../../data/products';
 import { getHoverImage, getPrimaryImage } from '../../data/productSelectors';
 import { useAppStore } from '../../store/useAppStore';
 import { cn } from '../../lib/utils';
+import { toast } from 'sonner';
 
 interface ProductCardProps {
   product: Product;
@@ -47,7 +48,14 @@ export function ProductCard({ product, className }: ProductCardProps) {
         )}
         <button
           type="button"
-          onClick={() => toggleWishlist(product.id)}
+          onClick={() => {
+            toggleWishlist(product.id)
+            if (!isWishlisted) {
+              toast.success(`Added "${product.name}" to wishlist!`)
+            } else {
+              toast(`Removed "${product.name}" from wishlist`)
+            }
+          }}
           className="absolute right-2 top-2 z-10 inline-flex h-11 w-11 items-center justify-center bg-ivory/85 text-charcoal transition-colors hover:bg-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
           aria-label={
             isWishlisted
@@ -142,6 +150,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
             onClick={() => {
               if (!defaultVariant) return;
               addToCart(product.id, defaultVariant.id);
+              toast.success(`Added "${product.name}" to cart!`)
             }}
             className="inline-flex min-h-11 w-full items-center justify-center gap-2 border border-charcoal/20 px-3 text-[10px] font-medium uppercase tracking-folio text-charcoal transition-colors hover:border-oxblood hover:bg-oxblood hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
             aria-label={`Add ${product.name} to cart`}

@@ -7,10 +7,16 @@ import { Cart } from './pages/Cart';
 import { Wishlist } from './pages/Wishlist';
 import { Blog } from './pages/Blog';
 import { ProductDetail } from './pages/ProductDetail';
+import { ScrollToTop } from './components/ui/ScrollToTop';
+import { ScrollToTopButton } from './components/ui/ScrollToTopButton';
+import { Toaster } from 'sonner';
 
 function App() {
   return (
     <BrowserRouter>
+      <Toaster position="bottom-right" richColors />
+      <ScrollToTop />
+      <ScrollToTopButton />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

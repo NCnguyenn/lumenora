@@ -53,7 +53,7 @@ export function ProductDetailsAccordion({
 }: ProductDetailsAccordionProps) {
   return (
     <section aria-label="Product details" className="border-t border-charcoal/15">
-      <DetailSection title="Product details" icon={<Package className="h-5 w-5" />} open>
+      <DetailSection title="Overview" icon={<Package className="h-5 w-5" />} open>
         <div className="space-y-3">
           {product.description.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -69,19 +69,71 @@ export function ProductDetailsAccordion({
             </li>
           ))}
         </ul>
-        <div className="mt-6">
-           <h3 className="text-[10px] font-medium uppercase tracking-folio text-charcoal mb-3">Product Facts</h3>
-           <dl>
-             <FactRow label="Type" value={product.productType} />
-             <FactRow label="Routine step" value={product.routineStep} />
-             <FactRow label="Skin types" value={product.skinTypes.join(', ')} />
-             <FactRow label="Texture" value={product.texture} />
-           </dl>
-        </div>
+      </DetailSection>
+
+      <DetailSection title="Key ingredients" icon={<Leaf className="h-5 w-5" />}>
+        <ul className="grid gap-4 sm:grid-cols-2">
+          {product.keyIngredients.map((ingredient) => (
+            <li key={ingredient.name} className="border border-charcoal/10 p-4">
+              <p className="font-medium text-charcoal">{ingredient.name}</p>
+              <p className="mt-1 text-charcoal/65">{ingredient.benefit}</p>
+            </li>
+          ))}
+        </ul>
       </DetailSection>
 
       <DetailSection title="Full ingredients" icon={<Leaf className="h-5 w-5" />}>
         <p>{product.fullIngredients}</p>
+      </DetailSection>
+
+      <DetailSection title="How to use">
+        <ol aria-label="How to use steps" className="space-y-3">
+          {product.howToUse.map((step, index) => (
+            <li key={step} className="grid grid-cols-[2rem_1fr] gap-3">
+              <span className="font-serif text-lg text-brass" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span>{step}</span>
+            </li>
+          ))}
+        </ol>
+      </DetailSection>
+
+      <DetailSection title="Product facts & care">
+        <dl>
+          <FactRow label="Type" value={product.productType} />
+          <FactRow label="Routine step" value={product.routineStep} />
+          <FactRow label="Use" value={product.usageTime.join(' · ')} />
+          <FactRow label="Skin types" value={product.skinTypes.join(', ')} />
+          <FactRow label="Concerns" value={product.concerns.join(', ')} />
+          <FactRow label="Texture" value={product.texture} />
+          <FactRow label="Finish" value={product.finish} />
+          <FactRow label="Scent" value={product.scent} />
+        </dl>
+        {product.warnings.length > 0 && (
+          <div className="mt-5 border-l-2 border-oxblood pl-4">
+            <p className="text-[10px] font-medium uppercase tracking-folio text-oxblood">
+              Care notes
+            </p>
+            <ul className="mt-2 space-y-2">
+              {product.warnings.map((warning) => (
+                <li key={warning}>{warning}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </DetailSection>
+
+      <DetailSection title="Brand story">
+        <p className="font-serif text-lg text-charcoal">{product.brand}</p>
+        {brand ? (
+          <div className="mt-3 space-y-3">
+            <p>{brand.shortStory}</p>
+            {brand.fullStory && <p>{brand.fullStory}</p>}
+          </div>
+        ) : (
+          <p className="mt-3">A considered part of the Lumenora edit.</p>
+        )}
       </DetailSection>
 
       <DetailSection title="Shipping & returns" icon={<Truck className="h-5 w-5" />}>

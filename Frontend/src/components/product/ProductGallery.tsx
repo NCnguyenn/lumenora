@@ -83,7 +83,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
   return (
     <section aria-label={`${product.name} gallery`}>
       {/* Gallery Layout (Large Image + Thumbnails) */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4" data-gallery-layout="mosaic">
         <div className="group relative aspect-square overflow-hidden bg-parchment">
           {product.images.map((image) => {
             const isActive = image.id === activeImage?.id

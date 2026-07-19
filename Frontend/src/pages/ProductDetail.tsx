@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ProductDetailsAccordion } from '../components/product/ProductDetailsAccordion'
 import { ProductGallery } from '../components/product/ProductGallery'
+import { ProductHighlights } from '../components/product/ProductHighlights'
 import { ProductInfoPanel } from '../components/product/ProductInfoPanel'
-import { QuickInfoGrid } from '../components/product/QuickInfoGrid'
 import { RoutinePairings } from '../components/product/RoutinePairings'
 import { SimilarProducts } from '../components/product/SimilarProducts'
 import type { Product } from '../data/types'
@@ -188,7 +188,7 @@ function ProductDetailContent({ product }: { product: Product }) {
         </div>
 
         <div className="mt-16 max-w-5xl mx-auto lg:mt-24 border border-charcoal/10 rounded-sm bg-ivory">
-          <QuickInfoGrid />
+          <ProductHighlights product={product} />
           <ProductDetailsAccordion product={product} brand={brand} />
         </div>
 

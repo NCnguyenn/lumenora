@@ -7,10 +7,10 @@ import { ProductCard } from './ProductCard'
 
 const product = products[0]
 
-function renderCard() {
+function renderCard(cardProduct = product) {
   return render(
     <MemoryRouter>
-      <ProductCard product={product} />
+      <ProductCard product={cardProduct} />
     </MemoryRouter>,
   )
 }
@@ -33,7 +33,7 @@ describe('ProductCard', () => {
     expect(screen.getByText(product.productType)).toBeInTheDocument()
     expect(screen.getByText(product.variants[0].size)).toBeInTheDocument()
     expect(screen.getByText('$45.00')).toBeInTheDocument()
-    expect(screen.getByText('New')).toBeInTheDocument()
+    expect(screen.getByText('NEW')).toBeInTheDocument()
     expect(
       screen.getByLabelText('Rated 4.8 out of 5 from 310 reviews'),
     ).toBeInTheDocument()
@@ -96,5 +96,21 @@ describe('ProductCard', () => {
     for (const button of screen.getAllByRole('button')) {
       expect(button.closest('a')).toBeNull()
     }
+  })
+
+  it('renders original and sale prices from the default variant', () => {
+    renderCard(products.find((item) => item.id === 'p6')!)
+
+    expect(screen.getByText('SALE')).toBeInTheDocument()
+    expect(screen.getByText('$32.00').closest('del')).toBeInTheDocument()
+    expect(screen.getByText('$26.00')).toBeInTheDocument()
+  })
+
+  it('renders no tag wrapper for an untagged product', () => {
+    const { container } = renderCard(
+      products.find((item) => item.id === 'p2')!,
+    )
+
+    expect(container.querySelector('[data-product-tag]')).toBeNull()
   })
 })

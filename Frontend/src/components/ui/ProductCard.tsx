@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, ShoppingBag, Star } from 'lucide-react';
 import type { Product } from '../../data/products';
-import { formatPrice } from '../../data/products';
+import { getProductMerchandising } from '../../data/productMerchandising';
 import { getHoverImage, getPrimaryImage } from '../../data/productSelectors';
 import { useAppStore } from '../../store/useAppStore';
 import { cn } from '../../lib/utils';
 import { toast } from 'sonner';
+import { ProductPrice } from './ProductPrice';
+import { ProductTag } from './ProductTag';
 
 interface ProductCardProps {
   product: Product;
@@ -23,9 +25,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
   const defaultVariant =
     product.variants.find((variant) => variant.id === product.defaultVariantId) ??
     product.variants[0];
-  const badge = (['bestseller', 'new', 'limited'] as const).find((candidate) =>
-    product.badges.includes(candidate),
-  );
+  const merchandising = getProductMerchandising(product, defaultVariant);
 
   if (!primaryImage) return null;
 
@@ -37,15 +37,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
       )}
     >
       <div className="group/image relative aspect-square overflow-hidden bg-parchment">
-        {badge && (
-          <span className="absolute left-3 top-3 z-10 bg-ivory/95 px-2 py-1 text-[9px] font-medium uppercase tracking-folio text-brass">
-            {badge === 'bestseller'
-              ? 'Bestseller'
-              : badge === 'limited'
-                ? 'Limited'
-                : 'New'}
-          </span>
-        )}
+        <ProductTag tag={merchandising.tag} />
         <button
           type="button"
           onClick={() => {
@@ -102,7 +94,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         </Link>
       </div>
 
-      <div className="flex flex-1 flex-col gap-1.5 pt-4">
+      <div className="flex flex-1 flex-col gap-1.5 px-4 pb-4 pt-4">
         <p className="text-[10px] font-medium uppercase tracking-folio text-brass">
           {product.brand}
         </p>
@@ -142,9 +134,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
           <p className="text-[11px] text-charcoal/55">{defaultVariant.size}</p>
         )}
         <div className="mt-auto flex flex-col gap-3 pt-3">
-          <p className="text-sm font-medium tabular-nums text-charcoal">
-            {formatPrice(product.price)}
-          </p>
+          <ProductPrice merchandising={merchandising} />
           <button
             type="button"
             onClick={() => {

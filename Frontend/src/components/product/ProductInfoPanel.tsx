@@ -5,16 +5,13 @@ import { formatPrice } from '../../data/productSelectors'
 import { cn } from '../../lib/utils'
 import { useAppStore } from '../../store/useAppStore'
 import { toast } from 'sonner'
+import { getProductMerchandising } from '../../data/productMerchandising'
+import { ProductPrice } from '../ui/ProductPrice'
+import { ProductTag } from '../ui/ProductTag'
 
 interface ProductInfoPanelProps {
   product: Product
 }
-
-const badgeLabels = {
-  bestseller: 'Bestseller',
-  new: 'New',
-  limited: 'Limited',
-} as const
 
 export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
   const initialVariant =
@@ -31,6 +28,7 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
   const selectedVariant = product.variants.find(
     (variant) => variant.id === selectedVariantId,
   )
+  const merchandising = getProductMerchandising(product, selectedVariant)
   const isWishlisted = wishlist.includes(product.id)
   const canAddToCart = Boolean(selectedVariant?.inStock)
   const addToCartLabel = `Add ${quantity} ${product.name} to cart`
@@ -117,21 +115,8 @@ export function ProductInfoPanel({ product }: ProductInfoPanelProps) {
       </div>
 
       <div className="mt-6 flex flex-wrap items-center gap-3">
-        <p
-          data-product-price
-          className="text-xl font-medium tabular-nums text-charcoal"
-        >
-          {formatPrice(selectedVariant?.price ?? product.price)}
-        </p>
-        {product.badges.map((badge) => (
-          <span
-            key={badge}
-            className="bg-[#B6935E] px-2 py-1 flex items-center gap-1 text-[9px] font-medium uppercase tracking-folio text-white"
-          >
-            <Star className="h-2.5 w-2.5 fill-current" />
-            {badgeLabels[badge]}
-          </span>
-        ))}
+        <ProductPrice merchandising={merchandising} className="text-xl" />
+        <ProductTag tag={merchandising.tag} placement="inline" />
       </div>
 
       {product.relatedTags && product.relatedTags.length > 0 && (

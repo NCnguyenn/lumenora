@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react'
-import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react'
+import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import type { Product } from '../../data/products'
 import { cn } from '../../lib/utils'
 
@@ -83,7 +83,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
   return (
     <section aria-label={`${product.name} gallery`}>
       {/* Gallery Layout (Large Image + Thumbnails) */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4" data-gallery-layout="mosaic">
         <div className="group relative aspect-square overflow-hidden bg-parchment">
           {product.images.map((image) => {
             const isActive = image.id === activeImage?.id

@@ -2,12 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
 import type { Product } from '../../data/types';
+import { getProductMerchandising } from '../../data/productMerchandising';
 import {
-  formatPrice,
   getPrimaryImage,
   searchProducts,
 } from '../../data/productSelectors';
 import { products } from '../../data/products';
+import { ProductPrice } from '../ui/ProductPrice';
+import { ProductTag } from '../ui/ProductTag';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -25,7 +27,7 @@ const POPULAR_SEARCHES = [
 
 function getPopularProducts(limit = 5): Product[] {
   const bestsellers = products.filter((product) =>
-    product.badges.includes('bestseller'),
+    product.tag === 'best-seller',
   );
   if (bestsellers.length >= limit) return bestsellers.slice(0, limit);
   return products
@@ -138,6 +140,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:gap-x-6 lg:grid-cols-4 xl:grid-cols-5">
               {results.map((product) => {
                 const image = getPrimaryImage(product);
+                const merchandising = getProductMerchandising(product);
                 return (
                   <Link
                     key={product.id}
@@ -146,6 +149,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     className="group block text-charcoal decoration-transparent"
                   >
                     <div className="relative mb-3 aspect-square overflow-hidden border border-charcoal/10 bg-parchment">
+                      <ProductTag tag={merchandising.tag} />
                       <img
                         src={image?.src ?? product.image}
                         alt={image?.alt ?? `${product.brand} — ${product.name}`}
@@ -161,9 +165,11 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     <h4 className="mt-0.5 truncate font-serif text-[13px] font-bold">
                       {product.name}
                     </h4>
-                    <p className="mt-0.5 text-[12px] tabular-nums text-charcoal/70">
-                      {formatPrice(product.price)}
-                    </p>
+                    <ProductPrice
+                      merchandising={merchandising}
+                      compact
+                      className="mt-0.5 text-charcoal/70"
+                    />
                   </Link>
                 );
               })}

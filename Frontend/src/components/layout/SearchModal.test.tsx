@@ -60,4 +60,20 @@ describe('SearchModal', () => {
       .filter((link) => (link.getAttribute('href') ?? '').startsWith('/products/'))
     expect(pdpLinks.length).toBeGreaterThan(0)
   })
+
+  it('shows synchronized tag and sale pricing in search results', () => {
+    render(
+      <MemoryRouter>
+        <SearchModal isOpen onClose={() => undefined} />
+      </MemoryRouter>,
+    )
+
+    fireEvent.change(screen.getByPlaceholderText('What are you looking for?'), {
+      target: { value: 'Shea' },
+    })
+
+    expect(screen.getByText('SALE')).toBeInTheDocument()
+    expect(screen.getByText('$32.00').closest('del')).toBeInTheDocument()
+    expect(screen.getByText('$26.00')).toBeInTheDocument()
+  })
 })

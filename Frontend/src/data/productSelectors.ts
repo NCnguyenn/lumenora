@@ -1,6 +1,12 @@
-import type { Product, ProductCategory } from './types';
+import type { Product, ProductCategory, ProductTag } from './types';
 import { products } from './products';
 import { brands } from './brands';
+
+const SUPPORTED_PRODUCT_TAGS: ReadonlySet<ProductTag> = new Set([
+  'new',
+  'sale',
+  'best-seller',
+]);
 
 export function getProductById(id: string): Product | undefined {
   return products.find((p) => p.id === id);
@@ -89,15 +95,15 @@ export function sortProducts(productsToSort: Product[], sort: string): Product[]
       break;
     case 'new':
       result.sort((a, b) => {
-        const aNew = a.badges.includes('new') ? 1 : 0;
-        const bNew = b.badges.includes('new') ? 1 : 0;
+        const aNew = a.tag === 'new' ? 1 : 0;
+        const bNew = b.tag === 'new' ? 1 : 0;
         return bNew - aNew || a.name.localeCompare(b.name);
       });
       break;
     case 'bestsellers':
       result.sort((a, b) => {
-        const aBest = a.badges.includes('bestseller') ? 1 : 0;
-        const bBest = b.badges.includes('bestseller') ? 1 : 0;
+        const aBest = a.tag === 'best-seller' ? 1 : 0;
+        const bBest = b.tag === 'best-seller' ? 1 : 0;
         return bBest - aBest || a.name.localeCompare(b.name);
       });
       break;
@@ -180,7 +186,7 @@ export function getSimilarProducts(
       }
 
       if (p.brandId === product.brandId) score += 4;
-      if (p.badges.includes('bestseller')) score += 2;
+      if (p.tag === 'best-seller') score += 2;
 
       return { p, score };
     });
@@ -292,7 +298,7 @@ function scoreRoutineCandidate(product: Product, candidate: Product): number {
     if (isSunscreenLike(candidate)) score -= 25;
   }
 
-  if (candidate.badges.includes('bestseller')) score += 2;
+  if (candidate.tag === 'best-seller') score += 2;
   score += candidate.rating.value;
 
   return score;
@@ -401,18 +407,30 @@ export function getHoverImage(product: Product) {
   return product.images.find(img => img.role === 'hover') || product.images[1] || getPrimaryImage(product);
 }
 
-export function validateCatalog() {
+export function validateCatalog(catalog: Product[] = products) {
   const errors: string[] = [];
   
-  if (products.length !== 20) {
-    errors.push(`Expected 20 products, found ${products.length}`);
+  if (catalog.length !== 20) {
+    errors.push(`Expected 20 products, found ${catalog.length}`);
+  }
+
+  const taggedCount = catalog.filter((product) => product.tag !== null).length;
+  if (taggedCount !== 8) {
+    errors.push(`Expected 8 tagged products, found ${taggedCount}`);
   }
 
   const ids = new Set();
   const slugs = new Set();
   const skus = new Set();
 
-  products.forEach(p => {
+  catalog.forEach(p => {
+    if (
+      p.tag !== null &&
+      !SUPPORTED_PRODUCT_TAGS.has(p.tag as ProductTag)
+    ) {
+      errors.push(`Product ${p.id} has unsupported tag: ${String(p.tag)}`);
+    }
+
     if (ids.has(p.id)) errors.push(`Duplicate ID: ${p.id}`);
     ids.add(p.id);
 
@@ -438,6 +456,21 @@ export function validateCatalog() {
     p.variants.forEach(v => {
       if (skus.has(v.sku)) errors.push(`Duplicate SKU: ${v.sku} in product ${p.id}`);
       skus.add(v.sku);
+
+      if (
+        p.tag === 'sale' &&
+        v.inStock &&
+        (v.compareAtPrice === undefined || v.compareAtPrice <= v.price)
+      ) {
+        errors.push(
+          `Sale product ${p.id} variant ${v.id} compareAtPrice must be greater than price`,
+        );
+      }
+      if (p.tag !== 'sale' && v.compareAtPrice !== undefined) {
+        errors.push(
+          `Non-sale product ${p.id} variant ${v.id} must not define compareAtPrice`,
+        );
+      }
     });
 
     if (p.source.sourceType === 'official' && !p.source.officialUrl) {

@@ -105,9 +105,12 @@ export function Shop() {
     }
 
     if (sortParam === 'new') {
-      list.sort((a, b) => Number(!!b.isNew) - Number(!!a.isNew));
+      list.sort((a, b) => Number(b.tag === 'new') - Number(a.tag === 'new'));
     } else if (sortParam === 'bestsellers') {
-      list.sort((a, b) => Number(!!b.isBestSeller) - Number(!!a.isBestSeller));
+      list.sort(
+        (a, b) =>
+          Number(b.tag === 'best-seller') - Number(a.tag === 'best-seller'),
+      );
     } else if (sortParam === 'price-low') {
       list.sort((a, b) => a.price - b.price);
     } else if (sortParam === 'price-high') {

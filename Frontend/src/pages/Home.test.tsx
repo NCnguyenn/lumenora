@@ -171,4 +171,19 @@ describe('Home editorial experience', () => {
     expect(screen.getAllByText('Aurelle Lab').length).toBeGreaterThan(0)
     expect(screen.getAllByText('COSRX').length).toBeGreaterThan(0)
   })
+
+  it('synchronizes tags and sale prices across every product introduction', () => {
+    renderHome()
+
+    expect(screen.getAllByText('NEW')).toHaveLength(2)
+    expect(screen.getAllByText('BEST SELLER')).toHaveLength(5)
+    expect(screen.getAllByText('SALE')).toHaveLength(2)
+
+    const originalPrices = screen.getAllByText('$31.00')
+    expect(originalPrices).toHaveLength(2)
+    originalPrices.forEach((price) => {
+      expect(price.closest('del')).toBeInTheDocument()
+    })
+    expect(screen.getAllByText('$24.80')).toHaveLength(2)
+  })
 })

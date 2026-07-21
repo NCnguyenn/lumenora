@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { products } from './products';
+import { describe, it, expect, vi } from 'vitest';
+import { products, type Product } from './products';
 import { brandList } from './brands';
 import { validateCatalog, getProductById, getProductBySlug, getProductsByCategory, searchProducts, getSimilarProducts, getRoutinePairings } from './productSelectors';
 
@@ -8,9 +8,59 @@ describe('Catalog Validation', () => {
     expect(products.length).toBe(20);
   });
 
+  it('assigns the approved single tag to 8 products and leaves 12 untagged', () => {
+    expect(products.filter(product => product.tag !== null)).toHaveLength(8);
+    expect(products.filter(product => product.tag === null)).toHaveLength(12);
+
+    expect(Object.fromEntries(products.map(product => [product.id, product.tag]))).toMatchObject({
+      p1: 'new',
+      p6: 'sale',
+      p8: 'best-seller',
+      p9: 'best-seller',
+      p11: 'sale',
+      p12: 'best-seller',
+      p13: 'new',
+      p16: 'new',
+    });
+  });
+
+  it('requires comparison prices only on sale products', () => {
+    for (const product of products) {
+      for (const variant of product.variants) {
+        if (product.tag === 'sale' && variant.inStock) {
+          expect(variant.compareAtPrice).toBeGreaterThan(variant.price);
+        } else {
+          expect(variant.compareAtPrice).toBeUndefined();
+        }
+      }
+    }
+  });
+
   it('should pass full validation logic without errors', () => {
     const errors = validateCatalog();
     expect(errors).toHaveLength(0);
+  });
+
+  it('reports invalid sale pricing from an imported catalog', () => {
+    const catalog = structuredClone(products);
+    const saleProduct = catalog.find(product => product.id === 'p6')!;
+    saleProduct.variants[0].compareAtPrice = saleProduct.variants[0].price;
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    expect(validateCatalog(catalog)).toContain(
+      'Sale product p6 variant SO-BUT-SHE-200 compareAtPrice must be greater than price',
+    );
+
+    consoleError.mockRestore();
+  });
+
+  it('reports unsupported tags from an imported catalog', () => {
+    const catalog = structuredClone(products);
+    catalog[0].tag = 'featured' as Product['tag'];
+
+    expect(validateCatalog(catalog)).toContain(
+      'Product p1 has unsupported tag: featured',
+    );
   });
 
   it('should have 8 skin, 4 body, 4 sun, 4 fragrance products', () => {

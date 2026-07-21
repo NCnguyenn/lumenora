@@ -1,4 +1,5 @@
 export type ProductCategory = 'skin' | 'body' | 'sun' | 'fragrance';
+export type ProductTag = 'new' | 'sale' | 'best-seller';
 export type ProductSourceType = 'official' | 'fictional';
 export type RatingSource = 'official' | 'retailer' | 'demo';
 
@@ -69,7 +70,7 @@ export interface Product {
   variants: ProductVariant[];
   rating: ProductRating;
   images: ProductImage[];     // length >= 3, roles primary/hover/detail
-  badges: Array<'new' | 'bestseller' | 'limited'>;
+  tag: ProductTag | null;
   shortDescription: string;
   description: string[];      // 2–4 short paragraphs
   benefits: string[];         // 3–5
@@ -94,6 +95,4 @@ export interface Product {
   
   // Backward compatibility fields for Home, Shop, Search, Cart
   image: string;
-  isNew: boolean;
-  isBestSeller: boolean;
 }

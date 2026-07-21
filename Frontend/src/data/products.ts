@@ -1,7 +1,7 @@
-import type { Product, ProductCategory } from './types';
-export type { Product, ProductCategory };
+import type { Product, ProductCategory, ProductTag } from './types';
+export type { Product, ProductCategory, ProductTag };
 
-const rawProducts = [
+const rawProducts: Array<Omit<Product, 'tag' | 'image'>> = [
   {
     id: 'p1',
     slug: 'bamboo-ultra-hydrating-toner',
@@ -23,7 +23,6 @@ const rawProducts = [
       { id: 'p1-img2', role: 'hover', src: '/assets/products/bamboo-ultra-hydrating-toner/02-hover.webp', alt: 'Aurelle Lab Bamboo Ultra Hydrating Toner hover', width: 960, height: 960 },
       { id: 'p1-img3', role: 'detail', src: '/assets/products/bamboo-ultra-hydrating-toner/03-detail.webp', alt: 'Aurelle Lab Bamboo Ultra Hydrating Toner texture', width: 960, height: 960 }
     ],
-    badges: ['new'],
     shortDescription: 'A weightless toner-essence hybrid that reintroduces water to a depleted barrier.',
     description: [
       'Bamboo water and panthenol settle thirst without film.',
@@ -78,7 +77,6 @@ const rawProducts = [
       { id: 'p2-img2', role: 'hover', src: '/assets/products/birch-moisturizing-soothing-gel/02-hover.webp', alt: 'Harbor & Hearth Birch Moisturizing Soothing Gel hover', width: 960, height: 960 },
       { id: 'p2-img3', role: 'detail', src: '/assets/products/birch-moisturizing-soothing-gel/03-detail.webp', alt: 'Harbor & Hearth Birch Moisturizing Soothing Gel texture', width: 960, height: 960 }
     ],
-    badges: ['new'],
     shortDescription: 'Water-light birch gel for warm, tight skin without heavy cream.',
     description: [
       'Cool gel from birch-sap tradition with aloe comfort. Forest-quiet scent profile, no sticky film.'
@@ -129,7 +127,6 @@ const rawProducts = [
       { id: 'p3-img2', role: 'hover', src: '/assets/products/mugwort-calming-cream/02-hover.webp', alt: 'Maison Verdé Mugwort Calming Cream hover', width: 960, height: 960 },
       { id: 'p3-img3', role: 'detail', src: '/assets/products/mugwort-calming-cream/03-detail.webp', alt: 'Maison Verdé Mugwort Calming Cream texture', width: 960, height: 960 }
     ],
-    badges: ['new'],
     shortDescription: 'Day cream around mugwort and centella with squalane softness.',
     description: [
       'A comforting herbal cream designed to calm reactive skin.',
@@ -181,7 +178,6 @@ const rawProducts = [
       { id: 'p4-img2', role: 'hover', src: '/assets/products/body-lotion-lavender-patchouli/02-hover.webp', alt: 'Solenne Body Lotion Lavender Patchouli hover', width: 960, height: 960 },
       { id: 'p4-img3', role: 'detail', src: '/assets/products/body-lotion-lavender-patchouli/03-detail.webp', alt: 'Solenne Body Lotion Lavender Patchouli texture', width: 960, height: 960 }
     ],
-    badges: ['new'],
     shortDescription: 'Daily body lotion with shea slip and low evening lavender–patchouli trail.',
     description: [
       'A luxurious body lotion that sinks into the skin instantly.',
@@ -233,7 +229,6 @@ const rawProducts = [
       { id: 'p5-img2', role: 'hover', src: '/assets/products/eucalyptus-nourishing-body-cleanser/02-hover.webp', alt: 'Harbor & Hearth Eucalyptus Nourishing Body Cleanser hover', width: 960, height: 960 },
       { id: 'p5-img3', role: 'detail', src: '/assets/products/eucalyptus-nourishing-body-cleanser/03-detail.webp', alt: 'Harbor & Hearth Eucalyptus Nourishing Body Cleanser texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Eucalyptus body wash with oat softness — clean, not squeaky.',
     description: [
       'A revitalizing body cleanser that awakens the senses with eucalyptus without stripping the skin\'s natural oils.',
@@ -276,7 +271,7 @@ const rawProducts = [
     currency: 'USD',
     defaultVariantId: 'SO-BUT-SHE-200',
     variants: [
-      { id: 'SO-BUT-SHE-200', label: '200 ml', size: '200 ml', price: 26.00, sku: 'SO-BUT-SHE-200', inStock: true }
+      { id: 'SO-BUT-SHE-200', label: '200 ml', size: '200 ml', price: 26.00, compareAtPrice: 32.00, sku: 'SO-BUT-SHE-200', inStock: true }
     ],
     rating: { value: 4.7, count: 34, source: 'demo' },
     images: [
@@ -284,7 +279,6 @@ const rawProducts = [
       { id: 'p6-img2', role: 'hover', src: '/assets/products/nourishing-shea-body-butter/02-hover.webp', alt: 'Solenne Nourishing Shea Body Butter hover', width: 960, height: 960 },
       { id: 'p6-img3', role: 'detail', src: '/assets/products/nourishing-shea-body-butter/03-detail.webp', alt: 'Solenne Nourishing Shea Body Butter texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Dense shea–cocoa butter that melts on contact for cracked dry air skin.',
     description: [
       'A deeply restorative body butter formulated for the driest skin conditions.',
@@ -336,7 +330,6 @@ const rawProducts = [
       { id: 'p7-img2', role: 'hover', src: '/assets/products/green-tea-deep-cleansing-gel/02-hover.webp', alt: 'Aurelle Lab Green Tea Deep Cleansing Gel hover', width: 960, height: 960 },
       { id: 'p7-img3', role: 'detail', src: '/assets/products/green-tea-deep-cleansing-gel/03-detail.webp', alt: 'Aurelle Lab Green Tea Deep Cleansing Gel texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Daily gel cleanser with green tea polyphenols — lifts film, leaves barrier quiet.',
     description: [
       'A refreshing gel that purifies without disrupting the skin\'s natural balance.',
@@ -387,7 +380,6 @@ const rawProducts = [
       { id: 'p8-img2', role: 'hover', src: '/assets/products/cosrx-advanced-snail-96-mucin-power-essence/02-hover.webp', alt: 'COSRX Advanced Snail 96 Mucin Power Essence hover', width: 960, height: 960 },
       { id: 'p8-img3', role: 'detail', src: '/assets/products/cosrx-advanced-snail-96-mucin-power-essence/03-detail.webp', alt: 'COSRX Advanced Snail 96 Mucin Power Essence texture', width: 960, height: 960 }
     ],
-    badges: ['bestseller'],
     shortDescription: 'Cult mucin essence that layers moisture into tired skin — marketplace hero SKU.',
     description: [
       'Formulated with 96.3% Snail Secretion Filtrate, this essence protects the skin from moisture loss while improving skin elasticity.',
@@ -438,7 +430,6 @@ const rawProducts = [
       { id: 'p9-img2', role: 'hover', src: '/assets/products/ordinary-niacinamide-10-zinc-1/02-hover.webp', alt: 'The Ordinary Niacinamide 10% + Zinc 1% hover', width: 960, height: 960 },
       { id: 'p9-img3', role: 'detail', src: '/assets/products/ordinary-niacinamide-10-zinc-1/03-detail.webp', alt: 'The Ordinary Niacinamide 10% + Zinc 1% texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'High-strength niacinamide with zinc for oilier, congestion-prone skin.',
     description: [
       'A universal serum for blemish-prone skin that smooths skin texture and visibly brightens tone.',
@@ -488,7 +479,6 @@ const rawProducts = [
       { id: 'p10-img2', role: 'hover', src: '/assets/products/volcanic-sea-clay-detox-masque/02-hover.webp', alt: 'Maison Verdé Volcanic Sea Clay Detox Masque hover', width: 960, height: 960 },
       { id: 'p10-img3', role: 'detail', src: '/assets/products/volcanic-sea-clay-detox-masque/03-detail.webp', alt: 'Maison Verdé Volcanic Sea Clay Detox Masque texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Weekly mineral clay masque — rinse before bone-dry.',
     description: [
       'A deep-cleaning mineral masque drawing from volcanic ash and sea silt.',
@@ -531,7 +521,7 @@ const rawProducts = [
     currency: 'USD',
     defaultVariantId: 'SO-SUN-INV-50',
     variants: [
-      { id: 'SO-SUN-INV-50', label: '50 ml', size: '50 ml', price: 24.80, sku: 'SO-SUN-INV-50', inStock: true }
+      { id: 'SO-SUN-INV-50', label: '50 ml', size: '50 ml', price: 24.80, compareAtPrice: 31.00, sku: 'SO-SUN-INV-50', inStock: true }
     ],
     rating: { value: 4.8, count: 453, source: 'demo' },
     images: [
@@ -539,7 +529,6 @@ const rawProducts = [
       { id: 'p11-img2', role: 'hover', src: '/assets/products/invisible-fluid-sunscreen-spf50/02-hover.webp', alt: 'Solenne Invisible Fluid Sunscreen SPF 50+ PA++++ hover', width: 960, height: 960 },
       { id: 'p11-img3', role: 'detail', src: '/assets/products/invisible-fluid-sunscreen-spf50/03-detail.webp', alt: 'Solenne Invisible Fluid Sunscreen SPF 50+ PA++++ texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Daily fluid sunscreen demo formula — invisible finish under makeup.',
     description: [
       'A weightless, invisible fluid that provides broad-spectrum defense against UV rays.',
@@ -590,7 +579,6 @@ const rawProducts = [
       { id: 'p12-img2', role: 'hover', src: '/assets/products/cosrx-low-ph-good-morning-gel-cleanser/02-hover.webp', alt: 'COSRX Low pH Good Morning Gel Cleanser hover', width: 960, height: 960 },
       { id: 'p12-img3', role: 'detail', src: '/assets/products/cosrx-low-ph-good-morning-gel-cleanser/03-detail.webp', alt: 'COSRX Low pH Good Morning Gel Cleanser texture', width: 960, height: 960 }
     ],
-    badges: ['bestseller'],
     shortDescription: 'Low-pH gel cleanser for morning refresh — removes impurities without stripping.',
     description: [
       'A gentle gel cleanser formulated with purifying botanical ingredients and a slightly acidic formula.',
@@ -640,7 +628,6 @@ const rawProducts = [
       { id: 'p13-img2', role: 'hover', src: '/assets/products/cedar-fig-eau-de-parfum/02-hover.webp', alt: 'Atelier Nocturne Cedar & Fig Eau de Parfum hover', width: 960, height: 960 },
       { id: 'p13-img3', role: 'detail', src: '/assets/products/cedar-fig-eau-de-parfum/03-detail.webp', alt: 'Atelier Nocturne Cedar & Fig Eau de Parfum texture', width: 960, height: 960 }
     ],
-    badges: ['new'],
     shortDescription: 'Independent EDP of cedar and ripe fig over soft musk.',
     description: [
       'A grounding, woody fragrance intertwined with the subtle sweetness of ripe fig.',
@@ -691,7 +678,6 @@ const rawProducts = [
       { id: 'p14-img2', role: 'hover', src: '/assets/products/soft-linen-hair-body-mist/02-hover.webp', alt: 'Atelier Nocturne Soft Linen Hair & Body Mist hover', width: 960, height: 960 },
       { id: 'p14-img3', role: 'detail', src: '/assets/products/soft-linen-hair-body-mist/03-detail.webp', alt: 'Atelier Nocturne Soft Linen Hair & Body Mist texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Sheer hair-and-body mist — sun on linen.',
     description: [
       'A lightweight mist that lightly scents hair and skin with the comfort of clean linen and iris.',
@@ -742,7 +728,6 @@ const rawProducts = [
       { id: 'p15-img2', role: 'hover', src: '/assets/products/cedar-leaf-smoothing-body-polish/02-hover.webp', alt: 'Aurelle Lab Cedar Leaf Smoothing Body Polish hover', width: 960, height: 960 },
       { id: 'p15-img3', role: 'detail', src: '/assets/products/cedar-leaf-smoothing-body-polish/03-detail.webp', alt: 'Aurelle Lab Cedar Leaf Smoothing Body Polish texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Weekly body polish with cedar-leaf clarity and oil slip.',
     description: [
       'A renewing scrub that lifts away dullness with fine grains suspended in jojoba oil.',
@@ -793,7 +778,6 @@ const rawProducts = [
       { id: 'p16-img2', role: 'hover', src: '/assets/products/mineral-veil-sun-milk-spf50/02-hover.webp', alt: 'Solenne Mineral Veil Sun Milk SPF 50 hover', width: 960, height: 960 },
       { id: 'p16-img3', role: 'detail', src: '/assets/products/mineral-veil-sun-milk-spf50/03-detail.webp', alt: 'Solenne Mineral Veil Sun Milk SPF 50 texture', width: 960, height: 960 }
     ],
-    badges: ['new'],
     shortDescription: 'Lightweight mineral sun milk for everyday wear (demo).',
     description: [
       'A gentle mineral formula that blends easily for daily protection.',
@@ -842,7 +826,6 @@ const rawProducts = [
       { id: 'p17-img2', role: 'hover', src: '/assets/products/daily-defense-sun-stick-spf50/02-hover.webp', alt: 'Aurelle Lab Daily Defense Sun Stick SPF 50+ hover', width: 960, height: 960 },
       { id: 'p17-img3', role: 'detail', src: '/assets/products/daily-defense-sun-stick-spf50/03-detail.webp', alt: 'Aurelle Lab Daily Defense Sun Stick SPF 50+ texture', width: 960, height: 960 }
     ],
-    badges: ['new'],
     shortDescription: 'Portable stick for nose, cheeks, reapplication.',
     description: [
       'A solid sun protection stick designed for easy, hands-free application on the go.',
@@ -892,7 +875,6 @@ const rawProducts = [
       { id: 'p18-img2', role: 'hover', src: '/assets/products/aloe-mineral-after-sun-gel/02-hover.webp', alt: 'Harbor & Hearth Aloe Mineral After-Sun Gel hover', width: 960, height: 960 },
       { id: 'p18-img3', role: 'detail', src: '/assets/products/aloe-mineral-after-sun-gel/03-detail.webp', alt: 'Harbor & Hearth Aloe Mineral After-Sun Gel texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Aloe gel for post-sun comfort — recovery, not protection.',
     description: [
       'A cooling, mineral-infused gel that comforts skin after sun exposure.',
@@ -942,7 +924,6 @@ const rawProducts = [
       { id: 'p19-img2', role: 'hover', src: '/assets/products/amber-iris-eau-de-parfum/02-hover.webp', alt: 'Atelier Nocturne Amber Iris Eau de Parfum hover', width: 960, height: 960 },
       { id: 'p19-img3', role: 'detail', src: '/assets/products/amber-iris-eau-de-parfum/03-detail.webp', alt: 'Atelier Nocturne Amber Iris Eau de Parfum texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Powdery iris EDP with warm amber dry-down — evening soft.',
     description: [
       'An elegant nighttime fragrance balancing powdery iris florals with deep, resinous amber.',
@@ -993,7 +974,6 @@ const rawProducts = [
       { id: 'p20-img2', role: 'hover', src: '/assets/products/neroli-moss-eau-de-parfum/02-hover.webp', alt: 'Maison Verdé Neroli Moss Eau de Parfum hover', width: 960, height: 960 },
       { id: 'p20-img3', role: 'detail', src: '/assets/products/neroli-moss-eau-de-parfum/03-detail.webp', alt: 'Maison Verdé Neroli Moss Eau de Parfum texture', width: 960, height: 960 }
     ],
-    badges: [],
     shortDescription: 'Neroli lifted over mossy base — botanical fragrance house entry.',
     description: [
       'A bright opening of citrus blossoms grounded by the damp, earthy depth of forest moss.',
@@ -1025,14 +1005,40 @@ const rawProducts = [
   }
 ];
 
+const tagByProductId = {
+  p1: 'new',
+  p2: null,
+  p3: null,
+  p4: null,
+  p5: null,
+  p6: 'sale',
+  p7: null,
+  p8: 'best-seller',
+  p9: 'best-seller',
+  p10: null,
+  p11: 'sale',
+  p12: 'best-seller',
+  p13: 'new',
+  p14: null,
+  p15: null,
+  p16: 'new',
+  p17: null,
+  p18: null,
+  p19: null,
+  p20: null,
+} as const satisfies Record<string, ProductTag | null>;
+
 export const products: Product[] = rawProducts.map((p) => {
+  if (!Object.prototype.hasOwnProperty.call(tagByProductId, p.id)) {
+    throw new Error(`Missing merchandising tag assignment for product ${p.id}`);
+  }
+
   const primaryImg = p.images.find((img) => img.role === 'primary') || p.images[0];
   return {
     ...p,
+    tag: tagByProductId[p.id as keyof typeof tagByProductId],
     image: primaryImg?.src || '',
-    isNew: p.badges.includes('new'),
-    isBestSeller: p.badges.includes('bestseller'),
-  } as unknown as Product;
+  };
 });
 
 export function formatPrice(price: number) {

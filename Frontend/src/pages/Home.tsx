@@ -18,13 +18,15 @@ import {
 import { products, type Product } from '../data/products';
 import {
   categoryLabel,
-  formatPrice,
   getPrimaryImage,
   getProductById,
 } from '../data/productSelectors';
+import { getProductMerchandising } from '../data/productMerchandising';
 import { articles } from '../data/articles';
 import { useAppStore } from '../store/useAppStore';
 import { ProductCard } from '../components/ui/ProductCard';
+import { ProductPrice } from '../components/ui/ProductPrice';
+import { ProductTag } from '../components/ui/ProductTag';
 import { cn } from '../lib/utils';
 import { toast } from 'sonner';
 
@@ -281,6 +283,7 @@ function ProductLineItem({ product }: { product: Product }) {
     product.variants.find((variant) => variant.id === product.defaultVariantId) ??
     product.variants[0];
   const thumb = getPrimaryImage(product);
+  const merchandising = getProductMerchandising(product, defaultVariant);
 
   return (
     <li className="border-b border-charcoal/15 last:border-b-0">
@@ -307,13 +310,22 @@ function ProductLineItem({ product }: { product: Product }) {
           <p className="mt-0.5 font-serif text-[15px] leading-snug text-charcoal transition-colors group-hover:text-oxblood">
             {product.name}
           </p>
-          <p className={cn('mt-0.5', META)}>{categoryLabel(product.category)}</p>
+          <div className="mt-1 flex flex-wrap items-center gap-2">
+            <span className={META}>{categoryLabel(product.category)}</span>
+            <ProductTag
+              tag={merchandising.tag}
+              placement="inline"
+              className="px-2 py-1 text-[8px]"
+            />
+          </div>
         </Link>
 
         <div className="flex shrink-0 flex-col items-end gap-1 sm:flex-row sm:items-center sm:gap-1">
-          <span className="text-[12px] tabular-nums tracking-wide text-charcoal/80">
-            {formatPrice(product.price)}
-          </span>
+          <ProductPrice
+            merchandising={merchandising}
+            compact
+            className="justify-end tracking-wide text-charcoal/80"
+          />
           <div className="flex items-center">
             <button
               type="button"
@@ -358,21 +370,23 @@ function ProductLineItem({ product }: { product: Product }) {
 }
 
 function CompositionCaption({
-  brand,
+  product,
   title,
   href,
   descriptor,
-  price,
 }: {
-  brand?: string;
+  product?: Product;
   title: string;
   href: string;
   descriptor: string;
-  price?: string;
 }) {
+  const merchandising = product
+    ? getProductMerchandising(product)
+    : null;
+
   return (
     <figcaption className="mt-5 space-y-1 border-t border-charcoal/15 pt-4">
-      {brand ? <p className={LABEL_SM}>{brand}</p> : null}
+      {product?.brand ? <p className={LABEL_SM}>{product.brand}</p> : null}
       <Link
         to={href}
         className="block font-serif text-lg leading-snug text-charcoal transition-colors hover:text-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal md:text-xl"
@@ -380,10 +394,19 @@ function CompositionCaption({
         {title}
       </Link>
       <p className="font-serif text-sm italic text-charcoal/75">{descriptor}</p>
-      {price ? (
-        <p className="pt-1 text-[13px] tabular-nums tracking-wide text-charcoal/80">
-          {price}
-        </p>
+      {merchandising ? (
+        <div className="flex flex-wrap items-center gap-2 pt-2">
+          <ProductTag
+            tag={merchandising.tag}
+            placement="inline"
+            className="px-2 py-1 text-[8px]"
+          />
+          <ProductPrice
+            merchandising={merchandising}
+            compact
+            className="tracking-wide text-charcoal/80"
+          />
+        </div>
       ) : null}
     </figcaption>
   );
@@ -434,9 +457,11 @@ export function Home() {
 
   /** Mix bestsellers and new arrivals so badges stay meaningful. */
   const shelfProducts = useMemo(() => {
-    const bestsellers = products.filter((p) => p.isBestSeller);
-    const news = products.filter((p) => p.isNew && !p.isBestSeller);
-    const rest = products.filter((p) => !p.isBestSeller && !p.isNew);
+    const bestsellers = products.filter((p) => p.tag === 'best-seller');
+    const news = products.filter((p) => p.tag === 'new');
+    const rest = products.filter(
+      (p) => p.tag !== 'best-seller' && p.tag !== 'new',
+    );
     return [...bestsellers, ...news, ...rest].slice(0, 4);
   }, []);
 
@@ -711,11 +736,10 @@ export function Home() {
                   />
                 </div>
                 <CompositionCaption
-                  brand={product?.brand}
+                  product={product}
                   title={title}
                   href={product ? `/products/${product.slug}` : '/shop'}
                   descriptor={item.descriptor}
-                  price={product ? formatPrice(product.price) : undefined}
                 />
               </figure>
             );
@@ -749,11 +773,10 @@ export function Home() {
                     />
                   </div>
                   <CompositionCaption
-                    brand={product?.brand}
+                    product={product}
                     title={title}
                     href={product ? `/products/${product.slug}` : '/shop'}
                     descriptor={item.descriptor}
-                    price={product ? formatPrice(product.price) : undefined}
                   />
                 </figure>
               );
@@ -896,18 +919,28 @@ export function Home() {
                     {step.productIds.map((productId) => {
                       const product = getProductById(productId);
                       if (!product) return null;
+                      const merchandising = getProductMerchandising(product);
                       return (
                         <li key={product.id}>
                           <Link
                             to={`/products/${product.slug}`}
-                            className="group/link flex items-baseline justify-between gap-3 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+                            className="group/link flex items-start justify-between gap-3 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
                           >
-                            <span className="min-w-0 font-serif text-sm leading-snug text-charcoal transition-colors group-hover/link:text-oxblood">
-                              {product.name}
+                            <span className="flex min-w-0 flex-col items-start gap-1.5">
+                              <span className="font-serif text-sm leading-snug text-charcoal transition-colors group-hover/link:text-oxblood">
+                                {product.name}
+                              </span>
+                              <ProductTag
+                                tag={merchandising.tag}
+                                placement="inline"
+                                className="px-2 py-1 text-[8px]"
+                              />
                             </span>
-                            <span className="shrink-0 text-[11px] tabular-nums text-charcoal/65">
-                              {formatPrice(product.price)}
-                            </span>
+                            <ProductPrice
+                              merchandising={merchandising}
+                              compact
+                              className="shrink-0 justify-end text-charcoal/65"
+                            />
                           </Link>
                         </li>
                       );

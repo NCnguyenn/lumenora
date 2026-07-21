@@ -165,4 +165,14 @@ describe('ProductInfoPanel', () => {
       }),
     ).not.toBeInTheDocument()
   })
+
+  it('shows synchronized sale merchandising for the selected variant', () => {
+    const saleProduct = products.find((item) => item.id === 'p6')!
+
+    render(<ProductInfoPanel product={saleProduct} />)
+
+    expect(screen.getByText('SALE')).toBeInTheDocument()
+    expect(screen.getByText('$32.00').closest('del')).toBeInTheDocument()
+    expect(screen.getAllByText('$26.00').length).toBeGreaterThan(0)
+  })
 })
